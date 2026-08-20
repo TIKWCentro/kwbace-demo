@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unidades, servicio, refacciones y respaldo especializado KENWORTH DAF BACE.">
+  <title>KENWORTH DAF BACE — Tu operación nunca se detiene</title>
+
+  <!-- Icono de la pestaña del navegador -->
+<link
+  rel="icon"
+  type="image/png"
+  href="assets/images/logos/LOGO BACE.png"
+>
+
+<link
+  rel="shortcut icon"
+  type="image/png"
+  href="assets/images/logos/LOGO BACE.png"
+>
+
+<link
+  rel="apple-touch-icon"
+  href="assets/images/logos/LOGO BACE.png"
+>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--
+    Correcciones estructurales críticas.
+    Se conservan aquí para que el formulario y el footer funcionen
+    incluso si el navegador mantiene en caché una versión anterior
+    de styles.css.
+  -->
+  <style>
+    [hidden] {
+      display: none !important;
+    }
+
+    .footer-logo-image {
+      display: block;
+      width: min(240px, 100%);
+      height: auto;
+      object-fit: contain;
+    }
+  </style>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
+  </script>
+</head>
+
+<body id="top">
+  <header class="topbar"><span>Gente con Pasión por Servir</span>
+    <div><a href="#sucursales">Sucursales</a><a href="#contacto">Atención especializada</a></div>
+  </header>
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="logo" href="#inicio" aria-label="Inicio KENWORTH DAF BACE">
+      <img src="assets/images/logos/logo-kenworth-daf-bace.PNG" alt="KENWORTH DAF BACE" class="logo-principal">
+    </a>
+
+    <button
+      class="menu-btn"
+      id="menuButton"
+      type="button"
+      aria-controls="navLinks"
+      aria-expanded="false"
+    >Menú</button>
+
+    <div class="nav-links" id="navLinks"><a href="unidades-nuevas.html">Unidades</a><a href="seminuevos.html">Seminuevos</a><a
+        href="servicio.html">Servicio</a><a href="refacciones.html">Refacciones</a><a href="bodyshop.html">BodyShop</a><a href="#sucursales">Sucursales</a><button
+        class="btn primary compact js-quote">Cotiza tu unidad <span>↗</span></button></div>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> KENWORTH DAF BACE</p>
+        <h1>Potencia para llegar <em>más lejos.</em></h1>
+        <p class="hero-copy">Unidades, servicio y respaldo especializado para mantener tu negocio siempre en movimiento.
+        </p>
+        <div class="hero-actions"><button class="btn primary js-quote">Cotiza tu unidad <span>↗</span></button><a
+            class="btn ghost" href="#modelos">Explorar modelos <span>↓</span></a></div>
+      </div>
+      <div class="hero-index"><b>01</b><span></span><small>Tu operación nunca se detiene</small></div>
+    </section>
+
+    <section class="need-section">
+      <div class="section-head inverse">
+        <div>
+          <p class="eyebrow"><span></span> EMPIEZA AQUÍ</p>
+          <h2>¿Qué necesita hoy<br>tu operación?</h2>
+        </div>
+        <p>Elige una opción y encuentra el camino más rápido hacia la solución que necesitas.</p>
+      </div>
+      <div class="need-grid"><button class="need-card js-quote"><span class="need-num">01</span>
+          <div>
+            <h3>Unidad nueva</h3>
+            <p>Configura el camión que impulsa tu negocio</p>
+          </div><b>↗</b>
+        </button><button class="need-card js-quote"><span class="need-num">02</span>
+          <div>
+            <h3>Seminuevo</h3>
+            <p>Encuentra una unidad lista para trabajar</p>
+          </div><b>↗</b>
+        </button><button class="need-card js-quote"><span class="need-num">03</span>
+          <div>
+            <h3>Servicio</h3>
+            <p>Mantén tu flota disponible más tiempo</p>
+          </div><b>↗</b>
+        </button><button class="need-card js-quote"><span class="need-num">04</span>
+          <div>
+            <h3>Refacciones</h3>
+            <p>Localiza la pieza que tu operación necesita</p>
+          </div><b>↗</b>
+        </button></div>
+    </section>
+
+    <section class="models section" id="modelos">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow dark"><span></span> NUESTRA GAMA</p>
+          <h2>Una unidad para<br><em>cada desafío.</em></h2>
+        </div>
+        <div class="tabs" role="tablist"><button class="active" data-brand="kenworth">KENWORTH</button><button
+            data-brand="daf">DAF</button></div>
+      </div>
+      <div class="model-grid" id="modelGrid"></div>
+      <div class="model-help">
+        <div><span class="pulse"></span>
+          <p><b>¿No sabes cuál elegir?</b><br>Te ayudamos a encontrar la configuración adecuada.</p>
+        </div><button class="text-link js-quote">Hablar con un especialista ↗</button>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     BUSCADOR DE INVENTARIO KENWORTH DAF BACE
+     ===================================================== -->
+    <section class="stock-section" id="inventario">
+
+      <div class="stock-heading">
+
+        <p class="eyebrow dark">
+          <span></span>
+          INVENTARIO DISPONIBLE
+        </p>
+
+        <h2>
+          Encuentra la unidad que
+          <em>tu operación necesita.</em>
+        </h2>
+
+        <p>
+          Explora unidades nuevas y seminuevas disponibles en
+          KENWORTH DAF BACE y solicita una cotización personalizada.
+        </p>
+
+      </div>
+
+      <!-- Selector visual de marca -->
+      <div class="stock-brands">
+
+        <button type="button" class="stock-brand active" data-stock-brand="Kenworth">
+
+         <div class="stock-brand-image">
+  <img
+    src="assets/stock/kenworth-stock.png"
+    alt="Unidades Kenworth disponibles"
+    class="stock-truck-image stock-truck-kenworth"
+  >
+</div> 
+
+          <strong>KENWORTH</strong>
+          <span>Explorar unidades</span>
+        </button>
+
+        <button type="button" class="stock-brand" data-stock-brand="DAF">
+          <div class="stock-brand-image">
+
+            <div class="stock-brand-image">
+
+              <img src="assets/stock/daf-stock.png" alt="Unidades DAF disponibles"
+                class="stock-truck-image stock-truck-daf">
+
+            </div>
+
+          </div>
+
+          <strong>DAF</strong>
+          <span>Explorar unidades</span>
+        </button>
+
+      </div>
+
+      <!-- Panel principal de búsqueda -->
+      <div class="stock-search-panel">
+
+        <div class="stock-search-header">
+
+          <div>
+            <small>BUSCADOR DE INVENTARIO</small>
+            <h3>Busca entre nuestras unidades disponibles</h3>
+          </div>
+
+          <div class="stock-counter">
+            <strong id="stockResultCount">0</strong>
+            <span>unidades encontradas</span>
+          </div>
+
+        </div>
+
+        <form class="stock-form" id="stockSearchForm">
+
+          <div class="stock-field">
+
+            <label for="stockCondition">
+              Tipo de unidad
+            </label>
+
+            <select id="stockCondition" name="condition">
+
+              <option value="all">
+                Todas
+              </option>
+
+              <option value="new">
+                Nuevas
+              </option>
+
+              <option value="used">
+                Seminuevas
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="stock-field">
+
+            <label for="stockCategory">
+              Aplicación
+            </label>
+
+            <select id="stockCategory" name="category">
+
+              <option value="all">
+                Todas las aplicaciones
+              </option>
+
+              <option value="highway">
+                Carretera
+              </option>
+
+              <option value="distribution">
+                Distribución
+              </option>
+
+              <option value="construction">
+                Construcción
+              </option>
+
+              <option value="vocational">
+                Vocacional
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="stock-field">
+
+            <label for="stockMake">
+              Marca
+            </label>
+
+            <select id="stockMake" name="make">
+
+              <option value="all">
+                Todas las marcas
+              </option>
+
+              <option value="Kenworth">
+                Kenworth
+              </option>
+
+              <option value="DAF">
+                DAF
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="stock-field">
+
+            <label for="stockModel">
+              Modelo
+            </label>
+
+            <select id="stockModel" name="model">
+
+              <option value="all">
+                Todos los modelos
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="stock-range-field">
+
+            <div class="stock-range-heading">
+
+              <label for="stockPrice">
+                Precio máximo
+              </label>
+
+              <output id="stockPriceOutput">
+                Sin límite
+              </output>
+
+            </div>
+
+            <input type="range" id="stockPrice" name="price" min="1000000" max="6000000" step="100000" value="6000000">
+
+            <div class="stock-range-values">
+              <span>$1 M</span>
+              <span>$6 M</span>
+            </div>
+
+          </div>
+
+          <div class="stock-range-field">
+
+            <div class="stock-range-heading">
+
+              <label for="stockYear">
+                Año mínimo
+              </label>
+
+              <output id="stockYearOutput">
+                2020
+              </output>
+
+            </div>
+
+            <input type="range" id="stockYear" name="year" min="2020" max="2026" step="1" value="2020">
+
+            <div class="stock-range-values">
+              <span>2020</span>
+              <span>2026</span>
+            </div>
+
+          </div>
+
+          <button type="submit" class="stock-search-button">
+            <span>Ver unidades disponibles</span>
+            <strong id="stockButtonCount">0</strong>
+            <b>→</b>
+          </button>
+
+        </form>
+
+        <!-- Accesos rápidos -->
+        <div class="stock-shortcuts">
+
+          <button type="button" class="stock-shortcut" data-stock-condition="new">
+            <span class="stock-shortcut-icon">
+              N
+            </span>
+
+            <span>
+              <strong>Unidades nuevas</strong>
+              <small>Explorar inventario</small>
+            </span>
+          </button>
+
+          <button type="button" class="stock-shortcut" data-stock-condition="used">
+            <span class="stock-shortcut-icon">
+              S
+            </span>
+
+            <span>
+              <strong>Seminuevos</strong>
+              <small>Unidades disponibles</small>
+            </span>
+          </button>
+
+          <button type="button" class="stock-shortcut" id="stockFinanceButton">
+            <span class="stock-shortcut-icon">
+              $
+            </span>
+
+            <span>
+              <strong>Financiamiento</strong>
+              <small>Solicitar información</small>
+            </span>
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Aquí aparecerán las unidades -->
+      <div class="stock-results" id="stockResults" aria-live="polite"></div>
+
+    </section>
+
+
+    <!-- =====================================================
+    MODELOS 3D
+     ===================================================== -->
+
+    <section class="advisor">
+      <div class="advisor-viewer">
+        <div class="viewer-topline">
+          <span>DAF XG</span>
+          <span>EXPERIENCIA 360°</span>
+        </div>
+
+        <model-viewer id="daf-model" class="daf-model" src="assets/models/daf-red-truck.glb"
+          alt="Camión DAF rojo en vista interactiva 3D" camera-controls auto-rotate rotation-per-second="10deg"
+          interaction-prompt="auto" shadow-intensity="1.1" shadow-softness="0.8" exposure="1.05"
+          environment-image="neutral" camera-orbit="35deg 72deg 1.45m" min-camera-orbit="auto 35deg 1.05m"
+          max-camera-orbit="auto 105deg 3.5m" field-of-view="24deg">
+        </model-viewer>
+
+        <div class="viewer-instruction">
+          Arrastra para girar · Usa la rueda para acercar
+        </div>
+
+        <div class="viewer-badge">360°</div>
+
+      </div>
+      <div class="advisor-copy">
+        <p class="eyebrow"><span></span> ASESORÍA INTELIGENTE</p>
+        <h2>La decisión correcta empieza por <em>entender tu operación.</em></h2>
+        <p>Cuéntanos qué transportas, por dónde circulas y qué necesitas lograr. Un especialista te ayudará a definir la
+          mejor alternativa para tu negocio.</p>
+        <div class="advisor-points">
+          <span>Aplicación</span><span>Recorrido</span><span>Carga</span><span>Financiamiento</span>
+        </div><button class="btn light js-quote">Encontrar mi unidad <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="section services" id="servicios">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow dark"><span></span> RESPALDO POSTVENTA</p>
+          <h2>Más kilómetros.<br><em>Menos paradas.</em></h2>
+        </div>
+        <p>Soluciones diseñadas para proteger tu inversión y mantener disponible tu flota.</p>
+      </div>
+      <div class="service-list"><a href="#cotizar"><span>01</span>
+          <h3>Taller móvil</h3>
+          <p>Atención especializada donde tu operación la necesita.</p><b>↗</b>
+        </a><a href="#cotizar"><span>02</span>
+          <h3>Truck Care</h3>
+          <p>Mantenimiento planeado para proteger tu inversión.</p><b>↗</b>
+        </a><a href="#cotizar"><span>03</span>
+          <h3>Rescate carretero</h3>
+          <p>Acompañamiento para volver al camino.</p><b>↗</b>
+        </a><a href="#cotizar"><span>04</span>
+          <h3>Ingeniería de campo</h3>
+          <p>Asesoría enfocada en productividad y rendimiento.</p><b>↗</b>
+        </a><a href="#cotizar"><span>05</span>
+          <h3>Servicio DAF</h3>
+          <p>Soporte especializado y mantenimiento preventivo.</p><b>↗</b>
+        </a><a href="#cotizar"><span>06</span>
+          <h3>Carrocería y pintura</h3>
+          <p>Recuperamos imagen y funcionalidad.</p><b>↗</b>
+        </a></div>
+    </section>
+
+    <section class="legacy">
+      <div class="legacy-content">
+        <p class="eyebrow"><span></span> EXPERIENCIA BACE</p>
+        <h2>El camino nos ha enseñado algo: <em>el respaldo lo es todo.</em></h2>
+        <p>Con presencia en el Bajío y Centro de México, acompañamos a transportistas y empresas con soluciones
+          integrales para seguir creciendo.</p>
+          <div class="bace-experience-actions">
+
+  <a
+    class="bace-culture-button"
+    href="bace.html"
+    aria-label="Conocer la cultura de Grupo BACE"
+  >
+    <span>Conoce Cultura BACE</span>
+    <span class="bace-culture-arrow" aria-hidden="true">↗</span>
+  </a>
+
+</div>
+      </div>
+      <div class="stats">
+        <div><b>+50</b><span>Años de experiencia</span></div>
+        <div><b>5</b><span>Estados con cobertura</span></div>
+        <div><b>360°</b><span>Solución integral</span></div>
+      </div>
+    </section>
+
+    <section class="quote" id="cotizar">
+      <div class="quote-intro">
+        <p class="eyebrow dark"><span></span> DA EL SIGUIENTE PASO</p>
+        <h2>Tu próxima unidad comienza <em>aquí.</em></h2>
+        <p>Completa esta solicitud inicial. Posteriormente puede conectarse con BACER IA, n8n y Salesforce.</p>
+        <div class="quote-contact"><small>¿Prefieres atención directa?</small><b>Habla con un asesor especializado →</b>
+        </div>
+      </div>
+      <div class="quote-card">
+        <div class="progress" aria-label="Progreso de cotización">
+          <span class="done" data-progress-step="1" aria-current="step">1</span>
+          <i aria-hidden="true"></i>
+          <span data-progress-step="2">2</span>
+          <i aria-hidden="true"></i>
+          <span data-progress-step="3">3</span>
+        </div>
+
+        <form id="quoteForm" novalidate>
+          <div class="form-step active" data-step="1"><small>PASO 1 DE 3</small>
+            <h3>¿Qué solución necesitas?</h3>
+            <div class="option-grid"><label><input type="radio" name="need" value="Unidad nueva" required> Unidad
+                nueva</label><label><input type="radio" name="need" value="Seminuevo"> Seminuevo</label><label><input
+                  type="radio" name="need" value="Servicio"> Servicio</label><label><input type="radio" name="need"
+                  value="Refacciones"> Refacciones</label></div><button type="button"
+              class="btn primary full next">Continuar <span>→</span></button>
+          </div>
+          <div class="form-step" data-step="2" hidden><small>PASO 2 DE 3</small>
+            <h3>Cuéntanos de tu operación</h3><label>Marca de interés<select name="marca" required>
+                <option value="">Selecciona una marca</option>
+                <option>Kenworth</option>
+                <option>DAF</option>
+              </select></label>
+            <div class="two"><label>Cantidad<input name="cantidad" type="number" min="1" value="1"
+                  placeholder="1" required></label><label>Aplicación<select name="aplicacion" required>
+                  <option value="">Seleccionar</option>
+                  <option>Carretera</option>
+                  <option>Distribución</option>
+                  <option>Construcción</option>
+                </select></label></div><button type="button" class="btn primary full next">Continuar
+              <span>→</span></button><button type="button" class="back">← Regresar</button>
+          </div>
+          <div class="form-step" data-step="3" hidden><small>PASO 3 DE 3</small>
+            <h3>¿Cómo te contactamos?</h3>
+            <div class="two"><label>Nombre<input name="nombre" placeholder="Tu nombre" autocomplete="name" required></label><label>Empresa<input
+                  name="empresa" placeholder="Nombre de empresa" autocomplete="organization" required></label></div>
+            <div class="two"><label>Teléfono<input name="telefono" type="tel"
+                  placeholder="477 000 0000" autocomplete="tel" required></label><label>Correo<input name="correo" type="email"
+                  placeholder="nombre@empresa.com" autocomplete="email" required></label></div><label class="check"><input type="checkbox"
+                name="privacidad" required> Acepto el aviso de privacidad.</label><button type="submit"
+              class="btn primary full">Solicitar asesoría <span>↗</span></button><button type="button" class="back">←
+              Regresar</button>
+          </div>
+        </form>
+        <div class="success" id="success" role="status" aria-live="polite" hidden><span>✓</span><small>SOLICITUD REGISTRADA</small>
+          <h3>Estamos listos para ayudarte.</h3>
+          <p>Demostración visual. Aquí conectaremos el formulario con tu flujo comercial.</p><button class="btn primary"
+            id="restart">Nueva solicitud</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     LOCALIZADOR DE SUCURSALES KENWORTH DAF BACE
+     ===================================================== -->
+    <section class="branch-locator" id="sucursales">
+
+      <div class="branch-locator-heading">
+
+        <div>
+          <p class="eyebrow dark">
+            <span></span>
+            RED KENWORTH DAF BACE
+          </p>
+
+          <h2>
+            Encuentra el respaldo BACE
+            <em>más cerca de tu operación.</em>
+          </h2>
+        </div>
+
+        <p>
+          Localiza nuestras sucursales y consulta los servicios,
+          horarios y medios de contacto disponibles.
+        </p>
+
+      </div>
+
+      <!-- Filtros -->
+      <div class="branch-filters">
+
+        <div class="branch-filter-field">
+          <label for="branchState">Estado</label>
+
+          <select id="branchState">
+            <option value="all">Todos los estados</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Zacatecas">Zacatecas</option>
+          </select>
+        </div>
+
+        <div class="branch-filter-field">
+          <label for="branchService">Servicio requerido</label>
+
+          <select id="branchService">
+            <option value="all">Todos los servicios</option>
+            <option value="unidades">Venta de unidades</option>
+            <option value="servicio">Taller de servicio</option>
+            <option value="refacciones">Refacciones</option>
+            <option value="carroceria">Carrocería y pintura</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Carrusel -->
+      <div class="branch-carousel-wrapper">
+
+        <button type="button" class="branch-arrow branch-arrow-left" id="branchPrevious"
+          aria-label="Ver sucursales anteriores">
+          ←
+        </button>
+
+        <div class="branch-carousel" id="branchCarousel">
+
+<!-- SUCURSAL: AGUASCALIENTES PONIENTE -->
+<article
+  class="branch-card"
+  data-state="Aguascalientes"
+  data-services="refacciones"
+>
+  <div class="branch-map">
+    <iframe
+      title="Mapa Aguascalientes Poniente"
+      src="https://www.google.com/maps?q=Av.%20Aguascalientes%20Poniente%20402%20Aguascalientes&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <span class="branch-map-label">
+      AGUASCALIENTES
+    </span>
+  </div>
+
+  <div class="branch-services">
+    <span>REFACCIONES</span>
+    <span>TRP</span>
+  </div>
+
+  <div class="branch-card-content">
+    <div class="branch-brand-list">
+      <span>KENWORTH</span>
+      <span class="daf">DAF</span>
+    </div>
+
+    <small>SUCURSAL</small>
+
+    <h3>Aguascalientes Poniente</h3>
+
+    <p class="branch-address">
+      Av. Aguascalientes Poniente No. 402,
+      Fracc. del Valle II, C.P. 20089,
+      Aguascalientes, Ags.
+    </p>
+
+    <a
+      class="branch-phone"
+      href="tel:+524499295389"
+    >
+      <span>☎</span>
+      449 929 5389
+    </a>
+
+    <a
+      class="branch-directions"
+      href="https://www.google.com/maps?ftid=0x8429ee5951852c2b:0x58ee485e2bf4c621"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Cómo llegar
+      <span>↗</span>
+    </a>
+
+    <button
+      type="button"
+      class="branch-details-button"
+      data-branch="Aguascalientes Poniente"
+    >
+      Ver información
+    </button>
+  </div>
+</article>
+
+
+<!-- SUCURSAL: AGUASCALIENTES NORTE -->
+<article
+  class="branch-card"
+  data-state="Aguascalientes"
+  data-services="unidades servicio refacciones"
+>
+  <div class="branch-map">
+    <iframe
+      title="Mapa Aguascalientes Norte"
+      src="https://www.google.com/maps?q=Blvd.%20Aguascalientes%20Norte%20901%20Aguascalientes&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <span class="branch-map-label">
+      AGUASCALIENTES
+    </span>
+  </div>
+
+  <div class="branch-services">
+    <span>UNIDADES</span>
+    <span>SERVICIO</span>
+    <span>REFACCIONES</span>
+  </div>
+
+  <div class="branch-card-content">
+    <div class="branch-brand-list">
+      <span>KENWORTH</span>
+      <span class="daf">DAF</span>
+    </div>
+
+    <small>SUCURSAL</small>
+
+    <h3>Aguascalientes Norte</h3>
+
+    <p class="branch-address">
+      Blvd. Aguascalientes Norte No. 901,
+      Fracc. Constitución, C.P. 20126,
+      Aguascalientes, Ags.
+    </p>
+
+    <a
+      class="branch-phone"
+      href="tel:+524499125155"
+    >
+      <span>☎</span>
+      449 912 5155
+    </a>
+
+    <a
+      class="branch-directions"
+      href="https://www.google.com/maps?ftid=0x85d1ff3e237bdb43:0xea19405482f9cbab"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Cómo llegar
+      <span>↗</span>
+    </a>
+
+    <button
+      type="button"
+      class="branch-details-button"
+      data-branch="Aguascalientes Norte"
+    >
+      Ver información
+    </button>
+  </div>
+</article>
+
+
+<!-- SUCURSAL: AGUASCALIENTES SUR -->
+<article
+  class="branch-card"
+  data-state="Aguascalientes"
+  data-services="servicio"
+>
+  <div class="branch-map">
+    <iframe
+      title="Mapa Aguascalientes Sur"
+      src="https://www.google.com/maps?q=Carretera%20Panamericana%20Sur%20Km%2012%20Vista%20Alegre%20Aguascalientes&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <span class="branch-map-label">
+      AGUASCALIENTES
+    </span>
+  </div>
+
+  <div class="branch-services">
+    <span>SERVICIO</span>
+  </div>
+
+  <div class="branch-card-content">
+    <div class="branch-brand-list">
+      <span>KENWORTH</span>
+      <span class="daf">DAF</span>
+    </div>
+
+    <small>SUCURSAL</small>
+
+    <h3>Aguascalientes Sur</h3>
+
+    <p class="branch-address">
+      Carretera Panamericana Sur Km. 12,
+      Col. Vista Alegre, C.P. 20290,
+      Aguascalientes, Ags.
+    </p>
+
+    <a
+      class="branch-phone"
+      href="tel:+524499295386"
+    >
+      <span>☎</span>
+      449 929 5386
+    </a>
+
+    <a
+      class="branch-directions"
+      href="https://www.google.com/maps?ftid=0x8429ef16a69fcc79:0xeba0c423fc1fead6"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Cómo llegar
+      <span>↗</span>
+    </a>
+
+    <button
+      type="button"
+      class="branch-details-button"
+      data-branch="Aguascalientes Sur"
+    >
+      Ver información
+    </button>
+  </div>
+</article>
+
+
+<!-- SUCURSAL: MATRIZ COMANJILLA -->
+<article
+  class="branch-card"
+  data-state="Guanajuato"
+  data-services="unidades servicio refacciones carroceria"
+>
+  <div class="branch-map">
+    <iframe
+      title="Mapa Matriz Comanjilla"
+      src="https://www.google.com/maps?q=Blvd.%20Aeropuerto%205017%20Los%20Sauces%20Leon%20Guanajuato&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <span class="branch-map-label">
+      GUANAJUATO
+    </span>
+  </div>
+
+  <div class="branch-services">
+    <span>UNIDADES</span>
+    <span>SERVICIO</span>
+    <span>REFACCIONES</span>
+    <span>CARROCERÍA</span>
+  </div>
+
+  <div class="branch-card-content">
+    <div class="branch-brand-list">
+      <span>KENWORTH</span>
+      <span class="daf">DAF</span>
+    </div>
+
+    <small>MATRIZ</small>
+
+    <h3>Comanjilla</h3>
+
+    <p class="branch-address">
+      Blvd. Aeropuerto No. 5017,
+      Col. Los Sauces, C.P. 37680,
+      León, Gto.
+    </p>
+
+    <a
+      class="branch-phone"
+      href="tel:+524777199500"
+    >
+      <span>☎</span>
+      477 719 9500
+    </a>
+
+    <a
+      class="branch-directions"
+      href="https://maps.app.goo.gl/KMdVNjXuPkocWXVD8"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Cómo llegar
+      <span>↗</span>
+    </a>
+
+    <button
+      type="button"
+      class="branch-details-button"
+      data-branch="Comanjilla"
+    >
+      Ver información
+    </button>
+  </div>
+</article>
+
+
+<!-- SUCURSAL: LEÓN SUR -->
+<article
+  class="branch-card"
+  data-state="Guanajuato"
+  data-services="refacciones"
+>
+  <div class="branch-map">
+    <iframe
+      title="Mapa León Sur"
+      src="https://www.google.com/maps?q=Blvd.%20Hermanos%20Aldama%204003%20Leon%20Guanajuato&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <span class="branch-map-label">
+      GUANAJUATO
+    </span>
+  </div>
+
+  <div class="branch-services">
+    <span>REFACCIONES</span>
+  </div>
+
+  <div class="branch-card-content">
+    <div class="branch-brand-list">
+      <span>KENWORTH</span>
+      <span class="daf">DAF</span>
+    </div>
+
+    <small>SUCURSAL</small>
+
+    <h3>León Sur</h3>
+
+    <p class="branch-address">
+      Blvd. Hermanos Aldama No. 4003,
+      Ciudad Industrial, C.P. 37564,
+      León, Gto.
+    </p>
+
+    <a
+      class="branch-phone"
+      href="tel:+524777730090"
+    >
+      <span>☎</span>
+      477 773 0090
+    </a>
+
+    <a
+      class="branch-directions"
+      href="https://www.google.com/maps?ftid=0x842bb8cc5150bc29:0x4383698d7ff2158a"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Cómo llegar
+      <span>↗</span>
+    </a>
+
+    <button
+      type="button"
+      class="branch-details-button"
+      data-branch="León Sur"
+    >
+      Ver información
+    </button>
+  </div>
+</article>
+
+
+<!-- SUCURSAL: LEÓN NORTE -->
+<article
+  class="branch-card"
+  data-state="Guanajuato"
+  data-services="servicio"
+>
+  <div class="branch-map">
+    <iframe
+      title="Mapa León Norte"
+      src="https://www.google.com/maps?q=Av.%20Autotransporte%20406%20Leon%20Guanajuato&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <span class="branch-map-label">
+      GUANAJUATO
+    </span>
+  </div>
+
+  <div class="branch-services">
+    <span>SERVICIO</span>
+    <span>TALLER</span>
+  </div>
+
+  <div class="branch-card-content">
+    <div class="branch-brand-list">
+      <span>KENWORTH</span>
+      <span class="daf">DAF</span>
+    </div>
+
+    <small>TALLER ESPECIALIZADO</small>
+
+    <h3>León Norte</h3>
+
+    <p class="branch-address">
+      Av. Autotransporte No. 406,
+      Col. Fracción de los Gómez,
+      C.P. 37148, León, Gto.
+    </p>
+
+    <a
+      class="branch-phone"
+      href="tel:+524778087747"
+    >
+      <span>☎</span>
+      477 808 7747
+    </a>
+
+    <a
+      class="branch-directions"
+      href="https://www.google.com/maps?ftid=0x842bb8cc514fa435:0x580331f4d13e6166"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Cómo llegar
+      <span>↗</span>
+    </a>
+
+    <button
+      type="button"
+      class="branch-details-button"
+      data-branch="León Norte"
+    >
+      Ver información
+    </button>
+  </div>
+</article>
+
+        </div>
+
+        <button type="button" class="branch-arrow branch-arrow-right" id="branchNext"
+          aria-label="Ver siguientes sucursales">
+          →
+        </button>
+
+      </div>
+
+      <!-- Indicadores inferiores -->
+      <div class="branch-pagination" 
+      id="branchPagination" 
+      aria-label="Posición del carrusel">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <p
+  class="branch-empty-message"
+  id="branchEmptyMessage"
+  role="status"
+  aria-live="polite"
+  hidden
+>
+  No encontramos sucursales con los filtros seleccionados.
+  Prueba con otro estado o servicio.
+</p>
+
+    </section>
+
+    <elevenlabs-convai agent-id="agent_1401m00renzbe8rresqqw6jca12k"></elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+  </main>
+
+  <footer id="contacto">
+<a
+  class="footer-logo"
+  href="#inicio"
+  aria-label="Volver al inicio de KENWORTH DAF BACE"
+>
+  <img
+    src="assets/images/logos/logo-kenworth-daf-bace.PNG"
+    alt="KENWORTH DAF BACE"
+    class="footer-logo-image"
+    width="240"
+    height="70"
+  >
+</a>
+    <div><b>Soluciones</b><a href="#modelos">Unidades nuevas</a><a href="#inventario">Seminuevos</a><a
+        href="#servicios">Servicio</a><a href="#cotizar">Refacciones</a></div>
+    <div><b>Grupo BACE</b><a href="#sucursales">Sucursales</a><a href="#contacto">Nosotros</a><a href="#contacto">Bolsa
+        de trabajo</a><a href="#contacto">Aviso de privacidad</a></div>
+    <div class="footer-cta"><small>¿LISTO PARA AVANZAR?</small><button class="js-quote">Cotiza tu unidad
+        <span>↗</span></button></div>
+    <p class="copyright">© 2026 KENWORTH DAF BACE · Propuesta conceptual para revisión</p>
+  </footer>
+  <!-- PERSONALIZAR: coloca el enlace real de WhatsApp en script.js -->
+
+  <a class="whatsapp" id="whatsapp" href="#" target="_blank" rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp" title="Contactar por WhatsApp">
+    <svg class="whatsapp-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path fill="currentColor"
+        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.068 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.926-7.926a7.9 7.9 0 0 0-2.323-5.611M7.994 14.521a6.56 6.56 0 0 1-3.357-.92l-.24-.144-2.494.654.666-2.433-.156-.25a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.591-6.591 6.591m3.615-4.934c-.197-.099-1.17-.578-1.353-.642-.18-.066-.314-.099-.445.099-.133.197-.51.642-.625.775-.115.133-.23.148-.428.05-.197-.1-.836-.308-1.592-.985-.59-.525-.986-1.173-1.101-1.372-.115-.197-.013-.304.085-.402.09-.088.197-.23.296-.345.1-.115.133-.197.197-.33.066-.133.033-.25-.016-.345-.05-.099-.445-1.07-.61-1.47-.16-.385-.323-.332-.445-.34l-.378-.006a.72.72 0 0 0-.527.247c-.181.197-.691.675-.691 1.646s.708 1.91.806 2.043c.1.133 1.394 2.128 3.376 2.984.47.205.84.326 1.126.417.475.15.907.129 1.249.078.38-.058 1.17-.48 1.336-.942.164-.462.164-.857.115-.943-.049-.082-.18-.131-.38-.23" />
+    </svg>
+  </a>
+
+<!-- ========================================================
+     KENWORTH FANS · TIENDA LATERAL
+     Colocar antes del cierre </body>
+
+<!-- CINTILLA LATERAL -->
+<button
+  class="kwfans-tab"
+  id="kwfansOpen"
+  type="button"
+  aria-label="Abrir tienda Kenworth Fans"
+  aria-controls="kwfansStore"
+  aria-expanded="false"
+>
+  <!-- Icono de bolsa -->
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 8H19L18 21H6L5 8Z"
+      stroke="currentColor"
+      stroke-width="1.8"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M9 9V6C9 4.34 10.34 3 12 3C13.66 3 15 4.34 15 6V9"
+      stroke="currentColor"
+      stroke-width="1.8"
+      stroke-linecap="round"
+    />
+  </svg>
+
+  <strong>KW FANS</strong>
+</button>
+
+<!-- FONDO OSCURO -->
+<div
+  class="kwfans-overlay"
+  id="kwfansOverlay"
+  aria-hidden="true"
+></div>
+
+<!-- ========================================================
+     PANEL DE LA TIENDA
+     ======================================================== -->
+
+<aside
+  class="kwfans-store"
+  id="kwfansStore"
+  aria-label="Tienda oficial Kenworth Fans"
+  aria-hidden="true"
+>
+  <!-- ENCABEZADO -->
+  <header class="kwfans-store-header">
+    <div>
+      <small>Tienda oficial · Grupo BACE</small>
+
+      <h2>
+        Kenworth <span>Fans</span>
+      </h2>
+    </div>
+
+    <button
+      class="kwfans-close"
+      id="kwfansClose"
+      type="button"
+      aria-label="Cerrar tienda"
+    >
+      ×
+    </button>
+  </header>
+
+  <!-- CONTENIDO CON SCROLL -->
+  <div class="kwfans-store-body">
+    <!-- INTRODUCCIÓN -->
+    <section class="kwfans-intro">
+      <small>Merch oficial</small>
+
+      <p>
+        Lleva contigo la pasión por Kenworth, DAF y Grupo BACE.
+        Conoce nuestra colección de productos oficiales.
+      </p>
+
+      <div class="kwfans-benefits">
+        <span>✓ Productos oficiales</span>
+        <span>✓ Atención personalizada</span>
+      </div>
+    </section>
+
+    <!-- FILTROS -->
+    <nav
+      class="kwfans-categories"
+      aria-label="Categorías de productos"
+    >
+      <button
+        class="active"
+        type="button"
+        data-kwfans-category="todos"
+        aria-pressed="true"
+      >
+        Todo
+      </button>
+
+      <button
+        type="button"
+        data-kwfans-category="ropa"
+        aria-pressed="false"
+      >
+        Ropa
+      </button>
+
+      <button
+        type="button"
+        data-kwfans-category="accesorios"
+        aria-pressed="false"
+      >
+        Accesorios
+      </button>
+
+      <button
+        type="button"
+        data-kwfans-category="coleccion"
+        aria-pressed="false"
+      >
+        Colección
+      </button>
+    </nav>
+
+    <!-- ====================================================
+         PRODUCTOS
+         ==================================================== -->
+
+    <section
+      class="kwfans-products"
+      aria-label="Productos Kenworth Fans"
+    >
+      <!-- PRODUCTO 01 · PLAYERA -->
+      <article
+        class="kwfans-product"
+        data-kwfans-product="ropa"
+      >
+        <div class="kwfans-product-media">
+          <span class="kwfans-badge">Nuevo</span>
+
+          <img
+            src="assets/images/kwfans/playera-kw.png"
+            alt="Playera oficial Kenworth"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="kwfans-product-info">
+          <span class="kwfans-product-category">
+            Ropa · Kenworth
+          </span>
+
+          <h3>Playera Kenworth</h3>
+
+          <p class="kwfans-product-description">
+            Playera oficial de algodón con diseño Kenworth.
+            Disponible en diferentes tallas.
+          </p>
+
+          <div class="kwfans-product-footer">
+            <strong class="kwfans-price">
+              $450
+              <small>MXN</small>
+            </strong>
+
+            <button
+              type="button"
+              data-kwfans-add
+              data-name="Playera Kenworth"
+              data-price="450"
+              aria-label="Agregar Playera Kenworth"
+              title="Agregar al carrito"
+            >
+              ＋
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTO 02 · GORRA -->
+      <article
+        class="kwfans-product"
+        data-kwfans-product="accesorios"
+      >
+        <div class="kwfans-product-media">
+          <img
+            src="assets/images/kwfans/gorra-bace.png"
+            alt="Gorra oficial Grupo BACE"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="kwfans-product-info">
+          <span class="kwfans-product-category">
+            Accesorios · BACE
+          </span>
+
+          <h3>Gorra BACE</h3>
+
+          <p class="kwfans-product-description">
+            Gorra ajustable con identidad oficial de Grupo BACE.
+          </p>
+
+          <div class="kwfans-product-footer">
+            <strong class="kwfans-price">
+              $380
+              <small>MXN</small>
+            </strong>
+
+            <button
+              type="button"
+              data-kwfans-add
+              data-name="Gorra BACE"
+              data-price="380"
+              aria-label="Agregar Gorra BACE"
+              title="Agregar al carrito"
+            >
+              ＋
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTO 03 · MINIATURA -->
+      <article
+        class="kwfans-product"
+        data-kwfans-product="coleccion"
+      >
+        <div class="kwfans-product-media">
+          <span class="kwfans-badge">
+            Edición especial
+          </span>
+
+          <img
+            src="assets/images/kwfans/daf - miniatura.png"
+            alt="Camión DAF de colección"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="kwfans-product-info">
+          <span class="kwfans-product-category">
+            Coleccionable · DAF
+          </span>
+
+          <h3>Miniatura DAF</h3>
+
+          <p class="kwfans-product-description">
+            Camión DAF de colección con acabados detallados.
+          </p>
+
+          <div class="kwfans-product-footer">
+            <strong class="kwfans-price">
+              $690
+              <small>MXN</small>
+            </strong>
+
+            <button
+              type="button"
+              data-kwfans-add
+              data-name="Miniatura Kenworth"
+              data-price="690"
+              aria-label="Agregar Miniatura Kenworth"
+              title="Agregar al carrito"
+            >
+              
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTO 04 · TERMO -->
+      <article
+        class="kwfans-product"
+        data-kwfans-product="accesorios"
+      >
+        <div class="kwfans-product-media">
+          <img
+            src="assets/images/kwfans/termo - daf.png"
+            alt="Termo oficial DAF"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="kwfans-product-info">
+          <span class="kwfans-product-category">
+            Accesorios · DAF
+          </span>
+
+          <h3>Termo DAF</h3>
+
+          <p class="kwfans-product-description">
+            Termo reutilizable con diseño DAF para acompañarte
+            en cada recorrido.
+          </p>
+
+          <div class="kwfans-product-footer">
+            <strong class="kwfans-price">
+              $320
+              <small>MXN</small>
+            </strong>
+
+            <button
+              type="button"
+              data-kwfans-add
+              data-name="Termo DAF"
+              data-price="320"
+              aria-label="Agregar Termo DAF"
+              title="Agregar al carrito"
+            >
+              
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTO 05 · CHAMARRA -->
+      <article
+        class="kwfans-product"
+        data-kwfans-product="ropa"
+      >
+        <div class="kwfans-product-media">
+          <img
+            src="assets/images/kwfans/chamarra - kw.png"
+            alt="Chamarra oficial Kenworth"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="kwfans-product-info">
+          <span class="kwfans-product-category">
+            Ropa · Kenworth
+          </span>
+
+          <h3>Chamarra Kenworth</h3>
+
+          <p class="kwfans-product-description">
+            Chamarra ligera con diseño oficial Kenworth.
+          </p>
+
+          <div class="kwfans-product-footer">
+            <strong class="kwfans-price">
+              $1,190
+              <small>MXN</small>
+            </strong>
+
+            <button
+              type="button"
+              data-kwfans-add
+              data-name="Chamarra Kenworth"
+              data-price="1190"
+              aria-label="Agregar Chamarra Kenworth"
+              title="Agregar al carrito"
+            >
+              ＋
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTO 06 · LLAVERO -->
+      <article
+        class="kwfans-product"
+        data-kwfans-product="coleccion"
+      >
+        <div class="kwfans-product-media">
+          <img
+            src="assets/images/kwfans/llavero-kw.png"
+            alt="Llavero oficial Grupo BACE"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="kwfans-product-info">
+          <span class="kwfans-product-category">
+            Coleccionable · BACE
+          </span>
+
+          <h3>Llavero BACE</h3>
+
+          <p class="kwfans-product-description">
+            Llavero metálico con identidad de Grupo BACE.
+          </p>
+
+          <div class="kwfans-product-footer">
+            <strong class="kwfans-price">
+              $180
+              <small>MXN</small>
+            </strong>
+
+            <button
+              type="button"
+              data-kwfans-add
+              data-name="Llavero BACE"
+              data-price="180"
+              aria-label="Agregar Llavero BACE"
+              title="Agregar al carrito"
+            >
+              ＋
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <!-- ======================================================
+       RESUMEN DEL CARRITO
+       Permanece visible al pie del panel
+       ====================================================== -->
+
+  <footer class="kwfans-cart">
+    <div class="kwfans-cart-summary">
+      <small>
+        <span id="kwfansCartCount">0</span>
+        productos
+      </small>
+
+      <strong
+        class="kwfans-cart-total"
+        id="kwfansCartTotal"
+      >
+        $0 MXN
+      </strong>
+    </div>
+
+    <button
+      class="kwfans-checkout"
+      id="kwfansCheckout"
+      type="button"
+      disabled
+      aria-disabled="true"
+    >
+      <span>Solicitar pedido</span>
+      <span aria-hidden="true">↗</span>
+    </button>
+  </footer>
+</aside>
+
+  <!-- ======================================================
+       CONTROL DEL FORMULARIO PASO A PASO
+       Mantiene visible únicamente el paso activo.
+       ====================================================== -->
+  <script>
+    (() => {
+      "use strict";
+
+      const form = document.querySelector("#quoteForm");
+      const success = document.querySelector("#success");
+      const restart = document.querySelector("#restart");
+      const quoteCard = document.querySelector(".quote-card");
+
+      if (!form || !success || !quoteCard) return;
+
+      const steps = [...form.querySelectorAll(".form-step")];
+      const progressSteps = [...document.querySelectorAll("[data-progress-step]")];
+      let currentStep = 1;
+
+      function fieldsForStep(stepNumber) {
+        return [...steps[stepNumber - 1].querySelectorAll("input, select, textarea")];
+      }
+
+      function validateStep(stepNumber) {
+        const fields = fieldsForStep(stepNumber);
+
+        for (const field of fields) {
+          if (!field.checkValidity()) {
+            field.reportValidity();
+            field.focus();
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      function showStep(stepNumber, moveFocus = true) {
+        currentStep = Math.min(Math.max(stepNumber, 1), steps.length);
+
+        steps.forEach((step, index) => {
+          const active = index + 1 === currentStep;
+          step.hidden = !active;
+          step.classList.toggle("active", active);
+        });
+
+        progressSteps.forEach((indicator, index) => {
+          const completed = index + 1 <= currentStep;
+          const active = index + 1 === currentStep;
+
+          indicator.classList.toggle("done", completed);
+
+          if (active) {
+            indicator.setAttribute("aria-current", "step");
+          } else {
+            indicator.removeAttribute("aria-current");
+          }
+        });
+
+        if (moveFocus) {
+          steps[currentStep - 1].querySelector("h3")?.setAttribute("tabindex", "-1");
+          steps[currentStep - 1].querySelector("h3")?.focus();
+        }
+      }
+
+      form.addEventListener("click", (event) => {
+        const nextButton = event.target.closest(".next");
+        const backButton = event.target.closest(".back");
+
+        if (nextButton) {
+          if (validateStep(currentStep)) showStep(currentStep + 1);
+          return;
+        }
+
+        if (backButton) showStep(currentStep - 1);
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!validateStep(currentStep)) return;
+
+        form.hidden = true;
+        quoteCard.querySelector(".progress").hidden = true;
+        success.hidden = false;
+        success.querySelector("h3")?.setAttribute("tabindex", "-1");
+        success.querySelector("h3")?.focus();
+      });
+
+      restart?.addEventListener("click", () => {
+        form.reset();
+        form.hidden = false;
+        quoteCard.querySelector(".progress").hidden = false;
+        success.hidden = true;
+        showStep(1);
+      });
+
+      document.querySelectorAll(".js-quote").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelector("#cotizar")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        });
+      });
+
+      const menuButton = document.querySelector("#menuButton");
+      const navLinks = document.querySelector("#navLinks");
+
+      menuButton?.addEventListener("click", () => {
+        const open = navLinks?.classList.toggle("open");
+        menuButton.setAttribute("aria-expanded", String(Boolean(open)));
+      });
+
+      navLinks?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          menuButton?.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      showStep(1, false);
+    })();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

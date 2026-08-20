@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Catálogo de unidades seminuevas BACE.">
+  <title>Seminuevos BACE | Tu próxima unidad</title>
+
+    <!-- Icono de la pestaña del navegador -->
+<link
+  rel="icon"
+  type="image/png"
+  href="assets/images/logos/LOGO BACE.png"
+>
+
+<link
+  rel="shortcut icon"
+  type="image/png"
+  href="assets/images/logos/LOGO BACE.png"
+>
+
+<link
+  rel="apple-touch-icon"
+  href="assets/images/logos/LOGO BACE.png"
+>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/pages/seminuevos.css">
+</head>
+<body>
+
+  <header class="nav-shell">
+  <a
+    class="brand brand-seminuevos"
+    href="index.html"
+    aria-label="Kenworth DAF BACE Seminuevos"
+  >
+    <img
+      src="assets/images/logos/logo-kenworth-daf-bace.PNG"
+      alt="Kenworth DAF BACE"
+    >
+
+    <i>SEMINUEVOS</i>
+  </a>
+
+  <nav id="mainNav">
+    <a href="#inventario">Comprar</a>
+    <a href="#metodo">Por qué BACE</a>
+    <a href="#vender">Vender mi unidad</a>
+    <a href="#asesor">Contacto</a>
+  </nav>
+
+  <div class="nav-actions">
+    <a href="#asesor">
+      Encuentra mi camión
+    </a>
+  </div>
+
+  <button
+    class="hamburger"
+    id="menuButton"
+    type="button"
+    aria-label="Abrir menú"
+    aria-controls="mainNav"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+</header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy"><div class="overline">SEMINUEVOS · KENWORTH DEL BAJÍO</div><h1>El camión correcto<br>cambia <em>todo.</em></h1><p>No estás buscando cualquier unidad. Estás buscando la que llegue a tiempo, produzca desde el primer día y tenga una red detrás.</p><div class="hero-buttons"><a href="#inventario">Ver inventario <span>→</span></a><a href="#asesor">Que un asesor lo busque</a></div><div class="hero-proof"><span><b id="unitTotal">3</b> unidades destacadas</span><span><b>12+</b> puntos de atención</span><span><b>1</b> red BACE</span></div></div>
+      <div class="hero-visual"><div class="red-block"></div><img src="https://kwbace.com.mx/wp-content/uploads/2025/11/T680-4-1024x984.png" alt="Kenworth T680 seminuevo"><div class="hero-card"><small>UNIDAD DESTACADA</small><b>KENWORTH T680</b><span>2025 · 11,800 km</span><button type="button" data-open-unit="1">Conocer unidad →</button></div><div class="vertical">HECHO PARA SEGUIR</div></div>
+    </section>
+
+    <section class="finder"><div><span>01</span><b>¿Qué necesitas mover?</b></div><button type="button" data-category="Carretera">Carretera <small>Larga distancia</small></button><button type="button" data-category="Vocacional">Trabajo pesado <small>Construcción y carga</small></button><button class="active" type="button" data-category="Todos">Ver todos <small>Inventario completo</small></button><a href="#inventario">Explorar →</a></section>
+
+    <section class="inventory" id="inventario">
+      <div class="section-title"><div><span>CATÁLOGO BACE</span><h2>Encuentra el que<br><em>trabaje contigo.</em></h2></div><p>Información directa, herramientas para comparar y un asesor listo para ayudarte a decidir.</p></div>
+      <div class="toolbar"><label><span>⌕</span><input id="searchInput" type="search" placeholder="Busca T680, T880, año o ciudad"></label><div class="pills"><button class="active" type="button" data-filter="Todos">Todos</button><button type="button" data-filter="Carretera">Carretera</button><button type="button" data-filter="Vocacional">Vocacional</button></div><select id="sortSelect" aria-label="Ordenar inventario"><option value="year">Año más reciente</option><option value="km">Menor kilometraje</option></select></div>
+      <div class="inventory-meta"><b><span id="resultCount">0</span> resultados</b><span>Actualizado · Inventario sujeto a disponibilidad</span></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="method" id="metodo"><div class="method-intro"><span>LA DIFERENCIA BACE</span><h2>Comprar seminuevo<br>sin comprar <em>dudas.</em></h2><p>Diseñamos una experiencia para que puedas revisar, comparar y avanzar acompañado. BACE Plus representa esa forma más clara de comprar.</p><a href="#asesor">Hablar con un especialista →</a></div><div class="method-list"><article><b>01</b><div><h3>Información que sirve</h3><p>Configuración, kilometraje y ubicación visibles desde el primer momento.</p></div><span>DATOS</span></article><article><b>02</b><div><h3>Decisión acompañada</h3><p>Un especialista entiende tu ruta, carga y operación antes de recomendar.</p></div><span>ASESORÍA</span></article><article><b>03</b><div><h3>Una red después de comprar</h3><p>Sucursales, servicio y refacciones BACE para mantener tu negocio en movimiento.</p></div><span>RESPALDO</span></article></div></section>
+
+    <section class="sell" id="vender"><div class="sell-visual"><img src="https://kwbace.com.mx/wp-content/uploads/2025/11/T880-2-903x1024.jpg" alt="Kenworth T880"><span>COMPRA · VENTA · RENOVACIÓN</span></div><div class="sell-copy"><span>TU UNIDAD TAMBIÉN CUENTA</span><h2>Es momento<br>de dar el <em>siguiente paso.</em></h2><p>Cuéntanos qué unidad tienes y qué buscas después. Revisamos la información y te contactamos para construir una propuesta.</p><div><a href="#asesor">Quiero vender mi unidad →</a><a href="#asesor">Quiero renovar mi flota</a></div></div></section>
+
+    <section class="advisor" id="asesor"><div><span>ASESORÍA BACE</span><h2>El siguiente kilómetro<br>empieza <em>aquí.</em></h2><p>Completa tus datos y un asesor especializado te ayudará a encontrar, comparar o vender una unidad.</p><div class="contact-proof"><b>Atención personal</b><b>Inventario real</b><b>Seguimiento directo</b></div></div><form id="contactForm"><label>Nombre<input required name="nombre" placeholder="Tu nombre completo"></label><label>WhatsApp<input required name="telefono" type="tel" placeholder="477 000 0000"></label><label>Correo<input name="correo" type="email" placeholder="nombre@empresa.com"></label><label>Me interesa<select name="interes" required><option value="">Selecciona una opción</option><option>Comprar una unidad</option><option>Vender mi unidad</option><option>Renovar mi flota</option><option>Opciones de financiamiento</option></select></label><button>Quiero que me contacten <span>→</span></button><small>Al enviar aceptas el aviso de privacidad.</small><p class="form-message" id="formMessage" role="status"></p></form></section>
+  </main>
+
+<footer class="seminuevos-footer">
+  <div class="seminuevos-footer-main">
+
+    <!-- LOGOTIPO -->
+
+    <div class="seminuevos-footer-identity">
+      <a
+        class="footer-brand-seminuevos"
+        href="#inicio"
+        aria-label="Kenworth DAF BACE Seminuevos"
+      >
+        <img
+          src="assets/images/logos/logo-kenworth-daf-bace.PNG"
+          alt="Kenworth DAF BACE"
+        >
+
+        <span>SEMINUEVOS</span>
+      </a>
+
+      <p>
+        Camiones que mueven a México.
+      </p>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+
+    <nav
+      class="seminuevos-footer-navigation"
+      aria-label="Navegación del pie de página"
+    >
+      <a href="#inventario">Inventario</a>
+      <a href="#metodo">BACE Plus</a>
+      <a href="#vender">Vende tu unidad</a>
+      <a href="#asesor">Contacto</a>
+    </nav>
+  </div>
+
+  <div class="seminuevos-footer-bottom">
+    <p>
+      © 2026 Kenworth DAF BACE
+    </p>
+
+    <span>
+      Seminuevos · Calidad y respaldo para seguir avanzando
+    </span>
+  </div>
+</footer>
+
+  <div class="compare-bar" id="compareBar" hidden><span><b id="compareCount">0</b> de 2 unidades</span><div id="compareItems"></div><button type="button" id="compareButton">Comparar ahora →</button><button type="button" id="clearCompare" aria-label="Limpiar comparación">×</button></div>
+  <div class="modal" id="unitModal" hidden><article role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close" type="button" id="closeModal" aria-label="Cerrar">×</button><div class="modal-photo"><img id="modalImage" alt=""><span id="modalLabel"></span></div><div class="modal-info"><span>KENWORTH · SEMINUEVO</span><h2 id="modalTitle"></h2><div class="modal-km" id="modalKm"></div><dl id="modalSpecs"></dl><a href="#asesor" id="quoteLink">Solicitar precio y disponibilidad →</a><small>Datos y disponibilidad por confirmar con un asesor.</small></div></article></div>
+  <script src="assets/js/pages/seminuevos.js"></script>
+</body>
+</html>
