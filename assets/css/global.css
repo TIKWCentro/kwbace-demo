@@ -1,0 +1,182 @@
+/* =========================================================
+   KENWORTH DAF BACE
+   CONFIGURACIÓN GLOBAL
+   ========================================================= */
+
+/* Reinicio básico */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--color-fondo);
+  color: var(--color-negro);
+  font-family: var(--fuente-principal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Elementos generales */
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  transition:
+    color var(--transicion-rapida),
+    background-color var(--transicion-rapida),
+    border-color var(--transicion-rapida),
+    opacity var(--transicion-rapida),
+    transform var(--transicion-rapida),
+    box-shadow var(--transicion-rapida);
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Tipografía */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+em {
+  font-family: var(--fuente-editorial);
+  font-weight: 400;
+}
+
+/* Contenedor general */
+
+.container {
+  width: min(
+    calc(100% - (var(--espacio-md) * 2)),
+    var(--ancho-contenido)
+  );
+  margin-inline: auto;
+}
+
+/* Ocultar elementos accesiblemente */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Bloqueo cuando está abierto el menú móvil */
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Estados de enfoque accesibles */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-rojo);
+  outline-offset: 3px;
+}
+
+/* Selección de texto */
+
+::selection {
+  background: var(--color-rojo);
+  color: var(--color-blanco);
+}
+
+/* Barra de desplazamiento */
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-carbon);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-rojo);
+  border: 3px solid var(--color-carbon);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rojo-claro);
+}
+
+/* Respeta las preferencias de accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

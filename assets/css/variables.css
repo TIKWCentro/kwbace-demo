@@ -1,0 +1,71 @@
+/* =========================================================
+   KENWORTH DAF BACE
+   VARIABLES GLOBALES DEL SITIO
+   ========================================================= */
+
+:root {
+  /* Colores principales */
+  --color-negro: #0b0d0e;
+  --color-carbon: #15181a;
+  --color-rojo: #c4122f;
+  --color-rojo-claro: #e01b3f;
+  --color-azul-daf: #0067a8;
+
+  /* Colores de superficies */
+  --color-fondo: #f4f2ed;
+  --color-blanco: #ffffff;
+  --color-gris-claro: #d7d5cf;
+  --color-gris: #6e7274;
+  --color-gris-oscuro: #3b3f41;
+
+  /* Colores transparentes */
+  --blanco-10: rgba(255, 255, 255, 0.1);
+  --blanco-20: rgba(255, 255, 255, 0.2);
+  --blanco-40: rgba(255, 255, 255, 0.4);
+  --negro-20: rgba(0, 0, 0, 0.2);
+  --negro-40: rgba(0, 0, 0, 0.4);
+
+  /* Tipografías */
+  --fuente-principal: "DM Sans", Arial, sans-serif;
+  --fuente-mono: "DM Mono", monospace;
+  --fuente-editorial: Georgia, "Times New Roman", serif;
+
+  /* Tamaños máximos */
+  --ancho-contenido: 1240px;
+  --ancho-texto: 720px;
+
+  /* Espaciado */
+  --espacio-xs: 8px;
+  --espacio-sm: 16px;
+  --espacio-md: 24px;
+  --espacio-lg: 40px;
+  --espacio-xl: 64px;
+  --espacio-2xl: 96px;
+  --espacio-3xl: 128px;
+
+  /* Bordes */
+  --radio-sm: 4px;
+  --radio-md: 12px;
+  --radio-lg: 24px;
+  --radio-circular: 50%;
+
+  /* Sombras */
+  --sombra-suave: 0 12px 30px rgba(11, 13, 14, 0.14);
+  --sombra-media: 0 18px 50px rgba(11, 13, 14, 0.2);
+  --sombra-flotante: 0 12px 30px rgba(11, 13, 14, 0.3);
+
+  /* Transiciones */
+  --transicion-rapida: 0.2s ease;
+  --transicion-normal: 0.3s ease;
+  --transicion-lenta: 0.6s ease;
+
+  /* Capas */
+  --z-menu: 100;
+  --z-flotante: 90;
+  --z-modal: 200;
+
+  /* Alturas de navegación */
+  --altura-topbar: 34px;
+  --altura-menu: 78px;
+  --altura-menu-movil: 66px;
+}

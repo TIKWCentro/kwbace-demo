@@ -1,0 +1,242 @@
+/* =========================================================
+   KENWORTH DAF BACE
+   COMPONENTES REUTILIZABLES
+   ========================================================= */
+
+/* Etiqueta superior de las secciones */
+
+.eyebrow {
+  margin: 0 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d5d7d8;
+  font-family: var(--fuente-mono);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.eyebrow span {
+  flex-shrink: 0;
+  width: 30px;
+  height: 2px;
+  display: inline-block;
+  background: var(--color-rojo);
+}
+
+.eyebrow.dark {
+  color: #5c6163;
+}
+
+.eyebrow.light {
+  color: var(--color-blanco);
+}
+
+/* Encabezados generales de sección */
+
+.section {
+  padding: 115px 7vw;
+}
+
+.section-head {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.section-head > div:first-child {
+  max-width: var(--ancho-texto);
+}
+
+.section-head > p {
+  max-width: 400px;
+  margin-bottom: 0;
+  color: var(--color-gris);
+  line-height: 1.65;
+}
+
+.section-head.inverse > p {
+  color: #aeb2b3;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: clamp(42px, 4.6vw, 72px);
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+}
+
+.section-head h2 em {
+  font-family: var(--fuente-editorial);
+  font-weight: 400;
+}
+
+/* Botón con fondo blanco */
+
+.btn.light {
+  background: var(--color-blanco);
+  color: var(--color-negro);
+}
+
+.btn.light:hover {
+  background: var(--color-rojo);
+  color: var(--color-blanco);
+  transform: translateY(-2px);
+}
+
+/* Botón transparente */
+
+.btn.ghost {
+  border-color: rgba(255, 255, 255, 0.39);
+  background: transparent;
+  color: var(--color-blanco);
+}
+
+.btn.ghost:hover {
+  background: var(--color-blanco);
+  color: var(--color-negro);
+}
+
+/* Botón de ancho completo */
+
+.btn.full {
+  width: 100%;
+}
+
+/* Enlace subrayado */
+
+.text-link {
+  padding: 0 0 6px;
+  border: 0;
+  border-bottom: 1px solid #999;
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.text-link:hover {
+  border-color: var(--color-rojo);
+  color: var(--color-rojo);
+}
+
+.text-link.light-link {
+  border-color: var(--color-blanco);
+  color: var(--color-blanco);
+}
+
+/* Indicador animado */
+
+.pulse {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radio-circular);
+  background: var(--color-rojo);
+  box-shadow: 0 0 0 7px rgba(196, 18, 47, 0.11);
+}
+
+/* Botón flotante de WhatsApp */
+
+.whatsapp {
+  position: fixed;
+  z-index: var(--z-flotante);
+  right: 25px;
+  bottom: 178px;
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--radio-circular);
+  background: #25d366;
+  color: var(--color-blanco);
+  box-shadow:
+    var(--sombra-flotante),
+    0 0 0 0 rgba(37, 211, 102, 0.35);
+  cursor: pointer;
+  text-decoration: none;
+  animation: whatsapp-pulse 2.8s infinite;
+}
+
+.whatsapp:hover {
+  background: #1fbd5a;
+  color: var(--color-blanco);
+  box-shadow:
+    0 16px 38px rgba(11, 13, 14, 0.3),
+    0 0 0 9px rgba(37, 211, 102, 0.13);
+  transform: translateY(-4px) scale(1.04);
+  animation: none;
+}
+
+.whatsapp-icon,
+.whatsapp svg {
+  width: 29px;
+  height: 29px;
+  display: block;
+  fill: currentColor;
+}
+
+/* Animación de WhatsApp */
+
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow:
+      var(--sombra-flotante),
+      0 0 0 0 rgba(37, 211, 102, 0.38);
+  }
+
+  70% {
+    box-shadow:
+      var(--sombra-flotante),
+      0 0 0 13px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow:
+      var(--sombra-flotante),
+      0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Botón fijo de cotización para celular */
+
+.mobile-quote {
+  display: none;
+}
+
+/* Animaciones de entrada */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Mensajes generales */
+
+.message-success {
+  padding: var(--espacio-md);
+  border-left: 4px solid #188a5a;
+  background: rgba(24, 138, 90, 0.08);
+  color: #126c47;
+}
+
+.message-error {
+  padding: var(--espacio-md);
+  border-left: 4px solid var(--color-rojo);
+  background: rgba(196, 18, 47, 0.08);
+  color: var(--color-rojo);
+}

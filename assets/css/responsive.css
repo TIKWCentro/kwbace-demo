@@ -1,0 +1,248 @@
+/* =========================================================
+   KENWORTH DAF BACE
+   AJUSTES RESPONSIVE COMPARTIDOS
+   ========================================================= */
+
+/* =========================================================
+   TABLET Y PANTALLAS MEDIANAS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  /* Navegación */
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links > a:not(.btn) {
+    display: none;
+  }
+
+  /* Encabezados de sección */
+
+  .section-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  /* Footer */
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-logo {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+@media (max-width: 680px) {
+  /* Configuración general */
+
+  :root {
+    --espacio-pagina-movil: 22px;
+  }
+
+  .container {
+    width: calc(100% - 44px);
+  }
+
+  /* Barra superior */
+
+  .topbar {
+    display: none;
+  }
+
+  /* Navegación */
+
+  .nav {
+    height: var(--altura-menu-movil);
+    padding-inline: 20px;
+  }
+
+  .logo img {
+    max-width: 170px;
+    max-height: 46px;
+  }
+
+  .logo b {
+    font-size: 11px;
+  }
+
+  .logo small {
+    font-size: 7px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    z-index: var(--z-menu);
+    top: var(--altura-menu-movil);
+    right: 0;
+    left: 0;
+    max-height: calc(100svh - var(--altura-menu-movil));
+    padding: 25px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    overflow-y: auto;
+    background: #101214;
+    border-top: 1px solid var(--blanco-10);
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.28);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links > a:not(.btn) {
+    width: 100%;
+    padding: 14px 0;
+    display: block;
+    border-bottom: 1px solid var(--blanco-10);
+  }
+
+  .nav-links > a:not(.btn)::after {
+    bottom: -1px;
+  }
+
+  .nav-links > .btn {
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  /* Secciones compartidas */
+
+  .section {
+    padding: 78px var(--espacio-pagina-movil);
+  }
+
+  .section-head {
+    margin-bottom: 35px;
+  }
+
+  .section-head h2 {
+    font-size: 43px;
+  }
+
+  /* Footer */
+
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding:
+      70px
+      var(--espacio-pagina-movil)
+      190px;
+  }
+
+  .footer::before {
+    left: var(--espacio-pagina-movil);
+  }
+
+  .footer-logo {
+    grid-column: auto;
+  }
+
+  .footer-logo img {
+    max-width: 190px;
+    max-height: 70px;
+  }
+
+  .footer-column {
+    gap: 16px;
+  }
+
+  .footer-column a {
+    padding-block: 2px;
+  }
+
+  .footer-cta a,
+  .footer-cta button {
+    font-size: 16px;
+  }
+
+  .copyright {
+    grid-column: auto;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+
+  /* WhatsApp */
+
+  .whatsapp {
+    right: 17px;
+    bottom: 175px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .whatsapp-icon,
+  .whatsapp svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  /* Cotización fija */
+
+  .mobile-quote {
+    position: fixed;
+    z-index: calc(var(--z-flotante) - 1);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    display: block;
+    border: 0;
+    background: var(--color-rojo);
+    color: var(--color-blanco);
+    font-weight: 700;
+  }
+
+  .mobile-quote:hover {
+    background: var(--color-rojo-claro);
+  }
+}
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .logo img {
+    max-width: 145px;
+  }
+
+  .section-head h2 {
+    font-size: 38px;
+  }
+
+  .footer {
+    padding-inline: 18px;
+  }
+}
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
