@@ -1,147 +1,596 @@
 <!doctype html>
+
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Catálogo de unidades seminuevas BACE.">
-  <title>Seminuevos BACE | Tu próxima unidad</title>
-
+  <head>
+    <!-- IDENTIDAD 20261016-03: fuente Kenworth integrada, sin fuentes secundarias; superficies claras #f4f2ed. -->
+    <!-- IDENTIDAD VISUAL: fuente Kenworth local y beige #f4f2ed compartidos desde assets/css/global.css. -->
+    <!--
+ DEMO · KENWORTH DEL CENTRO
+ Seminuevos: inventario de ejemplo, filtros, favoritos, comparación y contacto local.
+ Estructura: global.css (base) → CSS de página → componentes compartidos.
+ JS: main.js (utilidades), components/nav.js (menú) y script específico.
+ Formularios de demostración: no existe servicio de recepción configurado.
+ GitHub Pages: subir el CONTENIDO de esta carpeta a la raíz del repositorio;
+ Settings → Pages → Deploy from a branch → main → / (root).
+ Conservar exactamente los nombres de archivos, carpetas y recursos.
+ No requiere npm, servidor de aplicaciones ni archivos nuevos.
+-->
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="Catálogo de unidades seminuevas BACE." name="description" />
+    <title>Seminuevos BACE | Tu próxima unidad</title>
     <!-- Icono de la pestaña del navegador -->
-<link
-  rel="icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="shortcut icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="apple-touch-icon"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/pages/seminuevos.css">
-</head>
-<body>
-
-  <header class="nav-shell">
-  <a
-    class="brand brand-seminuevos"
-    href="index.html"
-    aria-label="Kenworth DAF BACE Seminuevos"
-  >
-    <img
-      src="assets/images/logos/logo-kenworth-daf-bace.PNG"
-      alt="Kenworth DAF BACE"
-    >
-
-    <i>SEMINUEVOS</i>
-  </a>
-
-  <nav id="mainNav">
-    <a href="#inventario">Comprar</a>
-    <a href="#metodo">Por qué BACE</a>
-    <a href="#vender">Vender mi unidad</a>
-    <a href="#asesor">Contacto</a>
-  </nav>
-
-  <div class="nav-actions">
-    <a href="#asesor">
-      Encuentra mi camión
-    </a>
-  </div>
-
-  <button
-    class="hamburger"
-    id="menuButton"
-    type="button"
-    aria-label="Abrir menú"
-    aria-controls="mainNav"
-    aria-expanded="false"
-  >
-    ☰
-  </button>
-</header>
-
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero-copy"><div class="overline">SEMINUEVOS · KENWORTH DEL BAJÍO</div><h1>El camión correcto<br>cambia <em>todo.</em></h1><p>No estás buscando cualquier unidad. Estás buscando la que llegue a tiempo, produzca desde el primer día y tenga una red detrás.</p><div class="hero-buttons"><a href="#inventario">Ver inventario <span>→</span></a><a href="#asesor">Que un asesor lo busque</a></div><div class="hero-proof"><span><b id="unitTotal">3</b> unidades destacadas</span><span><b>12+</b> puntos de atención</span><span><b>1</b> red BACE</span></div></div>
-      <div class="hero-visual"><div class="red-block"></div><img src="https://kwbace.com.mx/wp-content/uploads/2025/11/T680-4-1024x984.png" alt="Kenworth T680 seminuevo"><div class="hero-card"><small>UNIDAD DESTACADA</small><b>KENWORTH T680</b><span>2025 · 11,800 km</span><button type="button" data-open-unit="1">Conocer unidad →</button></div><div class="vertical">HECHO PARA SEGUIR</div></div>
-    </section>
-
-    <section class="finder"><div><span>01</span><b>¿Qué necesitas mover?</b></div><button type="button" data-category="Carretera">Carretera <small>Larga distancia</small></button><button type="button" data-category="Vocacional">Trabajo pesado <small>Construcción y carga</small></button><button class="active" type="button" data-category="Todos">Ver todos <small>Inventario completo</small></button><a href="#inventario">Explorar →</a></section>
-
-    <section class="inventory" id="inventario">
-      <div class="section-title"><div><span>CATÁLOGO BACE</span><h2>Encuentra el que<br><em>trabaje contigo.</em></h2></div><p>Información directa, herramientas para comparar y un asesor listo para ayudarte a decidir.</p></div>
-      <div class="toolbar"><label><span>⌕</span><input id="searchInput" type="search" placeholder="Busca T680, T880, año o ciudad"></label><div class="pills"><button class="active" type="button" data-filter="Todos">Todos</button><button type="button" data-filter="Carretera">Carretera</button><button type="button" data-filter="Vocacional">Vocacional</button></div><select id="sortSelect" aria-label="Ordenar inventario"><option value="year">Año más reciente</option><option value="km">Menor kilometraje</option></select></div>
-      <div class="inventory-meta"><b><span id="resultCount">0</span> resultados</b><span>Actualizado · Inventario sujeto a disponibilidad</span></div>
-      <div class="product-grid" id="productGrid"></div>
-    </section>
-
-    <section class="method" id="metodo"><div class="method-intro"><span>LA DIFERENCIA BACE</span><h2>Comprar seminuevo<br>sin comprar <em>dudas.</em></h2><p>Diseñamos una experiencia para que puedas revisar, comparar y avanzar acompañado. BACE Plus representa esa forma más clara de comprar.</p><a href="#asesor">Hablar con un especialista →</a></div><div class="method-list"><article><b>01</b><div><h3>Información que sirve</h3><p>Configuración, kilometraje y ubicación visibles desde el primer momento.</p></div><span>DATOS</span></article><article><b>02</b><div><h3>Decisión acompañada</h3><p>Un especialista entiende tu ruta, carga y operación antes de recomendar.</p></div><span>ASESORÍA</span></article><article><b>03</b><div><h3>Una red después de comprar</h3><p>Sucursales, servicio y refacciones BACE para mantener tu negocio en movimiento.</p></div><span>RESPALDO</span></article></div></section>
-
-    <section class="sell" id="vender"><div class="sell-visual"><img src="https://kwbace.com.mx/wp-content/uploads/2025/11/T880-2-903x1024.jpg" alt="Kenworth T880"><span>COMPRA · VENTA · RENOVACIÓN</span></div><div class="sell-copy"><span>TU UNIDAD TAMBIÉN CUENTA</span><h2>Es momento<br>de dar el <em>siguiente paso.</em></h2><p>Cuéntanos qué unidad tienes y qué buscas después. Revisamos la información y te contactamos para construir una propuesta.</p><div><a href="#asesor">Quiero vender mi unidad →</a><a href="#asesor">Quiero renovar mi flota</a></div></div></section>
-
-    <section class="advisor" id="asesor"><div><span>ASESORÍA BACE</span><h2>El siguiente kilómetro<br>empieza <em>aquí.</em></h2><p>Completa tus datos y un asesor especializado te ayudará a encontrar, comparar o vender una unidad.</p><div class="contact-proof"><b>Atención personal</b><b>Inventario real</b><b>Seguimiento directo</b></div></div><form id="contactForm"><label>Nombre<input required name="nombre" placeholder="Tu nombre completo"></label><label>WhatsApp<input required name="telefono" type="tel" placeholder="477 000 0000"></label><label>Correo<input name="correo" type="email" placeholder="nombre@empresa.com"></label><label>Me interesa<select name="interes" required><option value="">Selecciona una opción</option><option>Comprar una unidad</option><option>Vender mi unidad</option><option>Renovar mi flota</option><option>Opciones de financiamiento</option></select></label><button>Quiero que me contacten <span>→</span></button><small>Al enviar aceptas el aviso de privacidad.</small><p class="form-message" id="formMessage" role="status"></p></form></section>
-  </main>
-
-<footer class="seminuevos-footer">
-  <div class="seminuevos-footer-main">
-
-    <!-- LOGOTIPO -->
-
-    <div class="seminuevos-footer-identity">
-      <a
-        class="footer-brand-seminuevos"
-        href="#inicio"
-        aria-label="Kenworth DAF BACE Seminuevos"
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="icon"
+      type="image/png"
+    />
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
+    <link href="assets/images/logos/LOGO BACE.png" rel="apple-touch-icon" />
+    <link href="assets/css/global.css?v=20261016-03" rel="stylesheet" />
+    <link
+      href="assets/css/components/footer.css?v=20261016-03"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/css/pages/seminuevos.css?v=20261016-03"
+      rel="stylesheet"
+    />
+    <link href="assets/css/components/nav.css?v=20261016-03" rel="stylesheet" />
+    <script defer="" src="assets/js/components/nav.js"></script>
+    <script defer="True" src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <div id="bace-nav"></div>
+    <main>
+      <!-- BLOQUE: inicio · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="hero" id="inicio">
+        <div class="hero-bg">
+          <img
+            alt="Seminuevos Kenworth DAF BACE"
+            decoding="async"
+            fetchpriority="high"
+            src="assets/images/Sucursales/h-Seminuevos2.png"
+          />
+        </div>
+        <div class="hero-content">
+          <h1>Seminuevos</h1>
+          <p class="hero-copy">KENWORTH DAF BACE</p>
+          <div class="hero-actions">
+            <a href="#inventario">
+              Ver inventario
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- BLOQUE: inventario · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="inventory" id="inventario">
+        <div class="section-title">
+          <div>
+            <span>CATÁLOGO BACE</span>
+            <h2>Encuentra el que<br /><em>trabaje contigo.</em></h2>
+          </div>
+          <p>
+            Información directa, herramientas para comparar y un asesor listo
+            para ayudarte a decidir.
+          </p>
+        </div>
+        <div class="toolbar">
+          <label
+            ><span>⌕</span
+            ><input
+              id="searchInput"
+              placeholder="Busca T680, T880, año o ciudad"
+              type="search"
+          /></label>
+          <div class="pills">
+            <button class="active" data-filter="Todos" type="button">
+              Todos</button
+            ><button data-filter="Carretera" type="button">Carretera</button
+            ><button data-filter="Vocacional" type="button">Vocacional</button>
+          </div>
+          <select aria-label="Ordenar inventario" id="sortSelect">
+            <option value="year">Año más reciente</option>
+            <option value="km">Menor kilometraje</option>
+          </select>
+        </div>
+        <div class="inventory-meta">
+          <b><span id="resultCount">0</span> resultados</b
+          ><span>Actualizado · Inventario sujeto a disponibilidad</span>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+      <!-- BLOQUE: entregas · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section
+        aria-labelledby="deliveriesTitle"
+        class="bace-deliveries"
+        id="entregas"
       >
-        <img
-          src="assets/images/logos/logo-kenworth-daf-bace.PNG"
-          alt="Kenworth DAF BACE"
-        >
-
-        <span>SEMINUEVOS</span>
-      </a>
-
-      <p>
-        Camiones que mueven a México.
-      </p>
+        <div class="bace-deliveries__inner">
+          <header class="bace-deliveries__header">
+            <div>
+              <p class="bace-deliveries__eyebrow">
+                ENTREGAS QUE GENERAN CONFIANZA
+              </p>
+              <h2 id="deliveriesTitle">
+                Cada entrega,<br />
+                <em>un nuevo camino.</em>
+              </h2>
+            </div>
+            <p class="bace-deliveries__intro">
+              Unidades entregadas y nuevos proyectos que comienzan. Conoce
+              algunas de las entregas realizadas por Kenworth DAF BACE.
+            </p>
+          </header>
+          <div class="bace-deliveries__gallery">
+            <!-- ENTREGA DESTACADA -->
+            <figure
+              class="bace-deliveries__card bace-deliveries__card--featured"
+            >
+              <a
+                aria-label="Ampliar fotografía de la entrega 01"
+                href="assets/images/seminuevos/entregas/entrega-01.jpg"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt="Entrega de una unidad seminueva Kenworth DAF BACE"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/images/seminuevos/entregas/entrega-01.jpg"
+                />
+              </a>
+              <figcaption>
+                <small>SEMINUEVOS · KENWORTH DAF BACE</small>
+                <h3>Una nueva etapa comienza.</h3>
+              </figcaption>
+            </figure>
+            <!-- ENTREGA 02 -->
+            <figure class="bace-deliveries__card">
+              <a
+                aria-label="Ampliar fotografía de la entrega 02"
+                href="assets/images/seminuevos/entregas/entrega-02.jpg"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt="Fotografía de una segunda entrega de unidad seminueva"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/images/seminuevos/entregas/entrega-02.jpg"
+                />
+              </a>
+              <figcaption>
+                <small>SEMINUEVOS BACE</small>
+                <h3>Listos para seguir avanzando.</h3>
+              </figcaption>
+            </figure>
+            <!-- ENTREGA 03 -->
+            <figure class="bace-deliveries__card">
+              <a
+                aria-label="Ampliar fotografía de la entrega 03"
+                href="assets/images/seminuevos/entregas/entrega-03.jpg"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  alt="Fotografía de una tercera entrega de unidad seminueva"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/images/seminuevos/entregas/entrega-03.jpg"
+                />
+              </a>
+              <figcaption>
+                <small>SEMINUEVOS BACE</small>
+                <h3>Más historias en movimiento.</h3>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="bace-deliveries__bottom">
+            <p>Tu próxima historia comienza aquí.</p>
+            <a href="#asesor">
+              Hablar con un asesor
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- BLOQUE: metodo · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="method" id="metodo">
+        <div class="method-intro">
+          <span>LA DIFERENCIA BACE</span>
+          <h2>Comprar seminuevo<br />sin comprar <em>dudas.</em></h2>
+          <p>
+            Diseñamos una experiencia para que puedas revisar, comparar y
+            avanzar acompañado. BACE Plus representa esa forma más clara de
+            comprar.
+          </p>
+          <a href="#asesor">Hablar con un especialista →</a>
+        </div>
+        <div class="method-list">
+          <article>
+            <b>01</b>
+            <div>
+              <h3>Información que sirve</h3>
+              <p>
+                Configuración, kilometraje y ubicación visibles desde el primer
+                momento.
+              </p>
+            </div>
+            <span>DATOS</span>
+          </article>
+          <article>
+            <b>02</b>
+            <div>
+              <h3>Decisión acompañada</h3>
+              <p>
+                Un especialista entiende tu ruta, carga y operación antes de
+                recomendar.
+              </p>
+            </div>
+            <span>ASESORÍA</span>
+          </article>
+          <article>
+            <b>03</b>
+            <div>
+              <h3>Una red después de comprar</h3>
+              <p>
+                Sucursales, servicio y refacciones BACE para mantener tu negocio
+                en movimiento.
+              </p>
+            </div>
+            <span>RESPALDO</span>
+          </article>
+        </div>
+      </section>
+      <!-- BLOQUE: vender · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="sell" id="vender">
+        <div class="sell-visual">
+          <img
+            alt="Kenworth T880"
+            decoding="async"
+            loading="lazy"
+            src="https://kwbace.com.mx/wp-content/uploads/2025/11/T880-2-903x1024.jpg"
+          /><span>COMPRA · VENTA · RENOVACIÓN</span>
+        </div>
+        <div class="sell-copy">
+          <span>TU UNIDAD TAMBIÉN CUENTA</span>
+          <h2>Es momento<br />de dar el <em>siguiente paso.</em></h2>
+          <p>
+            Cuéntanos qué unidad tienes y qué buscas después. Revisamos la
+            información y te contactamos para construir una propuesta.
+          </p>
+          <div>
+            <a href="#asesor">Quiero vender mi unidad →</a
+            ><a href="#asesor">Quiero renovar mi flota</a>
+          </div>
+        </div>
+      </section>
+      <!-- BLOQUE: asesor · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="advisor" id="asesor">
+        <div>
+          <span>ASESORÍA BACE</span>
+          <h2>El siguiente kilómetro<br />empieza <em>aquí.</em></h2>
+          <p>
+            Completa tus datos y un asesor especializado te ayudará a encontrar,
+            comparar o vender una unidad.
+          </p>
+          <div class="contact-proof">
+            <b>Atención personal</b><b>Inventario real</b
+            ><b>Seguimiento directo</b>
+          </div>
+        </div>
+        <form id="contactForm">
+          <label
+            >Nombre<input
+              name="nombre"
+              placeholder="Tu nombre completo"
+              required="" /></label
+          ><label
+            >WhatsApp<input
+              name="telefono"
+              placeholder="477 000 0000"
+              required=""
+              type="tel" /></label
+          ><label
+            >Correo<input
+              name="correo"
+              placeholder="nombre@empresa.com"
+              type="email" /></label
+          ><label
+            >Me interesa<select name="interes" required="">
+              <option value="">Selecciona una opción</option>
+              <option>Comprar una unidad</option>
+              <option>Vender mi unidad</option>
+              <option>Renovar mi flota</option>
+              <option>Opciones de financiamiento</option>
+            </select></label
+          ><button>Quiero que me contacten <span>→</span></button
+          ><small>Al enviar aceptas el aviso de privacidad.</small>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </form>
+      </section>
+    </main>
+    <!-- ========================================================
+     FOOTER INSTITUCIONAL · KENWORTH DAF BACE
+     ======================================================== -->
+    <footer class="bace-footer" id="contacto">
+      <div class="bace-footer__inner">
+        <!-- Identidad superior -->
+        <div class="bace-footer__top">
+          <a
+            aria-label="Volver al inicio de Kenworth DAF BACE"
+            class="bace-footer__brand"
+            href="#inicio"
+          >
+            <img
+              alt="Kenworth DAF BACE"
+              decoding="async"
+              loading="lazy"
+              src="assets/images/logos/KW-DAF.png"
+            />
+          </a>
+        </div>
+        <!-- Matrices -->
+        <div class="bace-footer__locations">
+          <!-- Kenworth DAF del Bajío -->
+          <article class="bace-footer__location">
+            <header class="bace-footer__location-header">
+              <span class="bace-footer__location-number"></span>
+              <div>
+                <h2>Kenworth DAF del Bajío</h2>
+                <h3>Matriz Querétaro</h3>
+              </div>
+            </header>
+            <div class="bace-footer__contact-list">
+              <a
+                class="bace-footer__contact"
+                href="https://maps.app.goo.gl/FrEAsvTGB62Cdirf7"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                    ></path>
+                    <circle cx="12" cy="9" r="2.5"></circle>
+                  </svg>
+                </span>
+                <span>
+                  Autopista México–Querétaro km 204,<br />
+                  76209 San Isidro Miranda, Qro.
+                </span>
+              </a>
+              <a
+                class="bace-footer__contact bace-footer__phone"
+                href="tel:4422774086"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>
+                  <small>Teléfono</small>
+                  <strong>442 277 4086</strong>
+                </span>
+              </a>
+            </div>
+            <div class="bace-footer__location-bottom">
+              <a
+                class="bace-footer__branches"
+                href="https://kwbace.com.mx/kenworth-grupo-bace/#Localizar"
+              >
+                <span>Conoce nuestras sucursales</span>
+                <b aria-hidden="true">→</b>
+              </a>
+              <nav
+                aria-label="Redes sociales de Kenworth DAF del Bajío"
+                class="bace-footer__social"
+              >
+                <a
+                  aria-label="Facebook Kenworth DAF del Bajío"
+                  href="https://www.facebook.com/KWBajio"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  f
+                </a>
+                <a
+                  aria-label="Instagram Kenworth DAF del Bajío"
+                  href="https://www.instagram.com/kenworthbajiobace/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ◎
+                </a>
+                <a
+                  aria-label="LinkedIn Kenworth DAF del Bajío"
+                  href="https://www.linkedin.com/company/kenworth-del-baj%C3%ADo-bace/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  in
+                </a>
+                <a
+                  aria-label="TikTok Kenworth DAF del Bajío"
+                  href="https://www.tiktok.com/@kenworthbajio"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ♪
+                </a>
+              </nav>
+            </div>
+          </article>
+          <!-- Kenworth DAF del Centro -->
+          <article class="bace-footer__location">
+            <header class="bace-footer__location-header">
+              <span class="bace-footer__location-number"></span>
+              <div>
+                <h2>Kenworth DAF del Centro</h2>
+                <h3>Matriz Comanjilla</h3>
+              </div>
+            </header>
+            <div class="bace-footer__contact-list">
+              <a
+                class="bace-footer__contact"
+                href="https://maps.app.goo.gl/1gCTYLroUXHg9qKe7"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                    ></path>
+                    <circle cx="12" cy="9" r="2.5"></circle>
+                  </svg>
+                </span>
+                <span>
+                  Blvd. Aeropuerto #5017, Col. Los Sauces,<br />
+                  37680 León, Gto.
+                </span>
+              </a>
+              <a
+                class="bace-footer__contact bace-footer__phone"
+                href="tel:4777199500"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>
+                  <small>Teléfono</small>
+                  <strong>477 719 9500</strong>
+                </span>
+              </a>
+            </div>
+            <div class="bace-footer__location-bottom">
+              <a
+                class="bace-footer__branches"
+                href="https://kwbace.com.mx/kenworth-grupo-bace/#sucursales"
+              >
+                <span>Conoce nuestras sucursales</span>
+                <b aria-hidden="true">→</b>
+              </a>
+              <nav
+                aria-label="Redes sociales de Kenworth DAF del Centro"
+                class="bace-footer__social"
+              >
+                <a
+                  aria-label="Facebook Kenworth DAF del Centro"
+                  href="https://www.facebook.com/KWCBACE/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  f
+                </a>
+                <a
+                  aria-label="Instagram Kenworth DAF del Centro"
+                  href="https://www.instagram.com/kenworthdelcentro/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ◎
+                </a>
+                <a
+                  aria-label="LinkedIn Kenworth DAF del Centro"
+                  href="https://www.linkedin.com/company/kenworthdelcentrobace/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  in
+                </a>
+                <a
+                  aria-label="TikTok Kenworth DAF del Centro"
+                  href="https://www.tiktok.com/@kwcentrobace"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ♪
+                </a>
+              </nav>
+            </div>
+          </article>
+        </div>
+        <!-- Franja inferior -->
+        <div class="bace-footer__bottom">
+          <!--
+      <a
+        class="bace-footer__jobs"
+        href="https://kwbace.com.mx/bolsa-de-trabajo-kw/"
+      >
+        <span>Bolsa de trabajo</span>
+        <b aria-hidden="true">↗</b>
+      </a> -->
+          <p class="bace-footer__copyright">
+            © <span id="baceFooterYear">2026</span>
+            KENWORTH DAF BACE
+          </p>
+          <nav aria-label="Información legal" class="bace-footer__legal">
+            <a
+              href="https://kwbace.com.mx/wp-content/uploads/2024/07/NUEVO-AVISO-DE-PRIVACIDAD-KW-CENTRO-JULIO-2024.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Privacidad KW DAF BACE
+            </a>
+            <a
+              href="https://kwbace.com.mx/wp-content/uploads/2023/12/Constancia-Situacion-Fiscal.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Constancia fiscal
+            </a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <div class="compare-bar" hidden="" id="compareBar">
+      <span><b id="compareCount">0</b> de 2 unidades</span>
+      <div id="compareItems"></div>
+      <button id="compareButton" type="button">Comparar ahora →</button
+      ><button aria-label="Limpiar comparación" id="clearCompare" type="button">
+        ×
+      </button>
     </div>
-
-    <!-- NAVEGACIÓN -->
-
-    <nav
-      class="seminuevos-footer-navigation"
-      aria-label="Navegación del pie de página"
-    >
-      <a href="#inventario">Inventario</a>
-      <a href="#metodo">BACE Plus</a>
-      <a href="#vender">Vende tu unidad</a>
-      <a href="#asesor">Contacto</a>
-    </nav>
-  </div>
-
-  <div class="seminuevos-footer-bottom">
-    <p>
-      © 2026 Kenworth DAF BACE
-    </p>
-
-    <span>
-      Seminuevos · Calidad y respaldo para seguir avanzando
-    </span>
-  </div>
-</footer>
-
-  <div class="compare-bar" id="compareBar" hidden><span><b id="compareCount">0</b> de 2 unidades</span><div id="compareItems"></div><button type="button" id="compareButton">Comparar ahora →</button><button type="button" id="clearCompare" aria-label="Limpiar comparación">×</button></div>
-  <div class="modal" id="unitModal" hidden><article role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close" type="button" id="closeModal" aria-label="Cerrar">×</button><div class="modal-photo"><img id="modalImage" alt=""><span id="modalLabel"></span></div><div class="modal-info"><span>KENWORTH · SEMINUEVO</span><h2 id="modalTitle"></h2><div class="modal-km" id="modalKm"></div><dl id="modalSpecs"></dl><a href="#asesor" id="quoteLink">Solicitar precio y disponibilidad →</a><small>Datos y disponibilidad por confirmar con un asesor.</small></div></article></div>
-  <script src="assets/js/pages/seminuevos.js"></script>
-</body>
+    <div class="modal" hidden="" id="unitModal">
+      <article aria-labelledby="modalTitle" aria-modal="true" role="dialog">
+        <button aria-label="Cerrar" class="close" id="closeModal" type="button">
+          ×
+        </button>
+        <div class="modal-photo">
+          <img alt="" decoding="async" id="modalImage" loading="lazy" /><span
+            id="modalLabel"
+          ></span>
+        </div>
+        <div class="modal-info">
+          <span>KENWORTH · SEMINUEVO</span>
+          <h2 id="modalTitle"></h2>
+          <div class="modal-km" id="modalKm"></div>
+          <dl id="modalSpecs"></dl>
+          <a href="#asesor" id="quoteLink"
+            >Solicitar precio y disponibilidad →</a
+          ><small>Datos y disponibilidad por confirmar con un asesor.</small>
+        </div>
+      </article>
+    </div>
+    <script src="assets/js/pages/seminuevos.js"></script>
+  </body>
 </html>

@@ -1,143 +1,1018 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="es-MX">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Bodyshop BACE: carrocería, pintura y reparación especializada para unidades pesadas.">
-  <title>Bodyshop BACE | Carrocería y pintura</title>
-
+  <head>
+    <!-- IDENTIDAD 20261016-03: fuente Kenworth integrada, sin fuentes secundarias; superficies claras #f4f2ed. -->
+    <!-- IDENTIDAD VISUAL: fuente Kenworth local y beige #f4f2ed compartidos desde assets/css/global.css. -->
+    <!--
+ DEMO · KENWORTH DEL CENTRO
+ Bodyshop: capacidades, especialidades, promociones y valoración por pasos.
+ Estructura: global.css (base) → CSS de página → componentes compartidos.
+ JS: main.js (utilidades), components/nav.js (menú) y script específico.
+ Formularios de demostración: no existe servicio de recepción configurado.
+ GitHub Pages: subir el CONTENIDO de esta carpeta a la raíz del repositorio;
+ Settings → Pages → Deploy from a branch → main → / (root).
+ Conservar exactamente los nombres de archivos, carpetas y recursos.
+ No requiere npm, servidor de aplicaciones ni archivos nuevos.
+-->
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta
+      content="Bodyshop BACE: carrocería, pintura y reparación especializada para unidades pesadas."
+      name="description"
+    />
+    <title>Bodyshop BACE | Carrocería y pintura</title>
     <!-- Icono de la pestaña del navegador -->
-<link
-  rel="icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="shortcut icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="apple-touch-icon"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-  <link rel="stylesheet" href="assets/css/pages/bodyshop.css">
-</head>
-<body>
-<div class="utility"><span>KENWORTH · DAF · MULTIMARCA</span><span>León II Bodyshop · Atención especializada</span></div>
-<header>
-<a
-  class="brand bodyshop-brand"
-  href="index.html"
-  aria-label="Kenworth DAF BACE Bodyshop"
->
-  <img
-    src="assets/images/logos/logo-kenworth-daf-bace.PNG"
-    alt="Kenworth DAF BACE"
-  >
-
-  <span class="bodyshop-brand-divider" aria-hidden="true"></span>
-
-  <span class="bodyshop-brand-copy">
-    <b>BODYSHOP</b>
-    <small>LEÓN II</small>
-  </span>
-</a>
-  <nav id="mainNav"><a href="#soluciones">Soluciones</a><a href="#proceso">Proceso</a><a href="#calidad">Calidad</a><a href="#valoracion">Valoración</a></nav>
-  <a class="headerCta" href="#valoracion">Valorar mi unidad ↗</a>
-  <button class="menuButton" id="menuButton" aria-label="Abrir menú">☰</button>
-</header>
-<main>
-<section class="hero" id="inicio">
-  <div class="heroMedia"><img src="assets/images/Sucursales/Leon 2.png" alt="Unidad pesada en taller"><i></i></div><div class="grid"></div>
-  <div class="heroContent"><div class="eyebrow"><span>01</span><p>RECUPERAMOS MÁS QUE UNA UNIDAD<br><b>RECUPERAMOS TU OPERACIÓN</b></p></div><h1>El daño se ve.<em>La calidad también.</em></h1><p class="lead">Tecnología, precisión y especialistas para devolver seguridad, geometría e imagen a tu camión.</p><div class="actions"><a href="#valoracion">Iniciar valoración <b>→</b></a><a href="#soluciones">Explorar Bodyshop</a></div></div>
-  <aside><small>RESPUESTA INICIAL</small><strong>Cuéntanos qué ocurrió.</strong><p>Selecciona el tipo de daño y prepara tu solicitud en menos de dos minutos.</p><a href="#valoracion">Comenzar ahora <b>↘</b></a></aside>
-  <div class="stats"><div><b>360°</b><span>Atención integral</span></div><div><b>OEM</b><span>Opciones de refacción</span></div><div><b>01</b><span>Punto de seguimiento</span></div></div>
-</section>
-<section class="promise"><p>BODYSHOP BACE</p><h2>Volver al camino no debería sentirse como una incertidumbre.</h2><div><span>Diagnóstico claro</span><span>Proceso visible</span><span>Acabado profesional</span></div></section>
-<section class="capabilities" id="soluciones">
-  <div class="title"><span>CAPACIDAD INSTALADA · 01</span><h2>Elige lo que tu unidad <em>necesita recuperar.</em></h2></div>
-  <div class="stage">
-    <div class="capNav" id="capNav"></div>
-    <article class="visual"><img id="capImage" alt=""><span id="capIndex"></span><div><small id="capSub"></small><h3 id="capTitle"></h3><p id="capCopy"></p></div></article>
-    <div class="details"><small>INCLUYE</small><div id="capTags"></div><a href="#valoracion">Solicitar valoración →</a></div>
-  </div>
-</section>
-<section class="process" id="proceso">
-  <div class="processLead"><span>RUTA BODYSHOP · 02</span><h2>Un proceso que puedes <em>entender y seguir.</em></h2><p>Desde que recibimos tu unidad hasta que vuelve a operar, cada etapa tiene un objetivo claro.</p></div>
-  <div class="timeline"><article><span>01</span><b>Ingreso</b><p>Evidencia y revisión inicial</p></article><article><span>02</span><b>Diagnóstico</b><p>Daño, alcance y presupuesto</p></article><article><span>03</span><b>Intervención</b><p>Estructura, carrocería y pintura</p></article><article><span>04</span><b>Control</b><p>Geometría, calidad y acabado</p></article><article><span>05</span><b>Entrega</b><p>Explicación y recomendaciones</p></article></div>
-</section>
-<section class="quality" id="calidad">
-  <div class="qualityImage"><img src="https://youngstownkenworth.com/content/uploads/2021/09/body-shop.jpg" alt="Aplicación profesional de pintura"><span>PRECISIÓN EN CADA CAPA</span></div>
-  <div class="qualityCopy"><span>CALIDAD BODYSHOP · 03</span><h2>El acabado final empieza con un proceso bien hecho.</h2><p>No se trata sólo de cubrir el daño. Se trata de trabajar la estructura, preparar cada superficie y validar el resultado antes de entregar.</p><div><article><b>RED TOTAL</b><small>Procesos estandarizados</small></article><article><b>CESVI</b><small>Referencia en reparación</small></article><article><b>AXALTA</b><small>Sistemas de recubrimiento</small></article></div><a href="#valoracion">Hablar con un especialista ↗</a></div>
-</section>
-<section class="assessment" id="valoracion">
-  <div class="assessmentHead"><span>VALORACIÓN DIGITAL · 04</span><h2>Empecemos por <em>lo que pasó.</em></h2><p>Información inicial para dirigirte con el especialista correcto.</p></div>
-  <div class="wizard">
-    <div class="wizardTop"><p id="stepCount">PASO 1 DE 3</p><span><i id="stepBar"></i></span><small id="stepName">TIPO DE DAÑO</small></div>
-    <div id="wizardContent"></div>
-    <div class="wizardActions"><button class="back" id="backButton">← Regresar</button><button id="nextButton">Continuar →</button></div>
-  </div>
-</section>
-<section class="closing"><div><span>LEÓN II BODYSHOP</span><h2>Tu unidad puede volver a verse bien. <em>Y a trabajar mejor.</em></h2></div><a href="#valoracion">Solicitar una valoración ↗</a></section>
-</main>
-
-<footer class="bodyshop-footer">
-
-  <div class="bodyshop-footer-main">
-
-    <div class="bodyshop-footer-identity">
-
-      <a
-        class="bodyshop-footer-brand"
-        href="index.html"
-        aria-label="Kenworth DAF BACE Bodyshop"
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="icon"
+      type="image/png"
+    />
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
+    <link href="assets/images/logos/LOGO BACE.png" rel="apple-touch-icon" />
+    <link href="assets/css/global.css?v=20261016-03" rel="stylesheet" />
+    <link
+      href="assets/css/components/footer.css?v=20261016-03"
+      rel="stylesheet"
+    />
+    <link href="assets/css/components/nav.css?v=20261016-03" rel="stylesheet" />
+    <script defer="" src="assets/js/components/nav.js"></script>
+    <link href="assets/css/pages/bodyshop.css?v=20261016-03" rel="stylesheet" />
+    <script defer="True" src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <div id="bace-nav"></div>
+    <main>
+      <!-- BLOQUE: inicio · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="hero bs-bodyshop-hero" id="inicio">
+        <div class="heroMedia">
+          <img
+            alt="Unidad pesada en taller"
+            decoding="async"
+            src="assets/images/Sucursales/Leon 2.png"
+          /><i></i>
+        </div>
+        <div class="grid"></div>
+        <div class="heroContent">
+          <div class="eyebrow">
+            <p>
+              RECUPERAMOS MÁS QUE UNA UNIDAD<br /><b
+                >RECUPERAMOS TU OPERACIÓN</b
+              >
+            </p>
+          </div>
+          <h1>CARROCERIA Y<em>PINTURA</em></h1>
+          <p class="lead">Regresa tu unidad al camino con tu estilo.</p>
+          <div class="actions">
+            <a href="#valoracion">Iniciar valoración <b>→</b></a
+            ><a href="#soluciones">Explorar Bodyshop</a>
+          </div>
+        </div>
+        <aside>
+          <small>RESPUESTA INICIAL</small
+          ><strong>Cuéntanos qué ocurrió.</strong>
+          <p>
+            Selecciona el tipo de daño y prepara tu solicitud en menos de dos
+            minutos.
+          </p>
+          <a href="#valoracion">Comenzar ahora <b>↘</b></a>
+        </aside>
+        <div class="stats">
+          <div><b>360°</b><span>Atención integral</span></div>
+          <div><b>OEM</b><span>Opciones de refacción</span></div>
+          <div><b>01</b><span>Punto de seguimiento</span></div>
+        </div>
+      </section>
+      <!-- BLOQUE: soluciones · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="capabilities" id="soluciones">
+        <div class="title">
+          <span>CAPACIDAD INSTALADA · 01</span>
+          <h2>Elige lo que tu unidad <em>necesita recuperar.</em></h2>
+        </div>
+        <div class="stage">
+          <div class="capNav" id="capNav"></div>
+          <article class="visual">
+            <img alt="" decoding="async" id="capImage" loading="lazy" /><span
+              id="capIndex"
+            ></span>
+            <div>
+              <small id="capSub"></small>
+              <h3 id="capTitle"></h3>
+              <p id="capCopy"></p>
+            </div>
+          </article>
+          <div class="details">
+            <small>INCLUYE</small>
+            <div id="capTags"></div>
+            <a href="#valoracion">Solicitar valoración →</a>
+          </div>
+        </div>
+      </section>
+      <!-- BLOQUE: bodyshopEspecialidades · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section
+        aria-labelledby="bsServicesTitle"
+        class="bs-services"
+        id="bodyshopEspecialidades"
       >
-        <img
-          src="assets/images/logos/logo-kenworth-daf-bace.PNG"
-          alt="Kenworth DAF BACE"
+        <div class="bs-services__inner">
+          <div class="bs-services__header">
+            <div>
+              <p class="bs-services__eyebrow">ESPECIALIDADES BODYSHOP</p>
+              <h2 id="bsServicesTitle">
+                Cuidamos cada detalle.<br />
+                <em>Recuperamos tu unidad.</em>
+              </h2>
+            </div>
+            <p>
+              Conoce nuestras áreas de atención y encuentra el servicio que
+              necesita tu unidad.
+            </p>
+          </div>
+          <div class="bs-services__grid">
+            <!-- CABINA DE PINTURA -->
+            <article class="bs-service">
+              <div class="bs-service__photo">
+                <img
+                  alt="Proceso de pintura de una unidad"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/images/Bodyshop/cabina-pintura.jpg"
+                />
+                <span class="bs-service__number">01</span>
+              </div>
+              <div class="bs-service__body">
+                <h3>Cabina de pintura</h3>
+                <p>Una nueva imagen comienza con la atención a cada detalle.</p>
+                <button
+                  aria-controls="bsDetails"
+                  aria-haspopup="dialog"
+                  data-bs-service="pintura"
+                  type="button"
+                >
+                  Ver más
+                  <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </article>
+            <!-- BANCO DE ENDEREZADO -->
+            <article class="bs-service">
+              <div class="bs-service__photo">
+                <img
+                  alt="Banco de enderezado para unidades"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/images/Bodyshop/banco-enderezado.jpg"
+                />
+                <span class="bs-service__number">02</span>
+              </div>
+              <div class="bs-service__body">
+                <h3>Banco de enderezado</h3>
+                <p>
+                  Atención a la estructura, con un alcance definido por
+                  diagnóstico.
+                </p>
+                <button
+                  aria-controls="bsDetails"
+                  aria-haspopup="dialog"
+                  data-bs-service="enderezado"
+                  type="button"
+                >
+                  Ver más
+                  <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </article>
+            <!-- SERVICIOS GENERALES -->
+            <article class="bs-service">
+              <div class="bs-service__photo">
+                <img
+                  alt="Área de atención de servicios generales"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/images/Bodyshop/servicios-generales.jpg"
+                />
+                <span class="bs-service__number">03</span>
+              </div>
+              <div class="bs-service__body">
+                <h3>Servicios generales</h3>
+                <p>Orientación y atención para las necesidades de tu unidad.</p>
+                <button
+                  aria-controls="bsDetails"
+                  aria-haspopup="dialog"
+                  data-bs-service="generales"
+                  type="button"
+                >
+                  Ver más
+                  <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ==========================================
+     PROMOCIONES BODYSHOP
+=========================================== -->
+      <!-- BLOQUE: bodyshopPromociones · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section
+        aria-labelledby="bsPromosTitle"
+        aria-roledescription="carrusel"
+        class="bs-promos"
+        id="bodyshopPromociones"
+      >
+        <div class="bs-promos__inner">
+          <div class="bs-promos__heading">
+            <div>
+              <p class="bs-promos__eyebrow">PROMOCIONES BODYSHOP</p>
+              <h2 id="bsPromosTitle">
+                Una nueva imagen.
+                <em>Una nueva oportunidad.</em>
+              </h2>
+            </div>
+            <p class="bs-promos__intro">
+              Descubre las promociones para darle a tu unidad la atención que
+              necesita.
+            </p>
+          </div>
+          <div class="bs-promos__window">
+            <!-- PROMOCIÓN 1 -->
+            <article
+              aria-label="1 de 3"
+              aria-roledescription="diapositiva"
+              class="bs-promos__slide"
+              role="group"
+            >
+              <div class="bs-promos__content">
+                <span class="bs-promos__category"> CARROCERÍA Y PINTURA </span>
+                <h3>Dale una nueva imagen a tu unidad.</h3>
+                <p>
+                  Consulta nuestras promociones en carrocería y pintura para tu
+                  camión.
+                </p>
+                <a class="bs-promos__cta" href="#valoracion">
+                  Me interesa esta promoción
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <small>
+                  Consulta condiciones y disponibilidad con nuestro equipo.
+                </small>
+              </div>
+              <div class="bs-promos__visual">
+                <img
+                  alt="Promoción de carrocería y pintura BodyShop"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/images/bodyshop/promociones/promocion-01.jpg"
+                />
+              </div>
+            </article>
+            <!-- PROMOCIÓN 2 -->
+            <article
+              aria-label="2 de 3"
+              aria-roledescription="diapositiva"
+              class="bs-promos__slide"
+              hidden=""
+              role="group"
+            >
+              <div class="bs-promos__content">
+                <span class="bs-promos__category"> CHASIS Y ESTRUCTURA </span>
+                <h3>El siguiente paso para recuperar tu unidad.</h3>
+                <p>
+                  Conoce las promociones disponibles para la atención de chasis
+                  y estructura.
+                </p>
+                <a class="bs-promos__cta" href="#valoracion">
+                  Me interesa esta promoción
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <small>
+                  Consulta condiciones y disponibilidad con nuestro equipo.
+                </small>
+              </div>
+              <div class="bs-promos__visual">
+                <img
+                  alt="Promoción de chasis y estructura BodyShop"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/images/bodyshop/promociones/promocion-02.jpg"
+                />
+              </div>
+            </article>
+            <!-- PROMOCIÓN 3 -->
+            <article
+              aria-label="3 de 3"
+              aria-roledescription="diapositiva"
+              class="bs-promos__slide"
+              hidden=""
+              role="group"
+            >
+              <div class="bs-promos__content">
+                <span class="bs-promos__category"> SERVICIOS GENERALES </span>
+                <h3>Encuentra la atención que tu camión necesita.</h3>
+                <p>
+                  Pregunta por nuestras promociones y opciones de atención en
+                  servicios generales.
+                </p>
+                <a class="bs-promos__cta" href="#valoracion">
+                  Me interesa esta promoción
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <small>
+                  Consulta condiciones y disponibilidad con nuestro equipo.
+                </small>
+              </div>
+              <div class="bs-promos__visual">
+                <img
+                  alt="Promoción de servicios generales BodyShop"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/images/bodyshop/promociones/promocion-03.jpg"
+                />
+              </div>
+            </article>
+          </div>
+          <!-- CONTROLES -->
+          <div class="bs-promos__controls" hidden="">
+            <div class="bs-promos__navigation">
+              <button
+                aria-label="Promoción anterior"
+                class="bs-promos__arrow"
+                data-promo-prev=""
+                type="button"
+              >
+                ←
+              </button>
+              <span aria-hidden="true" class="bs-promos__counter">
+                <b data-promo-current="">01</b>
+                <span>/</span>
+                <span data-promo-total="">03</span>
+              </span>
+              <button
+                aria-label="Promoción siguiente"
+                class="bs-promos__arrow"
+                data-promo-next=""
+                type="button"
+              >
+                →
+              </button>
+            </div>
+            <div
+              aria-label="Seleccionar promoción"
+              class="bs-promos__dots"
+              data-promo-dots=""
+              role="group"
+            ></div>
+            <button
+              aria-pressed="false"
+              class="bs-promos__pause"
+              data-promo-pause=""
+              type="button"
+            >
+              Pausar
+            </button>
+          </div>
+          <p
+            aria-live="polite"
+            class="bs-promos__sr"
+            data-promo-status=""
+            role="status"
+          ></p>
+        </div>
+      </section>
+      <!-- TARJETA EMERGENTE: colocar una sola vez -->
+      <dialog
+        aria-labelledby="bsDetailsTitle"
+        class="bs-details"
+        id="bsDetails"
+      >
+        <button
+          aria-label="Cerrar información"
+          autofocus=""
+          class="bs-details__close"
+          type="button"
         >
-
-        <span class="bodyshop-footer-divider" aria-hidden="true"></span>
-
-        <span class="bodyshop-footer-brand-copy">
-          <b>BODYSHOP</b>
-          <small>LEÓN II</small>
-        </span>
-      </a>
-
-      <p>
-        Carrocería, pintura y reparación especializada.
-      </p>
-
-    </div>
-
-    <nav
-      class="bodyshop-footer-navigation"
-      aria-label="Navegación del pie de página"
-    >
-      <a href="#soluciones">Soluciones</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#calidad">Calidad</a>
-      <a href="#valoracion">Valoración</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-
-  </div>
-
-  <div class="bodyshop-footer-bottom">
-    <p>© 2026 Kenworth DAF BACE</p>
-
-    <span>
-      Bodyshop León II · Atención especializada
-    </span>
-  </div>
-
-</footer>
-
-<script src="assets/js/pages/bodyshop.js"></script>
-</body>
+          ×
+        </button>
+        <div class="bs-details__layout">
+          <div class="bs-details__photo">
+            <img alt="" decoding="async" id="bsDetailsImage" loading="lazy" />
+          </div>
+          <div class="bs-details__content">
+            <p class="bs-details__eyebrow">BODYSHOP · KENWORTH DAF BACE</p>
+            <h2 id="bsDetailsTitle"></h2>
+            <p class="bs-details__description" id="bsDetailsDescription"></p>
+            <h3>Conoce el servicio</h3>
+            <ul id="bsDetailsList"></ul>
+            <!-- Aseguradoras: solo visible en Servicios generales -->
+            <div class="bs-insurers" hidden="" id="bsInsurers">
+              <div class="bs-insurers__heading"></div>
+              <div class="bs-insurers__viewport">
+                <div class="bs-insurers__track">
+                  <!-- Agrega aquí tus logos -->
+                  <div class="bs-insurers__group">
+                    <img
+                      alt="Seguros El Potosí"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/el potosi.png"
+                    />
+                    <img
+                      alt="AXA"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/axxa.png"
+                    />
+                    <img
+                      alt="General de Seguros"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/general seguros.png"
+                    />
+                    <img
+                      alt="BANORTE"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/banorte.png"
+                    />
+                    <img
+                      alt="CHUBB"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/CHUBB.png"
+                    />
+                    <img
+                      alt="GNP Seguros"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/gnp.png"
+                    />
+                    <img
+                      alt="HDI Seguros"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/hdi.png"
+                    />
+                    <img
+                      alt="INBURSA"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/inbursa.png"
+                    />
+                    <img
+                      alt="SURA"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/sura.png"
+                    />
+                    <img
+                      alt="ATLAS"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/atlas.png"
+                    />
+                    <img
+                      alt="SURA"
+                      decoding="async"
+                      loading="lazy"
+                      src="assets/images/logos/aseguradoras/mapfre.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="bs-details__action" href="#contacto">
+              Solicitar información
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </dialog>
+      <!-- ==========================================
+     CALIDAD BODYSHOP
+=========================================== -->
+      <!-- BLOQUE: calidad · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="quality" id="calidad">
+        <div class="qualityImage">
+          <img
+            alt="Aplicación profesional de pintura"
+            decoding="async"
+            loading="lazy"
+            src="https://youngstownkenworth.com/content/uploads/2021/09/body-shop.jpg"
+          />
+          <span>PRECISIÓN EN CADA CAPA</span>
+        </div>
+        <div class="qualityCopy">
+          <span>CALIDAD BODYSHOP</span>
+          <h2>El acabado final empieza con un proceso bien hecho.</h2>
+          <p>
+            No se trata sólo de cubrir el daño. Se trata de trabajar la
+            estructura, preparar cada superficie y validar el resultado antes de
+            entregar.
+          </p>
+          <div class="bs-quality-brands">
+            <article>
+              <img
+                alt="Red Total"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/certificacion-red-total.png"
+              />
+            </article>
+            <article>
+              <img
+                alt="CESVI"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/cesvi.png"
+              />
+            </article>
+            <article>
+              <img
+                alt="Axalta"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/axalta.png"
+              />
+            </article>
+          </div>
+          <a href="#valoracion"> Hablar con un especialista ↗ </a>
+        </div>
+      </section>
+      <!-- AQUÍ TERMINA CALIDAD -->
+      <!-- ==========================================
+     FORMULARIO BODYSHOP
+=========================================== -->
+      <!-- BLOQUE: valoracion · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section aria-labelledby="bsQuoteTitle" class="bs-quote" id="valoracion">
+        <div class="bs-quote__intro">
+          <p class="bs-quote__eyebrow">ATENCIÓN BODYSHOP</p>
+          <h2 id="bsQuoteTitle">
+            Recuperar tu unidad
+            <em>comienza aquí.</em>
+          </h2>
+          <p class="bs-quote__description">
+            Comparte tus datos y cuéntanos qué necesita tu unidad para preparar
+            la información de tu valoración.
+          </p>
+          <ol class="bs-quote__steps">
+            <li aria-current="step">
+              <b>01</b>
+              <span>Tus datos</span>
+            </li>
+            <li>
+              <b>02</b>
+              <span>Tu unidad</span>
+            </li>
+            <li>
+              <b>03</b>
+              <span>Tipo de atención</span>
+            </li>
+          </ol>
+        </div>
+        <form class="bs-quote__form" id="bsQuoteForm" novalidate="">
+          <div class="bs-quote__progress">
+            <div>
+              <small id="bsQuoteStepNumber">PASO 1 DE 3</small>
+              <strong id="bsQuoteStepName">TUS DATOS</strong>
+            </div>
+            <div
+              aria-label="Avance del formulario"
+              aria-valuemax="3"
+              aria-valuemin="0"
+              aria-valuenow="1"
+              class="bs-quote__track"
+              id="bsQuoteProgress"
+              role="progressbar"
+            >
+              <span id="bsQuoteProgressBar"></span>
+            </div>
+          </div>
+          <div id="bsQuoteFields">
+            <!-- PASO 1 -->
+            <fieldset class="bs-quote__step" data-bs-quote-step="">
+              <legend>Cuéntanos quién eres</legend>
+              <p>Los campos con * son obligatorios.</p>
+              <div class="bs-quote__grid">
+                <label>
+                  Nombre completo *
+                  <input
+                    autocomplete="name"
+                    name="nombre"
+                    placeholder="Nombre y apellidos"
+                    required=""
+                    type="text"
+                  />
+                </label>
+                <label>
+                  Empresa
+                  <input
+                    autocomplete="organization"
+                    name="empresa"
+                    placeholder="Nombre de tu empresa"
+                    type="text"
+                  />
+                </label>
+                <label>
+                  Teléfono o WhatsApp *
+                  <input
+                    autocomplete="tel"
+                    name="telefono"
+                    placeholder="477 000 0000"
+                    required=""
+                    type="tel"
+                  />
+                </label>
+                <label>
+                  Correo electrónico *
+                  <input
+                    autocomplete="email"
+                    name="correo"
+                    placeholder="correo@empresa.com"
+                    required=""
+                    type="email"
+                  />
+                </label>
+              </div>
+            </fieldset>
+            <!-- PASO 2 -->
+            <fieldset class="bs-quote__step" data-bs-quote-step="" hidden="">
+              <legend>Identifiquemos tu unidad</legend>
+              <p>Comparte los datos que tengas disponibles.</p>
+              <div class="bs-quote__grid">
+                <label>
+                  Marca *
+                  <select name="marca" required="">
+                    <option value="">Selecciona una marca</option>
+                    <option>Kenworth</option>
+                    <option>DAF</option>
+                    <option>Otra marca</option>
+                  </select>
+                </label>
+                <label>
+                  Modelo *
+                  <input
+                    name="modelo"
+                    placeholder="Ej. T680, T880, XF"
+                    required=""
+                    type="text"
+                  />
+                </label>
+                <label>
+                  Año
+                  <input
+                    inputmode="numeric"
+                    maxlength="4"
+                    name="anio"
+                    pattern="[0-9]{4}"
+                    placeholder="Ej. 2022"
+                    title="Ingresa el año con cuatro dígitos."
+                    type="text"
+                  />
+                </label>
+                <label>
+                  Ciudad o ubicación
+                  <input
+                    name="ubicacion"
+                    placeholder="¿Dónde se encuentra la unidad?"
+                    type="text"
+                  />
+                </label>
+              </div>
+            </fieldset>
+            <!-- PASO 3 -->
+            <fieldset class="bs-quote__step" data-bs-quote-step="" hidden="">
+              <legend>¿Cómo podemos ayudarte?</legend>
+              <p>Describe la atención que buscas para tu unidad.</p>
+              <div class="bs-quote__grid">
+                <label class="bs-quote__wide">
+                  Servicio de interés *
+                  <select name="servicio" required="">
+                    <option value="">Selecciona una opción</option>
+                    <option>Carrocería y pintura</option>
+                    <option>Enderezado y revisión estructural</option>
+                    <option>Atención a siniestros</option>
+                    <option>Cambio de imagen</option>
+                    <option>Servicios generales</option>
+                    <option>Necesito orientación</option>
+                  </select>
+                </label>
+                <label>
+                  ¿Cuenta con aseguradora?
+                  <select name="tieneAseguradora">
+                    <option value="">Selecciona una opción</option>
+                    <option>Sí</option>
+                    <option>No</option>
+                    <option>Por confirmar</option>
+                  </select>
+                </label>
+                <label>
+                  Nombre de la aseguradora
+                  <input
+                    name="aseguradora"
+                    placeholder="Si aplica"
+                    type="text"
+                  />
+                </label>
+                <label class="bs-quote__wide">
+                  Describe lo ocurrido o el trabajo que necesitas *
+                  <textarea
+                    name="descripcion"
+                    placeholder="Cuéntanos qué partes requieren atención."
+                    required=""
+                    rows="4"
+                  ></textarea>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="bs-quote__result" hidden="" id="bsQuoteResult">
+            <span aria-hidden="true">✓</span>
+            <h3>Información preparada</h3>
+            <p>
+              Tus datos están preparados en esta página. Todavía no se han
+              enviado a un asesor.
+            </p>
+            <button id="bsQuoteRestart" type="button">
+              Preparar otra valoración
+            </button>
+          </div>
+          <div class="bs-quote__actions" id="bsQuoteActions">
+            <button
+              class="bs-quote__back"
+              disabled=""
+              id="bsQuoteBack"
+              type="button"
+            >
+              ← Regresar
+            </button>
+            <button class="bs-quote__next" id="bsQuoteNext" type="button">
+              Continuar →
+            </button>
+          </div>
+          <p
+            aria-live="polite"
+            class="bs-quote__status"
+            id="bsQuoteStatus"
+            role="status"
+          ></p>
+          <p class="bs-quote__note">
+            La valoración y el presupuesto requieren revisión del equipo
+            BodyShop.
+          </p>
+        </form>
+      </section>
+      <!-- AQUÍ TERMINA EL FORMULARIO -->
+      <!-- ========================================================
+     FOOTER INSTITUCIONAL · KENWORTH DAF BACE
+     ======================================================== -->
+      <footer class="bace-footer" id="contacto">
+        <div class="bace-footer__inner">
+          <!-- Identidad superior -->
+          <div class="bace-footer__top">
+            <a
+              aria-label="Volver al inicio de Kenworth DAF BACE"
+              class="bace-footer__brand"
+              href="#inicio"
+            >
+              <img
+                alt="Kenworth DAF BACE"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/KW-DAF.png"
+              />
+            </a>
+          </div>
+          <!-- Matrices -->
+          <div class="bace-footer__locations">
+            <!-- Kenworth DAF del Bajío -->
+            <article class="bace-footer__location">
+              <header class="bace-footer__location-header">
+                <span class="bace-footer__location-number"></span>
+                <div>
+                  <h2>Kenworth DAF del Bajío</h2>
+                  <h3>Matriz Querétaro</h3>
+                </div>
+              </header>
+              <div class="bace-footer__contact-list">
+                <a
+                  class="bace-footer__contact"
+                  href="https://maps.app.goo.gl/FrEAsvTGB62Cdirf7"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span aria-hidden="true" class="bace-footer__contact-icon">
+                    <svg viewbox="0 0 24 24">
+                      <path
+                        d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                      ></path>
+                      <circle cx="12" cy="9" r="2.5"></circle>
+                    </svg>
+                  </span>
+                  <span>
+                    Autopista México–Querétaro km 204,<br />
+                    76209 San Isidro Miranda, Qro.
+                  </span>
+                </a>
+                <a
+                  class="bace-footer__contact bace-footer__phone"
+                  href="tel:4422774086"
+                >
+                  <span aria-hidden="true" class="bace-footer__contact-icon">
+                    <svg viewbox="0 0 24 24">
+                      <path
+                        d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <small>Teléfono</small>
+                    <strong>442 277 4086</strong>
+                  </span>
+                </a>
+              </div>
+              <div class="bace-footer__location-bottom">
+                <a
+                  class="bace-footer__branches"
+                  href="https://kwbace.com.mx/kenworth-grupo-bace/#Localizar"
+                >
+                  <span>Conoce nuestras sucursales</span>
+                  <b aria-hidden="true">→</b>
+                </a>
+                <nav
+                  aria-label="Redes sociales de Kenworth DAF del Bajío"
+                  class="bace-footer__social"
+                >
+                  <a
+                    aria-label="Facebook Kenworth DAF del Bajío"
+                    href="https://www.facebook.com/KWBajio"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    f
+                  </a>
+                  <a
+                    aria-label="Instagram Kenworth DAF del Bajío"
+                    href="https://www.instagram.com/kenworthbajiobace/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ◎
+                  </a>
+                  <a
+                    aria-label="LinkedIn Kenworth DAF del Bajío"
+                    href="https://www.linkedin.com/company/kenworth-del-baj%C3%ADo-bace/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    in
+                  </a>
+                  <a
+                    aria-label="TikTok Kenworth DAF del Bajío"
+                    href="https://www.tiktok.com/@kenworthbajio"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ♪
+                  </a>
+                </nav>
+              </div>
+            </article>
+            <!-- Kenworth DAF del Centro -->
+            <article class="bace-footer__location">
+              <header class="bace-footer__location-header">
+                <span class="bace-footer__location-number"></span>
+                <div>
+                  <h2>Kenworth DAF del Centro</h2>
+                  <h3>Matriz Comanjilla</h3>
+                </div>
+              </header>
+              <div class="bace-footer__contact-list">
+                <a
+                  class="bace-footer__contact"
+                  href="https://maps.app.goo.gl/1gCTYLroUXHg9qKe7"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span aria-hidden="true" class="bace-footer__contact-icon">
+                    <svg viewbox="0 0 24 24">
+                      <path
+                        d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                      ></path>
+                      <circle cx="12" cy="9" r="2.5"></circle>
+                    </svg>
+                  </span>
+                  <span>
+                    Blvd. Aeropuerto #5017, Col. Los Sauces,<br />
+                    37680 León, Gto.
+                  </span>
+                </a>
+                <a
+                  class="bace-footer__contact bace-footer__phone"
+                  href="tel:4777199500"
+                >
+                  <span aria-hidden="true" class="bace-footer__contact-icon">
+                    <svg viewbox="0 0 24 24">
+                      <path
+                        d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <small>Teléfono</small>
+                    <strong>477 719 9500</strong>
+                  </span>
+                </a>
+              </div>
+              <div class="bace-footer__location-bottom">
+                <a
+                  class="bace-footer__branches"
+                  href="https://kwbace.com.mx/kenworth-grupo-bace/#sucursales"
+                >
+                  <span>Conoce nuestras sucursales</span>
+                  <b aria-hidden="true">→</b>
+                </a>
+                <nav
+                  aria-label="Redes sociales de Kenworth DAF del Centro"
+                  class="bace-footer__social"
+                >
+                  <a
+                    aria-label="Facebook Kenworth DAF del Centro"
+                    href="https://www.facebook.com/KWCBACE/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    f
+                  </a>
+                  <a
+                    aria-label="Instagram Kenworth DAF del Centro"
+                    href="https://www.instagram.com/kenworthdelcentro/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ◎
+                  </a>
+                  <a
+                    aria-label="LinkedIn Kenworth DAF del Centro"
+                    href="https://www.linkedin.com/company/kenworthdelcentrobace/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    in
+                  </a>
+                  <a
+                    aria-label="TikTok Kenworth DAF del Centro"
+                    href="https://www.tiktok.com/@kwcentrobace"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ♪
+                  </a>
+                </nav>
+              </div>
+            </article>
+          </div>
+          <!-- Franja inferior -->
+          <div class="bace-footer__bottom">
+            <!--
+      <a
+        class="bace-footer__jobs"
+        href="https://kwbace.com.mx/bolsa-de-trabajo-kw/"
+      >
+        <span>Bolsa de trabajo</span>
+        <b aria-hidden="true">↗</b>
+      </a> -->
+            <p class="bace-footer__copyright">
+              © <span id="baceFooterYear">2026</span>
+              KENWORTH DAF BACE
+            </p>
+            <nav aria-label="Información legal" class="bace-footer__legal">
+              <a
+                href="https://kwbace.com.mx/wp-content/uploads/2024/07/NUEVO-AVISO-DE-PRIVACIDAD-KW-CENTRO-JULIO-2024.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Privacidad KW DAF BACE
+              </a>
+              <a
+                href="https://kwbace.com.mx/wp-content/uploads/2023/12/Constancia-Situacion-Fiscal.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Constancia fiscal
+              </a>
+            </nav>
+          </div>
+        </div>
+      </footer>
+      <script defer="" src="assets/js/pages/bodyshop.js"></script>
+    </main>
+  </body>
 </html>

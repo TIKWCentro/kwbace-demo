@@ -1,133 +1,356 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="es-MX">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Historia, cultura GPS, red y evolución tecnológica de Kenworth DAF Grupo BACE.">
-<title>Kenworth DAF Grupo BACE</title><link rel="stylesheet" href="assets/css/pages/bace.css">
-
-  <!-- Icono de la pestaña del navegador -->
-<link
-  rel="icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="shortcut icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="apple-touch-icon"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-</head><body>
-<div class="topbar"><span>KENWORTH · DAF · GRUPO BACE</span><span>Gente con Pasión por Servir</span></div>
-<header>
-    <a
-  class="brand culture-brand"
-  href="index.html"
-  aria-label="Kenworth DAF BACE"
->
-  <img
-    src="assets/images/logos/logo-kenworth-daf-bace.PNG"
-    alt="Kenworth DAF BACE"
-  >
-
-  <span class="culture-brand-divider" aria-hidden="true"></span>
-
-  <span class="culture-brand-copy">
-    <b>GRUPO BACE</b>
-    <small>CULTURA</small>
-  </span>
-</a>
-    <nav id="nav"><a href="#somos">Quiénes somos</a><a href="#gps">Cultura GPS</a><a href="#historia">Historia</a><a href="#ia">BACER IA</a><a href="#red">Nuestra red</a></nav><a class="cta" href="#red">Conoce BACE <i>↗</i></a><button class="menu" id="menu">☰</button></header>
-<main>
-<section class="hero" id="inicio"><img src="assets/images/Sucursales/comanjilla-hero-4k.webp" alt="Unidades de carga recorriendo el centro de México"><div class="heroShade"></div><div class="heroGrid"></div><div class="heroCopy"><div class="eyebrow"><span>DESDE 1967</span><i></i><p>UNA HISTORIA QUE<br>SIGUE MOVIENDO A MÉXICO</p></div><h1>Más que camiones.<em>Impulsamos historias.</em></h1><p>Somos una red de personas, soluciones y tecnología dedicada a mantener en movimiento a quienes hacen crecer nuestro país.</p><div class="heroActions"><a href="#somos">Conoce nuestra historia <b>→</b></a><a href="#ia">Descubre BACER IA</a></div></div><div class="heroFoot"><div><b>5</b><span>Estados conectados</span></div><div><b>1967</b><span>Inicio de operaciones</span></div><div><b>360°</b><span>Unidades · Refacciones · Servicio</span></div></div><aside><small>NUESTRO PROPÓSITO</small><p>Transformar el mundo que tocamos y dejar un legado de bienestar y prosperidad.</p><span>GPS · GENTE CON PASIÓN POR SERVIR</span></aside></section>
-<section class="intro" id="somos"><div class="sectionNo">01 / QUIÉNES SOMOS</div><div><h2>El transporte mueve negocios.<em>Nosotros movemos posibilidades.</em></h2><p>Grupo BACE integra unidades de carga, refacciones y servicio postventa para ayudar a las empresas a transformarse en negocios rentables que nunca se detengan.</p><a href="#red">Explorar nuestra red →</a></div><div class="introCard"><span>BACE</span><b>Bienestar.<br>Acción.<br>Crecimiento.<br>Excelencia.</b><small>Una forma de trabajar y servir.</small></div></section>
-<section class="gps" id="gps"><div class="gpsLead"><span>CULTURA BACE · 02</span><h2>Gente con <em>Pasión por Servir.</em></h2><p>Basados en nuestra cultura GPS logramos trascender y forjar relaciones perdurables con colaboradores y clientes. Es la brújula que nos acerca a nuestro sueño: transformar el mundo que tocamos y dejar bienestar y prosperidad.</p></div><div class="gpsStage"><div class="gpsLetters" id="gpsLetters"></div><article><small id="gpsIndex"></small><h3 id="gpsTitle"></h3><p id="gpsCopy"></p><div class="signal"><i></i><i></i><i></i><span>GPS ACTIVO</span></div></article><div class="gpsQuote"><img src="assets/images/logos/LOGO BACE.png" alt="Logo BACE"><p>Estamos en el negocio de mejorar la vida de las personas.</p></div></div></section>
-<section class="bacer"><div class="bacerHero"><div class="bacerHalo"></div><img src="assets/images/gps/mascota-bacer.png" alt="BACER, superhéroe de Kenworth BACE"><span>NUESTRO SUPERHÉROE</span></div><div><small>IDENTIDAD BACE</small><h2>BACER, el superhéroe de <em>nuestra cultura.</em></h2><p>BACER representa a cada colaborador que vive GPS todos los días: saluda, escucha, cumple, crea soluciones, ayuda a su equipo, aprende y cuida los recursos. Su verdadero poder es servir con pasión y convertir cada interacción en una historia de éxito.</p><div class="traits"><span>Ética</span><span>Calidez</span><span>Excelencia</span><span>Innovación</span><span>Responsabilidad</span></div></div></section>
-<section class="history" id="historia"><div class="historyHead"><span>UN CAMINO LARGO · 03</span><h2>Una gran historia.<em>El siguiente capítulo empieza hoy.</em></h2></div><div class="years" id="years"></div><article class="historyCard"><b id="historyYear"></b><div><small id="historyIndex"></small><h3 id="historyTitle"></h3><p id="historyCopy"></p></div><span id="historyCount"></span></article></section>
-<section class="bace-technology" id="bacer-ia">
-
-  <!-- Personajes -->
-  <div class="bace-technology-visual">
-
-    <div class="technology-identity">
-      <span class="technology-number">04</span>
-
-      <div>
-        <small>EVOLUCIÓN DIGITAL</small>
-        <strong>BACER IA · AI LEAN</strong>
+  <head>
+    <!-- IDENTIDAD 20261016-03: fuente Kenworth integrada, sin fuentes secundarias; superficies claras #f4f2ed. -->
+    <!-- IDENTIDAD VISUAL: fuente Kenworth local y beige #f4f2ed compartidos desde assets/css/global.css. -->
+    <!--
+ DEMO · KENWORTH DEL CENTRO
+ Página institucional del grupo: historia, cultura y cobertura. Nombre original conservado.
+ Estructura: global.css (base) → CSS de página → componentes compartidos.
+ JS: main.js (utilidades), components/nav.js (menú) y script específico.
+ Formularios de demostración: no existe servicio de recepción configurado.
+ GitHub Pages: subir el CONTENIDO de esta carpeta a la raíz del repositorio;
+ Settings → Pages → Deploy from a branch → main → / (root).
+ Conservar exactamente los nombres de archivos, carpetas y recursos.
+ No requiere npm, servidor de aplicaciones ni archivos nuevos.
+-->
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta
+      content="Historia, cultura GPS, red y evolución tecnológica de Kenworth DAF Grupo BACE."
+      name="description"
+    />
+    <title>Kenworth DAF Grupo BACE</title>
+    <link href="assets/css/global.css?v=20261016-03" rel="stylesheet" />
+    <link href="assets/css/pages/bace.css?v=20261016-03" rel="stylesheet" />
+    <!-- Icono de la pestaña del navegador -->
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="icon"
+      type="image/png"
+    />
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
+    <link href="assets/images/logos/LOGO BACE.png" rel="apple-touch-icon" />
+    <link
+      href="assets/css/components/footer.css?v=20261016-03"
+      rel="stylesheet"
+    />
+    <link href="assets/css/components/nav.css?v=20261016-03" rel="stylesheet" />
+    <script defer="" src="assets/js/components/nav.js"></script>
+    <script defer="True" src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <div id="bace-nav"></div>
+    <!-- BLOQUE: inicio · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+    <section class="hero bace-hero" id="inicio">
+      <img
+        alt="Unidades de carga recorriendo el centro de México"
+        decoding="async"
+        loading="lazy"
+        src="assets/images/Sucursales/comanjilla-hero-4k.webp"
+      />
+      <div class="heroShade"></div>
+      <div class="heroGrid"></div>
+      <div class="heroCopy">
+        <div class="eyebrow">
+          <span>CONOCE MAS DE</span>
+          <p>GRUPO BACE</p>
+        </div>
+        <h1>SOMOS GENTE CON<em>PASIÓN POR SERVIR.</em></h1>
+        <p>
+          Somos KENWORTH DAF BACE, una compañía dedicada a contribuir a la
+          eliminación del desempleo, el hambre y la pobreza de nuestro México,
+          mediante la comercialización de unidades de carga, refacciones y
+          servicio postventa. <br />Con más de 100 años de trayectoria en el
+          mercado, nos hemos destacado por nuestra dedicación a la excelencia y
+          nuestro compromiso con la satisfacción de nuestros clientes. Nuestro
+          equipo altamente capacitado y comprometido trabaja incansablemente
+          para ofrecer soluciones innovadoras y de alta calidad que satisfagan
+          las necesidades de nuestros clientes.
+        </p>
+        <div class="heroActions"></div>
       </div>
-    </div>
-
-    <img
-      class="technology-characters"
-      src="assets/images/gps/bacer x ailean.png"
-      alt="BACER IA y AI LEAN, asistentes de inteligencia artificial"
-    >
-
-    <div class="technology-visual-glow" aria-hidden="true"></div>
-
-  </div>
-
-  <!-- Mensaje principal -->
-  <div class="bace-technology-copy">
-
-    <span class="technology-eyebrow">
-      IA + TECNOLOGÍA
-    </span>
-
-    <h2>
-      Tecnología moderna.
-      <em>Mejor servicio.</em>
-    </h2>
-
-    <p>
-      En Kenworth DAF BACE utilizamos inteligencia artificial y tecnologías
-      modernas para mejorar procesos internos, facilitar el trabajo de nuestros
-      equipos y brindar una atención más ágil y satisfactoria a nuestros clientes.
-    </p>
-
-  </div>
-
-  <!-- Beneficios -->
-  <aside class="technology-results">
-
-    <small>TECNOLOGÍA CON PROPÓSITO</small>
-
-    <div>
-      <span>01</span>
-
-      <strong>
-        Procesos más eficientes
-      </strong>
-    </div>
-
-    <div>
-      <span>02</span>
-
-      <strong>
-        Mejor atención al cliente
-      </strong>
-    </div>
-
-    <div>
-      <span>03</span>
-
-      <strong>
-        Decisiones más ágiles
-      </strong>
-    </div>
-
-  </aside>
-
-</section>
-
-<!--
+      <div class="heroFoot">
+        <div><b>5</b><span>Estados conectados</span></div>
+        <div><b>1967</b><span>Inicio de operaciones</span></div>
+        <div><b>360°</b><span>Unidades · Refacciones · Servicio</span></div>
+      </div>
+      <aside>
+        <small>NUESTRO PROPÓSITO</small>
+        <p>
+          Transformar el mundo que tocamos y dejar un legado de bienestar y
+          prosperidad.
+        </p>
+        <span>GPS · GENTE CON PASIÓN POR SERVIR</span>
+      </aside>
+    </section>
+    <!-- ==========================================
+     CULTURA BACE · GPS
+=========================================== -->
+    <!-- BLOQUE: gps · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+    <section class="bace-culture" id="gps">
+      <div class="bace-culture__inner">
+        <div class="bace-culture__heading">
+          <div>
+            <p class="bace-culture__eyebrow">CULTURA BACE</p>
+            <h2>Conoce nuestro <em>GPS.</em></h2>
+          </div>
+          <!-- LOGO GENERAL GPS -->
+          <img
+            alt="GPS · Gente con Pasión por Servir"
+            class="bace-culture__brand"
+            decoding="async"
+            loading="lazy"
+            src="assets/images/logos/logo_gps.png"
+          />
+        </div>
+        <div class="bace-culture__layout">
+          <!-- LISTADO DE VALORES -->
+          <div
+            aria-label="Valores de nuestra cultura"
+            aria-orientation="vertical"
+            class="bace-culture__tabs"
+            role="tablist"
+          >
+            <button
+              aria-controls="baceGpsPanel"
+              aria-selected="true"
+              class="is-active"
+              data-bace-value="sueno"
+              id="baceGpsTab-sueno"
+              role="tab"
+              type="button"
+            >
+              <span>01</span>
+              <strong>Nuestro sueño</strong>
+              <i aria-hidden="true">↗</i>
+            </button>
+            <button
+              aria-controls="baceGpsPanel"
+              aria-selected="false"
+              data-bace-value="causa"
+              id="baceGpsTab-causa"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>02</span>
+              <strong>Nuestra causa</strong>
+              <i aria-hidden="true">↗</i>
+            </button>
+            <button
+              aria-controls="baceGpsPanel"
+              aria-selected="false"
+              data-bace-value="pasion"
+              id="baceGpsTab-pasion"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>03</span>
+              <strong>Pasión por el servicio Trascendental</strong>
+              <i aria-hidden="true">↗</i>
+            </button>
+            <button
+              aria-controls="baceGpsPanel"
+              aria-selected="false"
+              data-bace-value="progreso"
+              id="baceGpsTab-progreso"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>04</span>
+              <strong>Espíritu de progreso</strong>
+              <i aria-hidden="true">↗</i>
+            </button>
+            <button
+              aria-controls="baceGpsPanel"
+              aria-selected="false"
+              data-bace-value="hermandad"
+              id="baceGpsTab-hermandad"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>05</span>
+              <strong>Hermandad BACE</strong>
+              <i aria-hidden="true">↗</i>
+            </button>
+            <button
+              aria-controls="baceGpsPanel"
+              aria-selected="false"
+              data-bace-value="excelencia"
+              id="baceGpsTab-excelencia"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>06</span>
+              <strong>Sed por la excelencia</strong>
+              <i aria-hidden="true">↗</i>
+            </button>
+            <button
+              aria-controls="baceGpsPanel"
+              aria-selected="false"
+              data-bace-value="planeta"
+              id="baceGpsTab-planeta"
+              role="tab"
+              tabindex="-1"
+              type="button"
+            >
+              <span>07</span>
+              <strong>Amor por el planeta</strong>
+              <i aria-hidden="true">↗</i>
+            </button>
+          </div>
+          <!-- INFORMACIÓN DEL VALOR SELECCIONADO -->
+          <div
+            aria-labelledby="baceGpsTab-sueno"
+            class="bace-culture__panel"
+            id="baceGpsPanel"
+            role="tabpanel"
+            tabindex="0"
+          >
+            <div class="bace-culture__panel-top">
+              <span>NUESTRA CULTURA</span>
+              <span id="baceGpsCount">01 / 07</span>
+            </div>
+            <div class="bace-culture__identity">
+              <img
+                alt="Nuestro sueño"
+                decoding="async"
+                id="baceGpsLogo"
+                loading="lazy"
+                src="assets/images/logos/gps/nuestro-sueno.png"
+              />
+              <h3 id="baceGpsName">Nuestro sueño</h3>
+            </div>
+            <div class="bace-culture__guides" id="baceGpsGuides">
+              <p>
+                Ser una compañía que transforme el mundo que toca y deje un
+                legado de bienestar y prosperidad en todas las personas con las
+                que interactúe. Contribuir a eliminar el desempleo, el hambre y
+                la pobreza de nuestro México, mediante la comercialización de
+                Unidades de Carga, Refacciones y Servicio Postventa. Seremos las
+                mejores concesionarias del mundo y nos reinventaremos
+                constantemente, ofreciendo una gama de servicios cargados de un
+                profundo sentido social.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BLOQUE: bacer · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+    <section class="bacer">
+      <div class="bacerHero">
+        <div class="bacerHalo"></div>
+        <img
+          alt="BACER, superhéroe de Kenworth BACE"
+          decoding="async"
+          loading="lazy"
+          src="assets/images/gps/mascota-bacer.png"
+        /><span>NUESTRO SUPERHÉROE</span>
+      </div>
+      <div>
+        <small>IDENTIDAD BACE</small>
+        <h2>BACER, el superhéroe de <em>nuestra cultura.</em></h2>
+        <p>
+          BACER representa a cada colaborador que vive GPS todos los días:
+          saluda, escucha, cumple, crea soluciones, ayuda a su equipo, aprende y
+          cuida los recursos. Su verdadero poder es servir con pasión y
+          convertir cada interacción en una historia de éxito.
+        </p>
+        <div class="traits">
+          <span>Ética</span><span>Calidez</span><span>Excelencia</span
+          ><span>Innovación</span><span>Responsabilidad</span>
+        </div>
+      </div>
+    </section>
+    <!-- BLOQUE: historia · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+    <section class="history" id="historia">
+      <div class="historyHead">
+        <span>UN CAMINO LARGO · 03</span>
+        <h2>Una gran historia.<em>El siguiente capítulo empieza hoy.</em></h2>
+      </div>
+      <div class="years" id="years"></div>
+      <article class="historyCard">
+        <b id="historyYear"></b>
+        <div>
+          <small id="historyIndex"></small>
+          <h3 id="historyTitle"></h3>
+          <p id="historyCopy"></p>
+        </div>
+        <figure class="historyCard__media">
+          <img
+            alt=""
+            decoding="async"
+            hidden=""
+            id="historyImage"
+            loading="lazy"
+          />
+        </figure>
+        <span id="historyCount"></span>
+      </article>
+    </section>
+    <!-- BLOQUE: bacer-ia · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+    <section class="bace-technology" id="bacer-ia">
+      <!-- Personajes -->
+      <div class="bace-technology-visual">
+        <div class="technology-identity">
+          <span class="technology-number">04</span>
+          <div>
+            <small>EVOLUCIÓN DIGITAL</small>
+            <strong>BACER IA · AI LEAN</strong>
+          </div>
+        </div>
+        <img
+          alt="BACER IA y AI LEAN, asistentes de inteligencia artificial"
+          class="technology-characters"
+          decoding="async"
+          loading="lazy"
+          src="assets/images/gps/bacer x ailean.png"
+        />
+        <div aria-hidden="true" class="technology-visual-glow"></div>
+      </div>
+      <!-- Mensaje principal -->
+      <div class="bace-technology-copy">
+        <span class="technology-eyebrow"> IA + TECNOLOGÍA </span>
+        <h2>
+          Tecnología moderna.
+          <em>Mejor servicio.</em>
+        </h2>
+        <p>
+          En Kenworth DAF BACE utilizamos inteligencia artificial y tecnologías
+          modernas para mejorar procesos internos, facilitar el trabajo de
+          nuestros equipos y brindar una atención más ágil y satisfactoria a
+          nuestros clientes.
+        </p>
+      </div>
+      <!-- Beneficios -->
+      <aside class="technology-results">
+        <small>TECNOLOGÍA CON PROPÓSITO</small>
+        <div>
+          <span>01</span>
+          <strong> Procesos más eficientes </strong>
+        </div>
+        <div>
+          <span>02</span>
+          <strong> Mejor atención al cliente </strong>
+        </div>
+        <div>
+          <span>03</span>
+          <strong> Decisiones más ágiles </strong>
+        </div>
+      </aside>
+    </section>
+    <!--
 <section class="network" id="red">
 
   <div class="networkMap">
@@ -212,58 +435,258 @@
   </div>
 
 </section>--->
-<section class="closing"><span>EL CAMINO CONTINÚA</span><h2>Lo que mueve a México, <em>nos mueve a servir.</em></h2><a href="#inicio">Volver al inicio ↑</a></section>
-</main>
-<footer class="culture-footer">
-
-  <div class="culture-footer-main">
-
-    <div class="culture-footer-identity">
-
+    <!-- BLOQUE: closing · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+    <section class="closing">
+      <span>EL CAMINO CONTINÚA</span>
+      <h2>Lo que mueve a México, <em>nos mueve a servir.</em></h2>
+      <a href="#inicio">Volver al inicio ↑</a>
+    </section>
+    <!-- ========================================================
+     FOOTER INSTITUCIONAL · KENWORTH DAF BACE
+     ======================================================== -->
+    <footer class="bace-footer" id="contacto">
+      <div class="bace-footer__inner">
+        <!-- Identidad superior -->
+        <div class="bace-footer__top">
+          <a
+            aria-label="Volver al inicio de Kenworth DAF BACE"
+            class="bace-footer__brand"
+            href="#inicio"
+          >
+            <img
+              alt="Kenworth DAF BACE"
+              decoding="async"
+              loading="lazy"
+              src="assets/images/logos/KW-DAF.png"
+            />
+          </a>
+        </div>
+        <!-- Matrices -->
+        <div class="bace-footer__locations">
+          <!-- Kenworth DAF del Bajío -->
+          <article class="bace-footer__location">
+            <header class="bace-footer__location-header">
+              <span class="bace-footer__location-number"></span>
+              <div>
+                <h2>Kenworth DAF del Bajío</h2>
+                <h3>Matriz Querétaro</h3>
+              </div>
+            </header>
+            <div class="bace-footer__contact-list">
+              <a
+                class="bace-footer__contact"
+                href="https://maps.app.goo.gl/FrEAsvTGB62Cdirf7"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                    ></path>
+                    <circle cx="12" cy="9" r="2.5"></circle>
+                  </svg>
+                </span>
+                <span>
+                  Autopista México–Querétaro km 204,<br />
+                  76209 San Isidro Miranda, Qro.
+                </span>
+              </a>
+              <a
+                class="bace-footer__contact bace-footer__phone"
+                href="tel:4422774086"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>
+                  <small>Teléfono</small>
+                  <strong>442 277 4086</strong>
+                </span>
+              </a>
+            </div>
+            <div class="bace-footer__location-bottom">
+              <a
+                class="bace-footer__branches"
+                href="https://kwbace.com.mx/kenworth-grupo-bace/#Localizar"
+              >
+                <span>Conoce nuestras sucursales</span>
+                <b aria-hidden="true">→</b>
+              </a>
+              <nav
+                aria-label="Redes sociales de Kenworth DAF del Bajío"
+                class="bace-footer__social"
+              >
+                <a
+                  aria-label="Facebook Kenworth DAF del Bajío"
+                  href="https://www.facebook.com/KWBajio"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  f
+                </a>
+                <a
+                  aria-label="Instagram Kenworth DAF del Bajío"
+                  href="https://www.instagram.com/kenworthbajiobace/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ◎
+                </a>
+                <a
+                  aria-label="LinkedIn Kenworth DAF del Bajío"
+                  href="https://www.linkedin.com/company/kenworth-del-baj%C3%ADo-bace/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  in
+                </a>
+                <a
+                  aria-label="TikTok Kenworth DAF del Bajío"
+                  href="https://www.tiktok.com/@kenworthbajio"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ♪
+                </a>
+              </nav>
+            </div>
+          </article>
+          <!-- Kenworth DAF del Centro -->
+          <article class="bace-footer__location">
+            <header class="bace-footer__location-header">
+              <span class="bace-footer__location-number"></span>
+              <div>
+                <h2>Kenworth DAF del Centro</h2>
+                <h3>Matriz Comanjilla</h3>
+              </div>
+            </header>
+            <div class="bace-footer__contact-list">
+              <a
+                class="bace-footer__contact"
+                href="https://maps.app.goo.gl/1gCTYLroUXHg9qKe7"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                    ></path>
+                    <circle cx="12" cy="9" r="2.5"></circle>
+                  </svg>
+                </span>
+                <span>
+                  Blvd. Aeropuerto #5017, Col. Los Sauces,<br />
+                  37680 León, Gto.
+                </span>
+              </a>
+              <a
+                class="bace-footer__contact bace-footer__phone"
+                href="tel:4777199500"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>
+                  <small>Teléfono</small>
+                  <strong>477 719 9500</strong>
+                </span>
+              </a>
+            </div>
+            <div class="bace-footer__location-bottom">
+              <a
+                class="bace-footer__branches"
+                href="https://kwbace.com.mx/kenworth-grupo-bace/#sucursales"
+              >
+                <span>Conoce nuestras sucursales</span>
+                <b aria-hidden="true">→</b>
+              </a>
+              <nav
+                aria-label="Redes sociales de Kenworth DAF del Centro"
+                class="bace-footer__social"
+              >
+                <a
+                  aria-label="Facebook Kenworth DAF del Centro"
+                  href="https://www.facebook.com/KWCBACE/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  f
+                </a>
+                <a
+                  aria-label="Instagram Kenworth DAF del Centro"
+                  href="https://www.instagram.com/kenworthdelcentro/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ◎
+                </a>
+                <a
+                  aria-label="LinkedIn Kenworth DAF del Centro"
+                  href="https://www.linkedin.com/company/kenworthdelcentrobace/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  in
+                </a>
+                <a
+                  aria-label="TikTok Kenworth DAF del Centro"
+                  href="https://www.tiktok.com/@kwcentrobace"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ♪
+                </a>
+              </nav>
+            </div>
+          </article>
+        </div>
+        <!-- Franja inferior -->
+        <div class="bace-footer__bottom">
+          <!--
       <a
-        class="culture-footer-brand"
-        href="index.html"
-        aria-label="Kenworth DAF BACE"
+        class="bace-footer__jobs"
+        href="https://kwbace.com.mx/bolsa-de-trabajo-kw/"
       >
-        <img
-          src="assets/images/logos/logo-kenworth-daf-bace.PNG"
-          alt="Kenworth DAF BACE"
-        >
-
-        <span class="culture-footer-divider" aria-hidden="true"></span>
-
-        <span class="culture-footer-brand-copy">
-          <b>GRUPO BACE</b>
-          <small>CULTURA</small>
-        </span>
-      </a>
-
-      <p>
-        Gente con Pasión por Servir.
-      </p>
-
-    </div>
-
-    <nav
-      class="culture-footer-navigation"
-      aria-label="Navegación Cultura BACE"
-    >
-      <a href="#quienes-somos">Quiénes somos</a>
-      <a href="#gps">Cultura GPS</a>
-      <a href="#historia">Historia</a>
-      <a href="#bacer-ia">BACER IA</a>
-      <a href="#red">Nuestra red</a>
-    </nav>
-
-  </div>
-
-  <div class="culture-footer-bottom">
-    <p>© 2026 Kenworth DAF BACE</p>
-
-    <span>
-      Grupo BACE · Gente con Pasión por Servir
-    </span>
-  </div>
-
-</footer>
-<script src="assets/js/pages/bace.js"></script></body></html>
+        <span>Bolsa de trabajo</span>
+        <b aria-hidden="true">↗</b>
+      </a> -->
+          <p class="bace-footer__copyright">
+            © <span id="baceFooterYear">2026</span>
+            KENWORTH DAF BACE
+          </p>
+          <nav aria-label="Información legal" class="bace-footer__legal">
+            <a
+              href="https://kwbace.com.mx/wp-content/uploads/2024/07/NUEVO-AVISO-DE-PRIVACIDAD-KW-CENTRO-JULIO-2024.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Privacidad KW DAF BACE
+            </a>
+            <a
+              href="https://kwbace.com.mx/wp-content/uploads/2023/12/Constancia-Situacion-Fiscal.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Constancia fiscal
+            </a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/pages/bace.js"></script>
+  </body>
+</html>

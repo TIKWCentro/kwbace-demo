@@ -1,783 +1,1631 @@
 <!doctype html>
+
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Descubre la gama Kenworth y DAF y encuentra la unidad ideal para tu operación.">
-  <title>Unidades nuevas | KENWORTH DAF BACE</title>
-
+  <head>
+    <!-- IDENTIDAD 20261016-03: fuente Kenworth integrada, sin fuentes secundarias; superficies claras #f4f2ed. -->
+    <!-- IDENTIDAD VISUAL: fuente Kenworth local y beige #f4f2ed compartidos desde assets/css/global.css. -->
+    <!--
+ DEMO · KENWORTH DEL CENTRO
+ Unidades nuevas: selección de marca, catálogo, fichas, visor 3D y cotizador local.
+ Estructura: global.css (base) → CSS de página → componentes compartidos.
+ JS: main.js (utilidades), components/nav.js (menú) y script específico.
+ Formularios de demostración: no existe servicio de recepción configurado.
+ GitHub Pages: subir el CONTENIDO de esta carpeta a la raíz del repositorio;
+ Settings → Pages → Deploy from a branch → main → / (root).
+ Conservar exactamente los nombres de archivos, carpetas y recursos.
+ No requiere npm, servidor de aplicaciones ni archivos nuevos.
+-->
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta
+      content="Descubre la gama Kenworth y DAF y encuentra la unidad ideal para tu operación."
+      name="description"
+    />
+    <title>Unidades nuevas | KENWORTH DAF BACE</title>
     <!-- Icono de la pestaña del navegador -->
-<link
-  rel="icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="shortcut icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="apple-touch-icon"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Mono:wght@500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/pages/unidades-nuevas.css">
-</head>
-<body>
-  <header class="topbar"><span>Gente con Pasión por Servir</span><div><a href="index.html#sucursales">Sucursales</a><a href="index.html#contacto">Atención especializada</a></div></header>
-  <nav class="nav" aria-label="Navegación principal">
-<div class="units-brand">
-  <a class="logo" href="index.html" aria-label="Inicio KENWORTH DAF BACE">
-    <img
-      src="assets/images/logos/logo-kenworth-daf-bace.PNG"
-      alt="KENWORTH DAF BACE"
-    >
-  </a>
-
-  <span class="parts-brand-divider" aria-hidden="true"></span>
-
-  <span class="parts-brand-copy">
-    <b>Unidades<span class="mobile-break"></span>Nuevas</b>
-    <small>GRUPO BACE</small>
-  </span>
-</div>
-    <button class="menu-btn" id="unitsMenuButton" type="button" aria-controls="unitsNavLinks" aria-expanded="false">Menú</button>
-    <div class="nav-links" id="unitsNavLinks"><a href="index.html">Inicio</a><a href="#kenworth">Kenworth</a><a href="#daf">DAF</a><a href="#especializados">Usos especializados</a><a href="#truckman">Truckman</a><a href="index.html#sucursales">Sucursales</a><a class="nav-cta" href="index.html#cotizar">Cotizar <span>↗</span></a></div>
-  </nav>
-
-  <main>
-    <section class="experience" id="inicio">
-      <div class="experience-bg is-active" data-bg="kenworth"></div>
-      <div class="experience-bg" data-bg="daf"></div>
-      <div class="experience-shade"></div>
-      <div class="brand-switch" role="group" aria-label="Seleccionar marca">
-        <button class="is-active" type="button" data-brand="kenworth" aria-pressed="true"><span>01</span> KENWORTH</button>
-        <button type="button" data-brand="daf" aria-pressed="false"><span>02</span> DAF</button>
-      </div>
-      <div class="experience-copy reveal is-visible">
-        <p class="eyebrow">UNIDADES NUEVAS · BACE</p>
-        <h1>No eliges solo un camión.<em>Defines hasta dónde puede llegar tu operación.</em></h1>
-        <p id="heroCopy">Potencia, eficiencia y respaldo para convertir cada kilómetro en una ventaja para tu negocio.</p>
-        <div class="hero-actions"><a class="button button-red" href="#elige">Encontrar mi unidad <span>↓</span></a><a class="button button-glass" id="heroModelsLink" href="#kenworth">Explorar modelos</a></div>
-      </div>
-      <aside class="featured-card">
-        <div class="featured-top"><span>MODELO DESTACADO</span><b id="featuredBrand">KENWORTH</b></div>
-        <strong id="featuredModel">T680</strong>
-        <p id="featuredTagline">La nueva generación del líder.</p>
-        <div class="featured-facts"><div><small>IDEAL PARA</small><b id="featuredUse">Larga distancia</b></div><div><small>FORTALEZA</small><b id="featuredStrength">Eficiencia aerodinámica</b></div></div>
-        <a id="featuredLink" href="#kenworth">Conocer el T680 <span>↗</span></a>
-      </aside>
-      <div class="scroll-cue"><i></i><span>DESCUBRE TU SIGUIENTE UNIDAD</span></div>
-    </section>
-
-    <section class="chooser" id="elige">
-      <div class="section-intro"><div><p class="eyebrow dark">EMPECEMOS POR TU OPERACIÓN</p><h2>¿Qué necesita mover <em>tu negocio?</em></h2></div><p>No tienes que conocer todos los modelos. Elige tu aplicación y te mostraremos un punto de partida.</p></div>
-      <div class="operation-grid" role="group" aria-label="Tipo de operación">
-        <button class="operation is-active" type="button" data-operation="carretera"><span>01</span><div><small>LARGA DISTANCIA</small><strong>Carretera</strong><p>Autonomía, rendimiento y confort.</p></div><b>↗</b></button>
-        <button class="operation" type="button" data-operation="distribucion"><span>02</span><div><small>CIUDAD Y REGIÓN</small><strong>Distribución</strong><p>Agilidad, visibilidad y productividad.</p></div><b>↗</b></button>
-        <button class="operation" type="button" data-operation="vocacional"><span>03</span><div><small>TRABAJO PESADO</small><strong>Vocacional</strong><p>Resistencia para el trabajo más exigente.</p></div><b>↗</b></button>
-        <button class="operation" type="button" data-operation="premium"><span>04</span><div><small>PRESENCIA Y CONFORT</small><strong>Experiencia premium</strong><p>Potencia, carácter y distinción.</p></div><b>↗</b></button>
-      </div>
-      <div class="recommendation">
-        <div><small>RECOMENDACIÓN INICIAL</small><h3 id="recommendedModels">Kenworth T680 · DAF XG</h3><p id="recommendationText">Dos referentes para recorrer largas distancias con eficiencia, seguridad y confort.</p></div>
-        <a id="recommendationLink" href="#kenworth">Ver modelos recomendados <span>→</span></a>
-      </div>
-    </section>
-
-    <section class="specialized" id="especializados">
-      <div class="specialized-head reveal">
-        <div><p class="eyebrow dark">SOLUCIONES PARA CADA INDUSTRIA</p><h2>No vendemos una configuración.<br><em>Diseñamos la herramienta de trabajo.</em></h2></div>
-        <p>Selecciona el tipo de equipo que requiere tu operación. Te mostraremos el punto de partida para integrar chasis, capacidad y aplicación con el acompañamiento de un especialista BACE.</p>
-      </div>
-      <div class="specialized-layout">
-        <div class="use-list" id="specializedList" role="tablist" aria-label="Usos especializados"></div>
-        <article class="use-stage" id="specializedStage" aria-live="polite"></article>
-      </div>
-      <div class="specialized-note"><span>CONFIGURACIÓN A LA MEDIDA</span><p>La recomendación final depende de carga, ruta, condiciones de operación, normatividad y equipo aliado.</p><a href="index.html#cotizar">Solicitar diagnóstico de aplicación <b>→</b></a></div>
-    </section>
-
-    <section class="brand-story kw-story" id="kenworth">
-      <div class="story-copy reveal"><p class="eyebrow">KENWORTH</p><h2>Hechos para quienes <em>mueven al país.</em></h2><p>Una gama desarrollada para convertir fuerza, tecnología y durabilidad en productividad real.</p><div class="story-stat"><span>4</span><p>modelos para distribución, carretera, aplicaciones vocacionales y experiencia premium.</p></div></div>
-      <div class="story-model-name" aria-hidden="true">T680</div>
-    </section>
-    <section class="model-showcase kw-models"><div class="model-tabs" id="kenworthTabs" role="tablist"></div><article class="model-stage" id="kenworthStage"></article></section>
-
-    <section class="brand-story daf-story" id="daf">
-      <div class="story-copy reveal"><p class="eyebrow blue">DAF</p><h2>Ingeniería europea para una <em>nueva dimensión.</em></h2><p>Eficiencia, seguridad, aerodinámica y una cabina pensada alrededor del conductor.</p><div class="story-stat"><span>3</span><p>modelos para distribución urbana, carretera y máximo confort.</p></div></div>
-      <div class="story-model-name" aria-hidden="true">XG</div>
-    </section>
-    <section class="model-showcase daf-models"><div class="model-tabs" id="dafTabs" role="tablist"></div><article class="model-stage" id="dafStage"></article></section>
-
-    <section class="truckman" id="truckman">
-      <div class="truckman-media"><div class="truckman-word" aria-hidden="true">TRUCKMAN</div><img src="assets/images/U Kenworth/truckman.jpg" alt="Propietario operador con unidad Kenworth"><div class="truckman-badge"><small>COMUNIDAD BACE</small><b>01—05</b><span>UNIDADES EN TU FLOTA</span></div></div>
-      <div class="truckman-copy reveal">
-        <p class="eyebrow">TRUCKMAN · PROPIETARIO OPERADOR</p>
-        <h2>Tu camión es tu empresa.<br><em>Tu historia comienza al volante.</em></h2>
-        <p>Truckman es una experiencia pensada para quienes conducen su propio negocio: transportistas independientes y pequeñas flotas que buscan crecer con una unidad confiable y una red que los acompañe.</p>
-        <div class="truckman-pillars"><article><span>01</span><div><b>Tu unidad ideal</b><p>Configurada alrededor de tu ruta, carga y forma de trabajar.</p></div></article><article><span>02</span><div><b>Ruta para crecer</b><p>Opciones de renovación y financiamiento según tu proyecto.</p></div></article><article><span>03</span><div><b>Respaldo en carretera</b><p>Servicio, refacciones y sucursales BACE cuando las necesitas.</p></div></article></div>
-        <div class="truckman-actions"><button type="button" id="truckmanStoryButton">Conocer una historia <span>▶</span></button></div>
-      </div>
-    </section>
-
-    <section class="truckman-manifesto" id="truckmanStory" hidden><button type="button" id="closeTruckmanStory" aria-label="Cerrar historia">×</button><small>MANIFIESTO TRUCKMAN</small><blockquote>“No cuento viajes. Cuento oportunidades, kilómetros y las veces que mi camión me permitió volver a casa.”</blockquote><p>Una sección preparada para integrar testimonios reales de clientes BACE durante la siguiente fase de contenido.</p></section>
-
-    <!-- =====================================================
-     FINANCIAMIENTO
-     ===================================================== -->
-
-<section
-  class="units-financing"
-  id="financiamiento"
-  aria-labelledby="financingTitle"
->
-  <div class="financing-heading reveal">
-    <div>
-      <p class="eyebrow dark">
-        SOLUCIONES FINANCIERAS
-      </p>
-
-      <h2 id="financingTitle">
-        La unidad correcta también necesita
-        <em>el plan correcto.</em>
-      </h2>
-    </div>
-
-    <p>
-      Compara alternativas para adquirir, arrendar o renovar
-      tus unidades con el acompañamiento de especialistas en
-      transporte.
-    </p>
-  </div>
-
-  <div class="finance-options reveal">
-
-    <!-- PACCAR FINANCIAL -->
-
-    <article
-      class="finance-card finance-card-paccar"
-      data-finance-card="paccar"
-    >
-      <div class="finance-card-top">
-        <span>01</span>
-        <small>ADQUISICIÓN DE UNIDADES</small>
-      </div>
-
-      <div class="finance-brand">
-        <span>PACCAR</span>
-        <strong>FINANCIAL</strong>
-      </div>
-
-      <h3>
-        Financiamiento especializado en transporte.
-      </h3>
-
-      <p>
-        Alternativas para adquirir unidades Kenworth,
-        considerando las características y necesidades
-        financieras de tu negocio.
-      </p>
-
-      <ul>
-        <li>Planes especializados para transporte.</li>
-        <li>Alternativas para propietarios y flotas.</li>
-        <li>Plazos y pagos sujetos a evaluación.</li>
-        <li>Acompañamiento durante el proceso.</li>
-      </ul>
-
-      <button
-        type="button"
-        data-finance-choice="paccar"
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="icon"
+      type="image/png"
+    />
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
+    <link href="assets/images/logos/LOGO BACE.png" rel="apple-touch-icon" />
+    <link href="assets/css/global.css?v=20261016-03" rel="stylesheet" />
+    <link
+      href="assets/css/components/footer.css?v=20261016-03"
+      rel="stylesheet"
+    />
+    <link href="assets/css/components/nav.css?v=20261016-03" rel="stylesheet" />
+    <script defer="" src="assets/js/components/nav.js"></script>
+    <link
+      href="assets/css/pages/unidades-nuevas.css?v=20261016-03"
+      rel="stylesheet"
+    />
+    <!-- Estilos del visor: aseguran dimensiones aunque la hoja principal sea anterior. -->
+    <script defer="True" src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <div id="bace-nav"></div>
+    <main>
+      <!--=====================================================
+ACCESO A UNIDADES KENWORTH Y DAF
+===================================================== -->
+      <!-- BLOQUE: inicio · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section
+        aria-labelledby="unitsGatewayTitle"
+        class="units-gateway"
+        id="inicio"
       >
-        Quiero financiar mi unidad
-        <span>→</span>
-      </button>
-    </article>
-
-    <!-- PACLEASE -->
-
-    <article
-      class="finance-card finance-card-paclease"
-      data-finance-card="paclease"
-    >
-      <div class="finance-card-top">
-        <span>02</span>
-        <small>ARRENDAMIENTO PURO</small>
-      </div>
-
-      <div class="finance-brand">
-        <span>PACLEASE</span>
-        
-      </div>
-
-      <h3>
-        Arrendamiento que mantiene tu operación en movimiento.
-      </h3>
-
-      <p>
-        Arrendamiento puro de unidades Kenworth y DAF con
-        alternativas de mantenimiento adaptadas a tu negocio.
-      </p>
-
-      <ul>
-        <li>Arrendamiento puro.</li>
-        <li>Unidades Kenworth y DAF.</li>
-        <li>Programas de mantenimiento.</li>
-        <li>Asistencia carretera.</li>
-      </ul>
-
-      <button
-        type="button"
-        data-finance-choice="paclease"
+        <h1 class="units-gateway__sr-title" id="unitsGatewayTitle">
+          Unidades nuevas Kenworth y DAF
+        </h1>
+        <!-- KENWORTH -->
+        <a
+          aria-label="Explorar unidades nuevas Kenworth"
+          class="units-gateway__option units-gateway__option--kenworth"
+          href="#kenworth"
+        >
+          <img
+            alt="Camión Kenworth T680"
+            decoding="async"
+            src="assets/images/U Kenworth/kw-680.jpg"
+          />
+          <div class="units-gateway__overlay"></div>
+          <span aria-hidden="true" class="units-gateway__number"> 01 </span>
+          <div class="units-gateway__content">
+            <small>Potencia · Durabilidad · Respaldo</small>
+            <h2>Kenworth</h2>
+            <p>
+              Camiones diseñados para transformar potencia, tecnología y
+              resistencia en productividad para tu operación.
+            </p>
+            <span class="units-gateway__action">
+              <span>Explorar modelos</span>
+              <b aria-hidden="true">↗</b>
+            </span>
+          </div>
+          <div aria-hidden="true" class="units-gateway__models">
+            T480 · T680 · T880 · W990
+          </div>
+        </a>
+        <!-- DAF -->
+        <a
+          aria-label="Explorar unidades nuevas DAF"
+          class="units-gateway__option units-gateway__option--daf"
+          href="#daf"
+        >
+          <img
+            alt="Camión DAF XG"
+            decoding="async"
+            src="assets/images/U DAF/daf-xg.png"
+          />
+          <div class="units-gateway__overlay"></div>
+          <span aria-hidden="true" class="units-gateway__number"> 02 </span>
+          <div class="units-gateway__content">
+            <small>Eficiencia · Tecnología · Confort</small>
+            <h2>DAF</h2>
+            <p>
+              Ingeniería europea enfocada en rendimiento, seguridad y una
+              experiencia superior para el conductor.
+            </p>
+            <span class="units-gateway__action">
+              <span>Explorar modelos</span>
+              <b aria-hidden="true">↗</b>
+            </span>
+          </div>
+          <div aria-hidden="true" class="units-gateway__models">
+            XB · XF · XG
+          </div>
+        </a>
+      </section>
+      <!--=====================================================
+ CARRUSEL DE MODELOS RECOMENDADOS
+ ===================================================== -->
+      <!-- BLOQUE: modelos · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section aria-labelledby="modelRailTitle" class="model-rail" id="modelos">
+        <div class="model-rail__container">
+          <!-- Encabezado -->
+          <header class="model-rail__header">
+            <div class="model-rail__heading">
+              <small>CATALOGO DE UNIDADES</small>
+              <h2 id="modelRailTitle">Explora nuestros modelos</h2>
+            </div>
+            <div class="model-rail__navigation">
+              <!-- Filtros -->
+              <div
+                aria-label="Filtrar modelos por marca"
+                class="model-rail__filters"
+                role="group"
+              >
+                <button class="is-active" data-rail-filter="all" type="button">
+                  Todos
+                </button>
+                <button data-rail-filter="kenworth" type="button">
+                  Kenworth
+                </button>
+                <button data-rail-filter="daf" type="button">DAF</button>
+              </div>
+              <!-- Flechas -->
+              <div class="model-rail__arrows">
+                <button
+                  aria-label="Modelos anteriores"
+                  id="modelRailPrevious"
+                  type="button"
+                >
+                  ←
+                </button>
+                <button
+                  aria-label="Siguientes modelos"
+                  id="modelRailNext"
+                  type="button"
+                >
+                  →
+                </button>
+              </div>
+            </div>
+          </header>
+          <!-- Carrusel -->
+          <div
+            aria-label="Modelos de unidades"
+            class="model-rail__viewport"
+            id="modelRailViewport"
+            role="region"
+            tabindex="0"
+          >
+            <div class="model-rail__track" id="modelRailTrack">
+              <!-- ==============================================
+             KENWORTH T480
+             ============================================== -->
+              <button
+                aria-label="Consultar Kenworth T480"
+                class="model-rail__item model-rail__item--kenworth"
+                data-model-brand="kenworth"
+                data-model-index="0"
+                type="button"
+              >
+                <span class="model-rail__image">
+                  <img
+                    alt="Kenworth T480"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/U Kenworth/T480-model.png"
+                  />
+                </span>
+              </button>
+              <!-- ==============================================
+             KENWORTH T680
+             ============================================== -->
+              <button
+                aria-label="Consultar Kenworth T680"
+                class="model-rail__item model-rail__item--kenworth"
+                data-model-brand="kenworth"
+                data-model-index="1"
+                type="button"
+              >
+                <span class="model-rail__image">
+                  <img
+                    alt="Kenworth T680"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/U Kenworth/T680-model.png"
+                  />
+                </span>
+              </button>
+              <!-- ==============================================
+             KENWORTH T680 ELECTRICO
+       ============================================== -->
+              <button
+                aria-label="Consultar Kenworth T680E"
+                class="model-rail__item model-rail__item--kenworth"
+                data-model-brand="kenworth"
+                data-model-index="2"
+                type="button"
+              >
+                <span class="model-rail__image">
+                  <img
+                    alt="Kenworth T680 ELECTRICO"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/U Kenworth/T680E-model.png"
+                  />
+                </span>
+              </button>
+              <!-- ==============================================
+             KENWORTH T680 GAS
+       ============================================== -->
+              <button
+                aria-label="Consultar Kenworth T680 G"
+                class="model-rail__item model-rail__item--kenworth"
+                data-model-brand="kenworth"
+                data-model-index="2"
+                type="button"
+              >
+                <span class="model-rail__image">
+                  <img
+                    alt="Kenworth T680 GAS"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/U Kenworth/T680G-model.png"
+                  />
+                </span>
+              </button>
+              <!-- ==============================================
+             KENWORTH T880
+      ============================================== -->
+              <button
+                aria-label="Consultar Kenworth T880"
+                class="model-rail__item model-rail__item--kenworth"
+                data-model-brand="kenworth"
+                data-model-index="2"
+                type="button"
+              >
+                <span class="model-rail__image">
+                  <img
+                    alt="Kenworth T880"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/U Kenworth/T880-model.png"
+                  />
+                </span>
+              </button>
+              <!-- ==============================================
+             KENWORTH W990
+             ============================================== -->
+              <button
+                aria-label="Consultar Kenworth W990"
+                class="model-rail__item model-rail__item--kenworth"
+                data-model-brand="kenworth"
+                data-model-index="3"
+                type="button"
+              >
+                <span class="model-rail__image">
+                  <img
+                    alt="Kenworth W990"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/U Kenworth/W990-model.png"
+                  />
+                </span>
+              </button>
+              <!-- ==============================================
+             DAF XB
+             ============================================== -->
+              <button
+                aria-label="Consultar DAF XB"
+                class="model-rail__item model-rail__item--daf"
+                data-model-brand="daf"
+                data-model-index="0"
+                type="button"
+              >
+                <span class="model-rail__image">
+                  <img
+                    alt="DAF XB"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/U DAF/XB-model.png"
+                  />
+                </span>
+              </button>
+              <!-- ==============================================
+             DAF CF
+             ============================================== -->
+              <button
+                aria-label="Consultar DAF CF"
+                class="model-rail__item model-rail__item--daf"
+                data-model-brand="daf"
+                data-model-index="1"
+                type="button"
+              >
+                <span class="model-rail__image">
+                  <img
+                    alt="DAF CF"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/U DAF/CF-model.png"
+                  />
+                </span>
+              </button>
+              <!-- ==============================================
+             DAF XG
+             ============================================== -->
+              <button
+                aria-label="Consultar DAF XG"
+                class="model-rail__item model-rail__item--daf"
+                data-model-brand="daf"
+                data-model-index="2"
+                type="button"
+              >
+                <span class="model-rail__image">
+                  <img
+                    alt="DAF XG"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/U DAF/XG-model.png"
+                  />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=====================================================
+ SOLUCIONES PARA CADA INDUSTRIA
+ ===================================================== -->
+      <!-- BLOQUE: especializados · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="specialized" id="especializados">
+        <div class="specialized-head reveal">
+          <div>
+            <p class="eyebrow dark">SOLUCIONES PARA CADA INDUSTRIA</p>
+            <h2>
+              Diseñamos cada unidad como<br /><em
+                >una solución para tu operación.</em
+              >
+            </h2>
+          </div>
+          <p>
+            Selecciona el tipo de equipo que requiere tu operación. Te
+            mostraremos el punto de partida para integrar chasis, capacidad y
+            aplicación con el acompañamiento de un especialista BACE.
+          </p>
+        </div>
+        <div class="specialized-layout">
+          <div
+            aria-label="Usos especializados"
+            class="use-list"
+            id="specializedList"
+            role="tablist"
+          ></div>
+          <article
+            aria-live="polite"
+            class="use-stage"
+            id="specializedStage"
+          ></article>
+        </div>
+        <div class="specialized-note">
+          <span>CONFIGURACIÓN A LA MEDIDA</span>
+          <p>
+            La recomendación final depende de carga, ruta, condiciones de
+            operación, normatividad y equipo aliado.
+          </p>
+          <a href="index.html#cotizar"
+            >Solicitar diagnóstico de aplicación <b>→</b></a
+          >
+        </div>
+      </section>
+      <!--=====================================================
+UNIDADES KENWORTH
+===================================================== -->
+      <!-- BLOQUE: kenworth · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="brand-story kw-story" id="kenworth">
+        <div class="story-copy reveal">
+          <p class="eyebrow">KENWORTH</p>
+          <h2>Hechos para quienes <em>mueven al país.</em></h2>
+          <p>
+            Una gama desarrollada para convertir fuerza, tecnología y
+            durabilidad en productividad real.
+          </p>
+          <div class="story-stat">
+            <span>4</span>
+            <p>
+              modelos para distribución, carretera, aplicaciones vocacionales y
+              experiencia premium.
+            </p>
+          </div>
+        </div>
+        <div aria-hidden="true" class="story-model-name">T680</div>
+      </section>
+      <!-- BLOQUE: model-showcase kw-models · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="model-showcase kw-models">
+        <div class="model-tabs" id="kenworthTabs" role="tablist"></div>
+        <article class="model-stage" id="kenworthStage"></article>
+      </section>
+      <!--=====================================================
+UNIDADES DAF
+===================================================== -->
+      <!-- BLOQUE: daf · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="brand-story daf-story" id="daf">
+        <div class="story-copy reveal">
+          <p class="eyebrow blue">DAF</p>
+          <h2>Ingeniería europea para una <em>nueva dimensión.</em></h2>
+          <p>
+            Eficiencia, seguridad, aerodinámica y una cabina pensada alrededor
+            del conductor.
+          </p>
+          <div class="story-stat">
+            <span>3</span>
+            <p>modelos para distribución urbana, carretera y máximo confort.</p>
+          </div>
+        </div>
+        <div aria-hidden="true" class="story-model-name">XG</div>
+      </section>
+      <!-- BLOQUE: model-showcase daf-models · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="model-showcase daf-models">
+        <div class="model-tabs" id="dafTabs" role="tablist"></div>
+        <article class="model-stage" id="dafStage"></article>
+      </section>
+      <!--=====================================================
+  SOLUCIONES ESPECIALIZADAS UNIDADES ELÉCTRICAS Y A GAS
+ ===================================================== -->
+      <!-- BLOQUE: movilidad-alternativa · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section
+        aria-labelledby="energiaUnidadesTitulo"
+        class="energia-unidades"
+        id="movilidad-alternativa"
       >
-        Conocer arrendamiento
-        <span>→</span>
-      </button>
-    </article>
-
-    <!-- COMPARADOR -->
-
-    <aside class="finance-help">
-      <span>¿NO SABES CUÁL ELEGIR?</span>
-
-      <h3>
-        Comparemos las alternativas.
-      </h3>
-
-      <p>
-        Un asesor puede ayudarte a evaluar cuál opción se
-        adapta mejor a tu operación, flujo y plan de crecimiento.
-      </p>
-
-      <button
-        type="button"
-        data-finance-choice="comparar"
+        <div class="energia-unidades__contenedor">
+          <div class="energia-unidades__encabezado">
+            <div>
+              <p class="energia-unidades__etiqueta">
+                KENWORTH · MOVILIDAD ALTERNATIVA
+              </p>
+              <h2 id="energiaUnidadesTitulo">
+                Otra energía.<br />
+                <span>El mismo compromiso.</span>
+              </h2>
+            </div>
+            <p class="energia-unidades__introduccion">
+              Conoce las opciones eléctricas y a gas natural. Dos tecnologías
+              para encontrar el siguiente paso de tu operación.
+            </p>
+          </div>
+          <div class="energia-unidades__grid">
+            <!-- UNIDADES ELÉCTRICAS -->
+            <article class="energia-unidades__tarjeta">
+              <!-- Cambia el src para colocar tu propia imagen -->
+              <img
+                alt="Camiones eléctricos Kenworth junto a cargadores PACCAR"
+                class="energia-unidades__imagen"
+                decoding="async"
+                loading="lazy"
+                src="https://kenworth.com.mx/media/0dregxot/electrict680ek270e2.jpg"
+              />
+              <div class="energia-unidades__contenido">
+                <p class="energia-unidades__tipo">100% ELÉCTRICOS</p>
+                <h3>Cero emisiones al conducir.</h3>
+                <p class="energia-unidades__descripcion">
+                  Propulsión eléctrica a batería, sin emisiones de escape. Con
+                  soluciones de carga PACCAR y soporte de infraestructura para
+                  avanzar hacia la electrificación de tu flota.
+                </p>
+                <div class="energia-unidades__fila">
+                  <strong>T680E</strong>
+                  <span>Clase 8 · Recolección y entrega</span>
+                </div>
+                <div class="energia-unidades__fila">
+                  <strong>K270E / K370E</strong>
+                  <span>Clases 6 y 7 · Rango medio</span>
+                </div>
+                <details>
+                  <summary>Conocer la tecnología</summary>
+                  <p>
+                    <strong>Propulsión:</strong> eléctrica a batería.<br />
+                    <strong>Recarga:</strong> conector rápido CCS1.<br />
+                    <strong>Soporte:</strong> soluciones de carga e
+                    infraestructura PACCAR.
+                  </p>
+                </details>
+                <a
+                  aria-label="Explorar unidades eléctricas en el sitio oficial, abre una nueva pestaña"
+                  class="energia-unidades__enlace"
+                  href="https://kenworth.com.mx/innovacion/cero-emisiones/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Explorar unidades eléctricas
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+            <!-- UNIDAD A GAS NATURAL -->
+            <article class="energia-unidades__tarjeta">
+              <!-- Cambia el src para colocar tu propia imagen -->
+              <img
+                alt="Kenworth T680 CNG azul con remolque"
+                class="energia-unidades__imagen"
+                decoding="async"
+                loading="lazy"
+                src="https://kenworth.com.mx/media/blinsxou/hero-gas.jpg"
+              />
+              <div class="energia-unidades__contenido">
+                <p class="energia-unidades__tipo energia-unidades__tipo--gas">
+                  GAS NATURAL
+                </p>
+                <h3>T680 CNG.</h3>
+                <p class="energia-unidades__descripcion">
+                  Una alternativa de combustible para tu flota. El T680 CNG
+                  integra gas natural comprimido en una unidad aerodinámica, con
+                  una configuración que se evalúa según tu operación.
+                </p>
+                <div class="energia-unidades__fila">
+                  <strong>Combustible</strong>
+                  <span>Gas natural comprimido</span>
+                </div>
+                <div class="energia-unidades__fila">
+                  <strong>Configuración</strong>
+                  <span>Asesoría según las necesidades de tu flota</span>
+                </div>
+                <details>
+                  <summary>Conocer la tecnología</summary>
+                  <p>
+                    <strong>Tecnología:</strong> motor de combustión a gas
+                    natural.<br />
+                    <strong>CNG:</strong> gas natural comprimido.<br />
+                    <strong>Ficha técnica:</strong> consulta motor, potencia y
+                    equipamiento con un asesor.
+                  </p>
+                </details>
+                <a
+                  aria-label="Explorar T680 CNG en el sitio oficial, abre una nueva pestaña"
+                  class="energia-unidades__enlace"
+                  href="https://kenworth.com.mx/modelos/t680-cng/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Explorar T680 CNG
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="energia-unidades__pie">
+            <div>
+              <strong>La energía correcta para tu ruta.</strong>
+              <p>
+                Revisemos carga, recorridos e infraestructura para orientar tu
+                elección.
+              </p>
+            </div>
+            <a class="energia-unidades__asesor" href="index.html#contacto">
+              Hablar con un asesor →
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================================
+SECCIÓN: TRANSMISIONES PACCAR
+===================================================== -->
+      <!-- BLOQUE: transmisiones-paccar · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section
+        aria-labelledby="paccarTransTitulo"
+        class="paccar-trans"
+        id="transmisiones-paccar"
       >
-        Necesito asesoría
-        <span>↗</span>
-      </button>
-    </aside>
-  </div>
-
-  <p class="finance-disclaimer">
-    Los planes, plazos, pagos y condiciones están sujetos a
-    evaluación, autorización y disponibilidad.
-  </p>
-</section>
-
-<!-- =====================================================
-     COTIZADOR
-     ===================================================== -->
-
-<section
-  class="units-quote-builder"
-  id="cotizador"
-  aria-labelledby="quoteBuilderTitle"
->
-  <div class="quote-builder-intro">
-    <p class="eyebrow">
-      TU OPERACIÓN ES ÚNICA
-    </p>
-
+        <div class="paccar-trans__contenedor">
+          <div class="paccar-trans__encabezado">
+            <p class="paccar-trans__etiqueta">
+              TECNOLOGÍA QUE IMPULSA TU OPERACIÓN
+            </p>
+            <h2 id="paccarTransTitulo">Transmisiones <span>PACCAR.</span></h2>
+          </div>
+          <div class="paccar-trans__grid">
+            <figure class="paccar-trans__visual">
+              <!-- IMAGEN EDITABLE: cambia el src por tu imagen -->
+              <img
+                alt="Transmisión PACCAR"
+                decoding="async"
+                loading="lazy"
+                src="https://kenworth.com.mx/media/k4cpqinh/tx-18-web-left-height-425.jpg"
+              />
+              <figcaption>INGENIERÍA PACCAR · TRANSMISIONES</figcaption>
+            </figure>
+            <div class="paccar-trans__contenido">
+              <h3>
+                Cambios inteligentes.<br />
+                Una conducción más intuitiva.
+              </h3>
+              <p class="paccar-trans__descripcion">
+                Las transmisiones PACCAR están diseñadas para una operación
+                intuitiva y un rendimiento superior. Sus características
+                inteligentes utilizan tecnología de anticipación para ejecutar
+                decisiones de cambio que mejoran la economía de combustible y la
+                comodidad del conductor.
+              </p>
+              <ul class="paccar-trans__beneficios">
+                <li>
+                  <span aria-hidden="true" class="paccar-trans__numero">
+                    01
+                  </span>
+                  <div>
+                    <strong>Tecnología de anticipación</strong>
+                    <p>
+                      Características inteligentes que orientan las decisiones
+                      de cambio.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span aria-hidden="true" class="paccar-trans__numero">
+                    02
+                  </span>
+                  <div>
+                    <strong>Economía de combustible</strong>
+                    <p>
+                      Cambios diseñados para favorecer el aprovechamiento del
+                      combustible.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span aria-hidden="true" class="paccar-trans__numero">
+                    03
+                  </span>
+                  <div>
+                    <strong>Comodidad del conductor</strong>
+                    <p>
+                      Una operación intuitiva para acompañar al conductor
+                      durante su recorrido.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="paccar-trans__acciones">
+                <a class="paccar-trans__boton" href="index.html#contacto">
+                  Consultar configuración
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  aria-label="Conocer tecnología PACCAR en el sitio oficial, abre una nueva pestaña"
+                  class="paccar-trans__enlace"
+                  href="https://kenworth.com.mx/innovacion/tren-motriz-paccar/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Conocer tecnología PACCAR
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================================
+TRUCKMAN · PROPIETARIO OPERADOR
+===================================================== -->
+      <!-- BLOQUE: truckman · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="truckman" id="truckman">
+        <div class="truckman-media">
+          <div aria-hidden="true" class="truckman-word">TRUCKMAN</div>
+          <img
+            alt="Propietario operador con unidad Kenworth"
+            decoding="async"
+            loading="lazy"
+            src="assets/images/U Kenworth/truckman.jpg"
+          />
+          <div class="truckman-badge">
+            <small>COMUNIDAD BACE</small><b>01—05</b
+            ><span>UNIDADES EN TU FLOTA</span>
+          </div>
+        </div>
+        <div class="truckman-copy reveal">
+          <p class="eyebrow">TRUCKMAN · PROPIETARIO OPERADOR</p>
+          <h2>
+            Tu camión es tu empresa.<br /><em
+              >Tu historia comienza al volante.</em
+            >
+          </h2>
+          <p>
+            Truckman es una experiencia pensada para quienes conducen su propio
+            negocio: transportistas independientes y pequeñas flotas que buscan
+            crecer con una unidad confiable y una red que los acompañe.
+          </p>
+          <div class="truckman-pillars">
+            <article>
+              <span>01</span>
+              <div>
+                <b>Tu unidad ideal</b>
+                <p>
+                  Configurada alrededor de tu ruta, carga y forma de trabajar.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <b>Ruta para crecer</b>
+                <p>
+                  Opciones de renovación y financiamiento según tu proyecto.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <b>Respaldo en carretera</b>
+                <p>
+                  Servicio, refacciones y sucursales BACE cuando las necesitas.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="truckman-actions">
+            <button id="truckmanStoryButton" type="button">
+              Conocer una historia <span>▶</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- BLOQUE: truckmanStory · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="truckman-manifesto" hidden="" id="truckmanStory">
+        <button
+          aria-label="Cerrar historia"
+          id="closeTruckmanStory"
+          type="button"
+        >
+          ×</button
+        ><small>MANIFIESTO TRUCKMAN</small>
+        <blockquote>
+          “No cuento viajes. Cuento oportunidades, kilómetros y las veces que mi
+          camión me permitió volver a casa.”
+        </blockquote>
+        <p>
+          Una sección preparada para integrar testimonios reales de clientes
+          BACE durante la siguiente fase de contenido.
+        </p>
+      </section>
+      <!-- =====================================================
+FINANCIAMIENTO
+===================================================== -->
+      <!-- BLOQUE: financiamiento · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section
+        aria-labelledby="financingTitle"
+        class="units-financing"
+        id="financiamiento"
+      >
+        <div class="financing-heading reveal">
+          <div>
+            <p class="eyebrow dark">SOLUCIONES FINANCIERAS</p>
+            <h2 id="financingTitle">
+              La unidad correcta también necesita
+              <em>el plan correcto.</em>
+            </h2>
+          </div>
+          <p>
+            Compara alternativas para adquirir, arrendar o renovar tus unidades
+            con el acompañamiento de especialistas en transporte.
+          </p>
+        </div>
+        <div class="finance-options reveal">
+          <!-- PACCAR FINANCIAL -->
+          <article
+            class="finance-card finance-card-paccar"
+            data-finance-card="paccar"
+          >
+            <div class="finance-card-top">
+              <span>01</span>
+              <small>ADQUISICIÓN DE UNIDADES</small>
+            </div>
+            <div class="finance-brand finance-brand--logo">
+              <img
+                alt="PACCAR Financial"
+                class="finance-logo finance-logo--paccar"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/PACCAR FINANCIAL.png"
+              />
+            </div>
+            <h3>Financiamiento especializado en transporte.</h3>
+            <p>
+              Alternativas para adquirir unidades Kenworth, considerando las
+              características y necesidades financieras de tu negocio.
+            </p>
+            <ul>
+              <li>Planes especializados para transporte.</li>
+              <li>Alternativas para propietarios y flotas.</li>
+              <li>Plazos y pagos sujetos a evaluación.</li>
+              <li>Acompañamiento durante el proceso.</li>
+            </ul>
+            <button data-finance-choice="paccar" type="button">
+              Quiero financiar mi unidad
+              <span>→</span>
+            </button>
+          </article>
+          <!-- PACLEASE -->
+          <article
+            class="finance-card finance-card-paclease"
+            data-finance-card="paclease"
+          >
+            <div class="finance-card-top">
+              <span>02</span>
+              <small>ARRENDAMIENTO PURO</small>
+            </div>
+            <div class="finance-brand finance-brand--logo">
+              <img
+                alt="PacLease"
+                class="finance-logo finance-logo--paclease"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/pacLease.png"
+              />
+            </div>
+            <h3>Arrendamiento que mantiene tu operación en movimiento.</h3>
+            <p>
+              Arrendamiento puro de unidades Kenworth y DAF con alternativas de
+              mantenimiento adaptadas a tu negocio.
+            </p>
+            <ul>
+              <li>Arrendamiento puro.</li>
+              <li>Unidades Kenworth y DAF.</li>
+              <li>Programas de mantenimiento.</li>
+              <li>Asistencia carretera.</li>
+            </ul>
+            <button data-finance-choice="paclease" type="button">
+              Conocer arrendamiento
+              <span>→</span>
+            </button>
+          </article>
+          <!-- COMPARADOR -->
+          <aside class="finance-help">
+            <span>¿NO SABES CUÁL ELEGIR?</span>
+            <h3>Comparemos las alternativas.</h3>
+            <p>
+              Un asesor puede ayudarte a evaluar cuál opción se adapta mejor a
+              tu operación, flujo y plan de crecimiento.
+            </p>
+            <button data-finance-choice="comparar" type="button">
+              Necesito asesoría
+              <span>↗</span>
+            </button>
+          </aside>
+        </div>
+        <p class="finance-disclaimer">
+          Los planes, plazos, pagos y condiciones están sujetos a evaluación,
+          autorización y disponibilidad.
+        </p>
+      </section>
+      <!-- =====================================================
+FORMULARIO
+===================================================== -->
+      <!-- BLOQUE: cotizador · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section
+        aria-labelledby="quoteBuilderTitle"
+        class="units-quote-builder"
+        id="cotizador"
+      >
+        <div class="quote-builder-intro">
+          <p class="eyebrow">TU OPERACIÓN ES ÚNICA</p>
+          <!--
     <h2 id="quoteBuilderTitle">
       La unidad correcta se define con
       <em>datos, recorrido y propósito.</em>
     </h2>
-
-    <p>
-      Completa la información de tu operación para que un
-      asesor pueda recomendarte una configuración y alternativa
-      financiera.
-    </p>
-
-    <div class="quote-builder-points">
-      <span>
-        <b>01</b>
-        Datos
-      </span>
-
-      <span>
-        <b>02</b>
-        Unidad
-      </span>
-
-      <span>
-        <b>03</b>
-        Operación
-      </span>
-
-      <span>
-        <b>04</b>
-        Financiamiento
-      </span>
-    </div>
-  </div>
-
-  <form
-    class="quote-form"
-    id="unitsQuoteForm"
-    novalidate
-  >
-    <!-- PROGRESO -->
-
-    <div class="quote-progress">
-      <div>
-        <small id="quoteStepNumber">
-          PASO 1 DE 4
-        </small>
-
-        <b id="quoteStepName">
-          DATOS DEL CLIENTE
-        </b>
-      </div>
-
-      <span class="quote-progress-track">
-        <i id="quoteProgressBar"></i>
-      </span>
-    </div>
-
-    <!-- PASO 1 -->
-
-    <fieldset
-      class="quote-step is-active"
-      data-quote-step="1"
-    >
+  -->
+          <p>
+            Completa la información de tu operación para que un asesor pueda
+            recomendarte una configuración y alternativa financiera.
+          </p>
+          <div class="quote-builder-points">
+            <span>
+              <b>01</b>
+              Datos
+            </span>
+            <span>
+              <b>02</b>
+              Unidad
+            </span>
+            <span>
+              <b>03</b>
+              Operación
+            </span>
+            <span>
+              <b>04</b>
+              Financiamiento
+            </span>
+          </div>
+        </div>
+        <form class="quote-form" id="unitsQuoteForm" novalidate="">
+          <!-- PROGRESO -->
+          <div class="quote-progress">
+            <div>
+              <small id="quoteStepNumber"> PASO 1 DE 4 </small>
+              <b id="quoteStepName"> DATOS DEL CLIENTE </b>
+            </div>
+            <span class="quote-progress-track">
+              <i id="quoteProgressBar"></i>
+            </span>
+          </div>
+          <!-- PASO 1 -->
+          <fieldset class="quote-step is-active" data-quote-step="1">
+            <!--
       <legend>
         Cuéntanos quién eres
       </legend>
-
-      <p>
-        Estos datos nos permitirán asignar tu solicitud al
-        asesor correspondiente.
-      </p>
-
-      <div class="quote-fields">
-        <label>
-          Nombre completo *
-          <input
-            type="text"
-            name="nombre"
-            autocomplete="name"
-            required
-            placeholder="Nombre y apellidos"
+    -->
+            <p>
+              Estos datos nos permitirán asignar tu solicitud al asesor
+              correspondiente.
+            </p>
+            <div class="quote-fields">
+              <label>
+                Nombre completo *
+                <input
+                  autocomplete="name"
+                  name="nombre"
+                  placeholder="Nombre y apellidos"
+                  required=""
+                  type="text"
+                />
+              </label>
+              <label>
+                Empresa o razón social
+                <input
+                  name="empresa"
+                  placeholder="Nombre de la empresa"
+                  type="text"
+                />
+              </label>
+              <label>
+                RFC
+                <input
+                  maxlength="13"
+                  name="rfc"
+                  placeholder="RFC de la empresa o persona"
+                  type="text"
+                />
+              </label>
+              <label>
+                Teléfono o WhatsApp *
+                <input
+                  name="telefono"
+                  placeholder="477 000 0000"
+                  required=""
+                  type="tel"
+                />
+              </label>
+              <label>
+                Correo electrónico *
+                <input
+                  autocomplete="email"
+                  name="correo"
+                  placeholder="correo@empresa.com"
+                  required=""
+                  type="email"
+                />
+              </label>
+              <label>
+                Ciudad y estado
+                <input
+                  name="ubicacion"
+                  placeholder="León, Guanajuato"
+                  type="text"
+                />
+              </label>
+            </div>
+          </fieldset>
+          <!-- PASO 2 -->
+          <fieldset class="quote-step" data-quote-step="2" hidden="">
+            <legend>¿Qué unidad necesitas?</legend>
+            <p>Puedes seleccionar un modelo o solicitar una recomendación.</p>
+            <div class="quote-fields">
+              <label>
+                Marca *
+                <select id="quoteBrand" name="marca" required="">
+                  <option value="">Selecciona una marca</option>
+                  <option value="Kenworth">Kenworth</option>
+                  <option value="DAF">DAF</option>
+                  <option value="Recomendación">Aún no lo sé</option>
+                </select>
+              </label>
+              <label>
+                Modelo
+                <select id="quoteModel" name="modelo">
+                  <option value="">Primero selecciona una marca</option>
+                </select>
+              </label>
+              <label>
+                Número de unidades *
+                <input
+                  min="1"
+                  name="cantidad"
+                  required=""
+                  type="number"
+                  value="1"
+                />
+              </label>
+              <label>
+                Condición
+                <select name="condicion">
+                  <option value="Nueva">Nueva</option>
+                  <option value="Seminueva">Seminueva</option>
+                  <option value="Comparar">Deseo comparar</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+          <!-- PASO 3 -->
+          <fieldset class="quote-step" data-quote-step="3" hidden="">
+            <legend>¿Cómo trabajará la unidad?</legend>
+            <p>La aplicación y el recorrido determinan la configuración.</p>
+            <div class="quote-fields">
+              <label>
+                Aplicación *
+                <select name="aplicacion" required="">
+                  <option value="">Selecciona una aplicación</option>
+                  <option>Carretera</option>
+                  <option>Distribución urbana</option>
+                  <option>Construcción</option>
+                  <option>Caja seca</option>
+                  <option>Revolvedora</option>
+                  <option>Volteo</option>
+                  <option>Tolva</option>
+                  <option>Tanque</option>
+                  <option>Otra</option>
+                </select>
+              </label>
+              <label>
+                Tipo de carga
+                <input
+                  name="carga"
+                  placeholder="Producto o material transportado"
+                  type="text"
+                />
+              </label>
+              <label>
+                Peso aproximado
+                <input name="peso" placeholder="Ej. 30 toneladas" type="text" />
+              </label>
+              <label>
+                Recorrido mensual
+                <input
+                  name="recorrido"
+                  placeholder="Ej. 12,000 km"
+                  type="text"
+                />
+              </label>
+              <label>
+                Ruta principal
+                <input
+                  name="ruta"
+                  placeholder="Ej. Bajío – Norte del país"
+                  type="text"
+                />
+              </label>
+              <label>
+                Equipo aliado
+                <input
+                  name="equipoAliado"
+                  placeholder="Caja, tanque, tolva, plataforma..."
+                  type="text"
+                />
+              </label>
+            </div>
+          </fieldset>
+          <!-- PASO 4 -->
+          <fieldset class="quote-step" data-quote-step="4" hidden="">
+            <legend>¿Cómo deseas adquirirla?</legend>
+            <p>
+              Selecciona una alternativa inicial. Un asesor podrá ayudarte a
+              compararlas.
+            </p>
+            <div class="finance-selector">
+              <label>
+                <input
+                  name="financiamiento"
+                  required=""
+                  type="radio"
+                  value="Contado"
+                />
+                <span>
+                  <b>Compra de contado</b>
+                  <small>Adquisición directa.</small>
+                </span>
+              </label>
+              <label>
+                <input
+                  name="financiamiento"
+                  type="radio"
+                  value="PACCAR Financial"
+                />
+                <span>
+                  <b>PACCAR Financial</b>
+                  <small>Financiamiento especializado.</small>
+                </span>
+              </label>
+              <label>
+                <input name="financiamiento" type="radio" value="PacLease" />
+                <span>
+                  <b>PacLease</b>
+                  <small>Arrendamiento puro.</small>
+                </span>
+              </label>
+              <label>
+                <input name="financiamiento" type="radio" value="Comparar" />
+                <span>
+                  <b>Comparar alternativas</b>
+                  <small>Necesito asesoría.</small>
+                </span>
+              </label>
+            </div>
+            <div class="quote-fields quote-finance-details">
+              <label>
+                Enganche aproximado
+                <input
+                  name="enganche"
+                  placeholder="Monto o porcentaje"
+                  type="text"
+                />
+              </label>
+              <label>
+                Plazo deseado
+                <select name="plazo">
+                  <option value="">Aún no lo sé</option>
+                  <option>12 meses</option>
+                  <option>24 meses</option>
+                  <option>36 meses</option>
+                  <option>48 meses</option>
+                  <option>60 meses</option>
+                  <option>Otro plazo</option>
+                </select>
+              </label>
+              <label>
+                Fecha estimada de compra
+                <input name="fechaCompra" type="month" />
+              </label>
+              <label>
+                ¿Actualmente tienes unidades?
+                <select name="unidadesActuales">
+                  <option>No</option>
+                  <option>1 unidad</option>
+                  <option>2 a 5 unidades</option>
+                  <option>6 a 20 unidades</option>
+                  <option>Más de 20 unidades</option>
+                </select>
+              </label>
+              <label class="quote-field-wide">
+                Información adicional
+                <textarea
+                  name="comentarios"
+                  placeholder="Cuéntanos cualquier requerimiento adicional"
+                ></textarea>
+              </label>
+            </div>
+          </fieldset>
+          <!-- RESULTADO -->
+          <!-- BLOQUE: quoteSuccess · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+          <section class="quote-success" hidden="" id="quoteSuccess">
+            <span>✓</span>
+            <small> SOLICITUD PREPARADA </small>
+            <h3>Gracias por compartir tu operación.</h3>
+            <p>
+              Demostración: la unidad, configuración y alternativa financiera
+              quedaron preparadas en esta página. La solicitud todavía no se ha
+              enviado a un asesor.
+            </p>
+            <button id="restartQuote" type="button">
+              Preparar otra solicitud
+            </button>
+          </section>
+          <!-- NAVEGACIÓN -->
+          <div class="quote-navigation" id="quoteNavigation">
+            <button class="quote-back" disabled="" id="quoteBack" type="button">
+              ← Regresar
+            </button>
+            <button class="quote-next" id="quoteNext" type="button">
+              Continuar →
+            </button>
+          </div>
+          <p class="quote-legal">
+            La información enviada no representa una autorización de crédito.
+            Los planes y condiciones están sujetos a evaluación, autorización y
+            disponibilidad.
+          </p>
+        </form>
+      </section>
+    </main>
+    <!-- ========================================================
+     FOOTER INSTITUCIONAL · KENWORTH DAF BACE
+     ======================================================== -->
+    <footer class="bace-footer" id="contacto">
+      <div class="bace-footer__inner">
+        <!-- Identidad superior -->
+        <div class="bace-footer__top">
+          <a
+            aria-label="Volver al inicio de Kenworth DAF BACE"
+            class="bace-footer__brand"
+            href="#inicio"
           >
-        </label>
-
-        <label>
-          Empresa o razón social
-          <input
-            type="text"
-            name="empresa"
-            placeholder="Nombre de la empresa"
-          >
-        </label>
-
-        <label>
-          RFC
-          <input
-            type="text"
-            name="rfc"
-            maxlength="13"
-            placeholder="RFC de la empresa o persona"
-          >
-        </label>
-
-        <label>
-          Teléfono o WhatsApp *
-          <input
-            type="tel"
-            name="telefono"
-            required
-            placeholder="477 000 0000"
-          >
-        </label>
-
-        <label>
-          Correo electrónico *
-          <input
-            type="email"
-            name="correo"
-            autocomplete="email"
-            required
-            placeholder="correo@empresa.com"
-          >
-        </label>
-
-        <label>
-          Ciudad y estado
-          <input
-            type="text"
-            name="ubicacion"
-            placeholder="León, Guanajuato"
-          >
-        </label>
-      </div>
-    </fieldset>
-
-    <!-- PASO 2 -->
-
-    <fieldset
-      class="quote-step"
-      data-quote-step="2"
-      hidden
-    >
-      <legend>
-        ¿Qué unidad necesitas?
-      </legend>
-
-      <p>
-        Puedes seleccionar un modelo o solicitar una recomendación.
-      </p>
-
-      <div class="quote-fields">
-        <label>
-          Marca *
-          <select
-            name="marca"
-            id="quoteBrand"
-            required
-          >
-            <option value="">
-              Selecciona una marca
-            </option>
-
-            <option value="Kenworth">
-              Kenworth
-            </option>
-
-            <option value="DAF">
-              DAF
-            </option>
-
-            <option value="Recomendación">
-              Aún no lo sé
-            </option>
-          </select>
-        </label>
-
-        <label>
-          Modelo
-          <select
-            name="modelo"
-            id="quoteModel"
-          >
-            <option value="">
-              Primero selecciona una marca
-            </option>
-          </select>
-        </label>
-
-        <label>
-          Número de unidades *
-          <input
-            type="number"
-            name="cantidad"
-            min="1"
-            value="1"
-            required
-          >
-        </label>
-
-        <label>
-          Condición
-          <select name="condicion">
-            <option value="Nueva">
-              Nueva
-            </option>
-
-            <option value="Seminueva">
-              Seminueva
-            </option>
-
-            <option value="Comparar">
-              Deseo comparar
-            </option>
-          </select>
-        </label>
-      </div>
-    </fieldset>
-
-    <!-- PASO 3 -->
-
-    <fieldset
-      class="quote-step"
-      data-quote-step="3"
-      hidden
-    >
-      <legend>
-        ¿Cómo trabajará la unidad?
-      </legend>
-
-      <p>
-        La aplicación y el recorrido determinan la configuración.
-      </p>
-
-      <div class="quote-fields">
-        <label>
-          Aplicación *
-          <select
-            name="aplicacion"
-            required
-          >
-            <option value="">
-              Selecciona una aplicación
-            </option>
-
-            <option>Carretera</option>
-            <option>Distribución urbana</option>
-            <option>Construcción</option>
-            <option>Caja seca</option>
-            <option>Revolvedora</option>
-            <option>Volteo</option>
-            <option>Tolva</option>
-            <option>Tanque</option>
-            <option>Otra</option>
-          </select>
-        </label>
-
-        <label>
-          Tipo de carga
-          <input
-            type="text"
-            name="carga"
-            placeholder="Producto o material transportado"
-          >
-        </label>
-
-        <label>
-          Peso aproximado
-          <input
-            type="text"
-            name="peso"
-            placeholder="Ej. 30 toneladas"
-          >
-        </label>
-
-        <label>
-          Recorrido mensual
-          <input
-            type="text"
-            name="recorrido"
-            placeholder="Ej. 12,000 km"
-          >
-        </label>
-
-        <label>
-          Ruta principal
-          <input
-            type="text"
-            name="ruta"
-            placeholder="Ej. Bajío – Norte del país"
-          >
-        </label>
-
-        <label>
-          Equipo aliado
-          <input
-            type="text"
-            name="equipoAliado"
-            placeholder="Caja, tanque, tolva, plataforma..."
-          >
-        </label>
-      </div>
-    </fieldset>
-
-    <!-- PASO 4 -->
-
-    <fieldset
-      class="quote-step"
-      data-quote-step="4"
-      hidden
-    >
-      <legend>
-        ¿Cómo deseas adquirirla?
-      </legend>
-
-      <p>
-        Selecciona una alternativa inicial. Un asesor podrá
-        ayudarte a compararlas.
-      </p>
-
-      <div class="finance-selector">
-        <label>
-          <input
-            type="radio"
-            name="financiamiento"
-            value="Contado"
-            required
-          >
-
-          <span>
-            <b>Compra de contado</b>
-            <small>Adquisición directa.</small>
-          </span>
-        </label>
-
-        <label>
-          <input
-            type="radio"
-            name="financiamiento"
-            value="PACCAR Financial"
-          >
-
-          <span>
-            <b>PACCAR Financial</b>
-            <small>Financiamiento especializado.</small>
-          </span>
-        </label>
-
-        <label>
-          <input
-            type="radio"
-            name="financiamiento"
-            value="PacLease"
-          >
-
-          <span>
-            <b>PacLease</b>
-            <small>Arrendamiento puro.</small>
-          </span>
-        </label>
-
-        <label>
-          <input
-            type="radio"
-            name="financiamiento"
-            value="Comparar"
-          >
-
-          <span>
-            <b>Comparar alternativas</b>
-            <small>Necesito asesoría.</small>
-          </span>
-        </label>
-      </div>
-
-      <div class="quote-fields quote-finance-details">
-        <label>
-          Enganche aproximado
-          <input
-            type="text"
-            name="enganche"
-            placeholder="Monto o porcentaje"
-          >
-        </label>
-
-        <label>
-          Plazo deseado
-          <select name="plazo">
-            <option value="">
-              Aún no lo sé
-            </option>
-
-            <option>12 meses</option>
-            <option>24 meses</option>
-            <option>36 meses</option>
-            <option>48 meses</option>
-            <option>60 meses</option>
-            <option>Otro plazo</option>
-          </select>
-        </label>
-
-        <label>
-          Fecha estimada de compra
-          <input
-            type="month"
-            name="fechaCompra"
-          >
-        </label>
-
-        <label>
-          ¿Actualmente tienes unidades?
-          <select name="unidadesActuales">
-            <option>No</option>
-            <option>1 unidad</option>
-            <option>2 a 5 unidades</option>
-            <option>6 a 20 unidades</option>
-            <option>Más de 20 unidades</option>
-          </select>
-        </label>
-
-        <label class="quote-field-wide">
-          Información adicional
-          <textarea
-            name="comentarios"
-            placeholder="Cuéntanos cualquier requerimiento adicional"
-          ></textarea>
-        </label>
-      </div>
-    </fieldset>
-
-    <!-- RESULTADO -->
-
-    <section
-      class="quote-success"
-      id="quoteSuccess"
-      hidden
-    >
-      <span>✓</span>
-
-      <small>
-        SOLICITUD PREPARADA
-      </small>
-
-      <h3>
-        Gracias por compartir tu operación.
-      </h3>
-
-      <p>
-        Un asesor especializado de Kenworth DAF BACE revisará
-        la unidad, configuración y alternativa financiera
-        seleccionadas.
-      </p>
-
-      <button
-        type="button"
-        id="restartQuote"
+            <img
+              alt="Kenworth DAF BACE"
+              decoding="async"
+              loading="lazy"
+              src="assets/images/logos/KW-DAF.png"
+            />
+          </a>
+        </div>
+        <!-- Matrices -->
+        <div class="bace-footer__locations">
+          <!-- Kenworth DAF del Bajío -->
+          <article class="bace-footer__location">
+            <header class="bace-footer__location-header">
+              <span class="bace-footer__location-number"></span>
+              <div>
+                <h2>Kenworth DAF del Bajío</h2>
+                <h3>Matriz Querétaro</h3>
+              </div>
+            </header>
+            <div class="bace-footer__contact-list">
+              <a
+                class="bace-footer__contact"
+                href="https://maps.app.goo.gl/FrEAsvTGB62Cdirf7"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                    ></path>
+                    <circle cx="12" cy="9" r="2.5"></circle>
+                  </svg>
+                </span>
+                <span>
+                  Autopista México–Querétaro km 204,<br />
+                  76209 San Isidro Miranda, Qro.
+                </span>
+              </a>
+              <a
+                class="bace-footer__contact bace-footer__phone"
+                href="tel:4422774086"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>
+                  <small>Teléfono</small>
+                  <strong>442 277 4086</strong>
+                </span>
+              </a>
+            </div>
+            <div class="bace-footer__location-bottom">
+              <a
+                class="bace-footer__branches"
+                href="https://kwbace.com.mx/kenworth-grupo-bace/#Localizar"
+              >
+                <span>Conoce nuestras sucursales</span>
+                <b aria-hidden="true">→</b>
+              </a>
+              <nav
+                aria-label="Redes sociales de Kenworth DAF del Bajío"
+                class="bace-footer__social"
+              >
+                <a
+                  aria-label="Facebook Kenworth DAF del Bajío"
+                  href="https://www.facebook.com/KWBajio"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  f
+                </a>
+                <a
+                  aria-label="Instagram Kenworth DAF del Bajío"
+                  href="https://www.instagram.com/kenworthbajiobace/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ◎
+                </a>
+                <a
+                  aria-label="LinkedIn Kenworth DAF del Bajío"
+                  href="https://www.linkedin.com/company/kenworth-del-baj%C3%ADo-bace/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  in
+                </a>
+                <a
+                  aria-label="TikTok Kenworth DAF del Bajío"
+                  href="https://www.tiktok.com/@kenworthbajio"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ♪
+                </a>
+              </nav>
+            </div>
+          </article>
+          <!-- Kenworth DAF del Centro -->
+          <article class="bace-footer__location">
+            <header class="bace-footer__location-header">
+              <span class="bace-footer__location-number"></span>
+              <div>
+                <h2>Kenworth DAF del Centro</h2>
+                <h3>Matriz Comanjilla</h3>
+              </div>
+            </header>
+            <div class="bace-footer__contact-list">
+              <a
+                class="bace-footer__contact"
+                href="https://maps.app.goo.gl/1gCTYLroUXHg9qKe7"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                    ></path>
+                    <circle cx="12" cy="9" r="2.5"></circle>
+                  </svg>
+                </span>
+                <span>
+                  Blvd. Aeropuerto #5017, Col. Los Sauces,<br />
+                  37680 León, Gto.
+                </span>
+              </a>
+              <a
+                class="bace-footer__contact bace-footer__phone"
+                href="tel:4777199500"
+              >
+                <span aria-hidden="true" class="bace-footer__contact-icon">
+                  <svg viewbox="0 0 24 24">
+                    <path
+                      d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>
+                  <small>Teléfono</small>
+                  <strong>477 719 9500</strong>
+                </span>
+              </a>
+            </div>
+            <div class="bace-footer__location-bottom">
+              <a
+                class="bace-footer__branches"
+                href="https://kwbace.com.mx/kenworth-grupo-bace/#sucursales"
+              >
+                <span>Conoce nuestras sucursales</span>
+                <b aria-hidden="true">→</b>
+              </a>
+              <nav
+                aria-label="Redes sociales de Kenworth DAF del Centro"
+                class="bace-footer__social"
+              >
+                <a
+                  aria-label="Facebook Kenworth DAF del Centro"
+                  href="https://www.facebook.com/KWCBACE/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  f
+                </a>
+                <a
+                  aria-label="Instagram Kenworth DAF del Centro"
+                  href="https://www.instagram.com/kenworthdelcentro/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ◎
+                </a>
+                <a
+                  aria-label="LinkedIn Kenworth DAF del Centro"
+                  href="https://www.linkedin.com/company/kenworthdelcentrobace/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  in
+                </a>
+                <a
+                  aria-label="TikTok Kenworth DAF del Centro"
+                  href="https://www.tiktok.com/@kwcentrobace"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  ♪
+                </a>
+              </nav>
+            </div>
+          </article>
+        </div>
+        <!-- Franja inferior -->
+        <div class="bace-footer__bottom">
+          <!--
+      <a
+        class="bace-footer__jobs"
+        href="https://kwbace.com.mx/bolsa-de-trabajo-kw/"
       >
-        Preparar otra solicitud
-      </button>
-    </section>
-
-    <!-- NAVEGACIÓN -->
-
-    <div
-      class="quote-navigation"
-      id="quoteNavigation"
+        <span>Bolsa de trabajo</span>
+        <b aria-hidden="true">↗</b>
+      </a> -->
+          <p class="bace-footer__copyright">
+            © <span id="baceFooterYear">2026</span>
+            KENWORTH DAF BACE
+          </p>
+          <nav aria-label="Información legal" class="bace-footer__legal">
+            <a
+              href="https://kwbace.com.mx/wp-content/uploads/2024/07/NUEVO-AVISO-DE-PRIVACIDAD-KW-CENTRO-JULIO-2024.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Privacidad KW DAF BACE
+            </a>
+            <a
+              href="https://kwbace.com.mx/wp-content/uploads/2023/12/Constancia-Situacion-Fiscal.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Constancia fiscal
+            </a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <!-- CONFIGURACIÓN 3D: las rutas son relativas a este HTML.
+       Coloca cada GLB en assets/models/ con el nombre indicado.
+       Completa specs con datos validados de la versión comercial.
+       Los campos vacíos se muestran como «Pendiente de confirmar».
+       No usar un archivo de otra unidad como sustituto. -->
+    <script id="units3dConfig" type="application/json">
+      {
+        "kenworth-t480": {
+          "src": "assets/models/kenworth-t480.glb",
+          "specs": {
+            "Motor": "",
+            "Potencia": "",
+            "Torque": "",
+            "Transmisión": "",
+            "Configuración de ejes": "",
+            "Cabina": ""
+          }
+        },
+        "kenworth-t680": {
+          "src": "assets/models/kenworth-t680.glb",
+          "specs": {
+            "Motor": "",
+            "Potencia": "",
+            "Torque": "",
+            "Transmisión": "",
+            "Configuración de ejes": "",
+            "Cabina": ""
+          }
+        },
+        "kenworth-t880": {
+          "src": "assets/models/kenworth-t880.glb",
+          "specs": {
+            "Motor": "",
+            "Potencia": "",
+            "Torque": "",
+            "Transmisión": "",
+            "Configuración de ejes": "",
+            "Cabina": ""
+          }
+        },
+        "kenworth-w990": {
+          "src": "assets/models/kenworth-w990.glb",
+          "specs": {
+            "Motor": "",
+            "Potencia": "",
+            "Torque": "",
+            "Transmisión": "",
+            "Configuración de ejes": "",
+            "Cabina": ""
+          }
+        },
+        "daf-xb": {
+          "src": "assets/models/daf-xb.glb",
+          "specs": {
+            "Motor": "",
+            "Potencia": "",
+            "Torque": "",
+            "Transmisión": "",
+            "Configuración de ejes": "",
+            "Cabina": ""
+          }
+        },
+        "daf-xf": {
+          "src": "assets/models/daf-xf.glb",
+          "specs": {
+            "Motor": "",
+            "Potencia": "",
+            "Torque": "",
+            "Transmisión": "",
+            "Configuración de ejes": "",
+            "Cabina": ""
+          }
+        },
+        "daf-xg": {
+          "src": "assets/models/daf-xg.glb",
+          "specs": {
+            "Motor": "",
+            "Potencia": "",
+            "Torque": "",
+            "Transmisión": "",
+            "Configuración de ejes": "",
+            "Cabina": ""
+          }
+        }
+      }
+    </script>
+    <!-- =====================================================
+     EXPERIENCIA 3D
+     ===================================================== -->
+    <dialog
+      aria-labelledby="model3dTitle"
+      class="model-3d-modal"
+      id="model3dModal"
     >
-      <button
-        type="button"
-        class="quote-back"
-        id="quoteBack"
-        disabled
-      >
-        ← Regresar
-      </button>
-
-      <button
-        type="button"
-        class="quote-next"
-        id="quoteNext"
-      >
-        Continuar →
-      </button>
-    </div>
-
-    <p class="quote-legal">
-      La información enviada no representa una autorización de
-      crédito. Los planes y condiciones están sujetos a evaluación,
-      autorización y disponibilidad.
-    </p>
-  </form>
-</section>
-  </main>
-
-  <footer><a class="footer-logo" href="index.html"><img src="assets/images/logos/logo-kenworth-daf-bace.PNG" alt="KENWORTH DAF BACE"></a><div><b>Unidades</b><a href="#kenworth">Kenworth</a><a href="#daf">DAF</a><a href="#especializados">Usos especializados</a><a href="#truckman">Truckman</a></div><div><b>Grupo BACE</b><a href="index.html#servicios">Servicio</a><a href="index.html#sucursales">Sucursales</a><a href="index.html#contacto">Contacto</a></div><div class="footer-action"><small>¿LISTO PARA AVANZAR?</small><a href="index.html#cotizar">Cotiza tu unidad <span>↗</span></a></div><p class="copyright">© 2026 KENWORTH DAF BACE</p></footer>
-  <script src="assets/js/pages/unidades-nuevas.js"></script>
-</body>
+      <div class="model-3d-modal__panel">
+        <header class="model-3d-modal__header">
+          <div>
+            <small>KENWORTH DAF BACE</small>
+            <strong>Experiencia interactiva</strong>
+          </div>
+          <button
+            aria-label="Cerrar experiencia 3D"
+            autofocus=""
+            class="model-3d-modal__close"
+            id="closeModel3d"
+            type="button"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </header>
+        <div class="model-3d-modal__body">
+          <!-- Visor -->
+          <div class="model-3d-modal__viewer">
+            <!-- El visor se crea al abrir y se retira al cerrar. -->
+            <div class="model-3d-modal__host" id="model3dHost"></div>
+            <div
+              aria-live="polite"
+              class="model-3d-modal__status"
+              id="model3dStatus"
+              role="status"
+            >
+              <span aria-hidden="true">3D</span>
+              <strong id="model3dStatusTitle">Experiencia 3D</strong>
+              <p id="model3dStatusText">Selecciona una unidad para comenzar.</p>
+              <button hidden="" id="retryModel3d" type="button">
+                Reintentar
+              </button>
+            </div>
+            <div class="model-3d-modal__viewer-help" hidden="" id="model3dHelp">
+              <span>Arrastra para girar · Rueda o pellizco para acercar</span>
+              <button id="resetModel3d" type="button">Restablecer vista</button>
+            </div>
+          </div>
+          <!-- Información -->
+          <aside class="model-3d-modal__information">
+            <small id="model3dBrand"> EXPERIENCIA 3D </small>
+            <h2 id="model3dTitle">Unidad</h2>
+            <p id="model3dDescription">
+              Explora la unidad desde cualquier ángulo y conoce su configuración
+              técnica.
+            </p>
+            <dl
+              class="model-3d-modal__specifications"
+              id="model3dSpecifications"
+            ></dl>
+            <p class="model-3d-modal__note">
+              Ficha pendiente de validación. La configuración final depende de
+              la versión y la aplicación. La representación 3D es ilustrativa.
+            </p>
+            <a
+              class="model-3d-modal__quote"
+              href="#cotizador"
+              id="model3dQuote"
+            >
+              Solicitar configuración
+              <span aria-hidden="true">↗</span>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </dialog>
+    <!-- Una sola carga, después de todo el contenido y de la configuración. -->
+    <script
+      defer=""
+      src="assets/js/pages/unidades-nuevas.js?v=20261007-3d-config-fix"
+    ></script>
+  </body>
 </html>

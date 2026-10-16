@@ -1,355 +1,742 @@
 <!doctype html>
+
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Refacciones originales y multimarca para camión, tractocamión y remolque. Cotiza con Kenworth DAF BACE.">
-  <title>Refacciones | Kenworth DAF BACE</title>
-
+  <head>
+    <!-- IDENTIDAD 20261016-03: fuente Kenworth integrada, sin fuentes secundarias; superficies claras #f4f2ed. -->
+    <!-- IDENTIDAD VISUAL: fuente Kenworth local y beige #f4f2ed compartidos desde assets/css/global.css. -->
+    <!--
+ DEMO · KENWORTH DEL CENTRO
+ Refacciones: categorías, marcas, promociones y preparación local de solicitudes.
+ Estructura: global.css (base) → CSS de página → componentes compartidos.
+ JS: main.js (utilidades), components/nav.js (menú) y script específico.
+ Formularios de demostración: no existe servicio de recepción configurado.
+ GitHub Pages: subir el CONTENIDO de esta carpeta a la raíz del repositorio;
+ Settings → Pages → Deploy from a branch → main → / (root).
+ Conservar exactamente los nombres de archivos, carpetas y recursos.
+ No requiere npm, servidor de aplicaciones ni archivos nuevos.
+-->
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta
+      content="Refacciones originales y multimarca para camión, tractocamión y remolque. Cotiza con Kenworth DAF BACE."
+      name="description"
+    />
+    <title>Refacciones | Kenworth DAF BACE</title>
     <!-- Icono de la pestaña del navegador -->
-<link
-  rel="icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="shortcut icon"
-  type="image/png"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-<link
-  rel="apple-touch-icon"
-  href="assets/images/logos/LOGO BACE.png"
->
-
-  <link rel="stylesheet" href="assets/css/pages/refacciones.css">
-</head>
-<body>
-  <main>
-    <header class="topline"><span>GENTE CON PASIÓN POR SERVIR</span><div><a href="index.html#sucursales">21 puntos de atención</a><a href="#cotizar">Atención especializada</a></div></header>
-    <nav class="nav" aria-label="Navegación principal">
-<a
-  class="brand parts-brand"
-  href="index.html"
-  aria-label="Kenworth DAF BACE Refacciones"
->
-  <img
-    src="assets/images/logos/logo-kenworth-daf-bace.PNG"
-    alt="Kenworth DAF BACE"
-  >
-
-  <span class="parts-brand-divider" aria-hidden="true"></span>
-
-  <span class="parts-brand-copy">
-    <b>REFACCIONES</b>
-    <small>GRUPO BACE</small>
-  </span>
-</a>
-      <button class="menu" id="partsMenuButton" type="button" aria-expanded="false" aria-controls="partsNavLinks">Menú</button>
-      <div class="navlinks" id="partsNavLinks"><a href="index.html">Inicio</a><a href="#soluciones">Soluciones</a><a href="#programas">Programas</a><a href="#canales">Cómo comprar</a><a href="index.html#sucursales">Sucursales</a><a class="nav-cta" href="#cotizar">Cotizar <span>↗</span></a></div>
-    </nav>
-
-    <section class="hero">
-      <div class="hero-photo"></div><div class="hero-overlay"></div><div class="hero-lines" aria-hidden="true"></div>
-      <div class="hero-copy"><p class="eyebrow">REFACCIONES · KENWORTH DAF BACE</p><h1>Tu unidad no puede esperar.<em>Nosotros tampoco.</em></h1><p class="lead">Refacciones originales y multimarca para camión, tractocamión y remolque. Respaldo experto para mantener tu operación avanzando.</p><div class="hero-actions"><a class="button red" href="#cotizar">Solicitar refacción <span>↗</span></a><a class="button ghost" href="#soluciones">Explorar soluciones <span>↓</span></a></div></div>
-      <aside class="availability"><span class="pulse"></span><div><small>RESPALDO REGIONAL</small><strong>Inventario conectado</strong><p>CEDIS + almacenes + atención especializada</p></div></aside>
-      <div class="hero-stats"><div><b>21</b><span>SUCURSALES</span></div><div><b>5</b><span>ESTADOS</span></div><div><b>24/7</b><span>MOVI EN LÍNEA</span></div><div><b>OEM</b><span>Y MULTIMARCA</span></div></div>
-    </section>
-
-<section class="parts-intro" id="refacciones">
-
-  <!-- Columna izquierda: promociones -->
-  <div class="parts-intro-left">
-
-    <p class="parts-eyebrow">
-      MÁS QUE UNA PIEZA
-    </p>
-
-    <div
-      class="promo-carousel"
-      id="partsPromoCarousel"
-      aria-label="Promociones de refacciones"
-    >
-
-      <div class="promo-carousel-viewport">
-
-        <div class="promo-carousel-track">
-
-          <!-- Promoción 1 -->
-          <article class="promo-slide active" aria-hidden="false">
-            <img
-              src="assets/images/Promos/promo-1.jpg"
-              alt="Promoción en filtros originales Kenworth"
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="icon"
+      type="image/png"
+    />
+    <link
+      href="assets/images/logos/LOGO BACE.png"
+      rel="shortcut icon"
+      type="image/png"
+    />
+    <link href="assets/images/logos/LOGO BACE.png" rel="apple-touch-icon" />
+    <link href="assets/css/global.css?v=20261016-03" rel="stylesheet" />
+    <link href="assets/css/components/nav.css?v=20261016-03" rel="stylesheet" />
+    <script defer="" src="assets/js/components/nav.js"></script>
+    <link
+      href="assets/css/pages/refacciones.css?v=20261016-03"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/css/components/footer.css?v=20261016-03"
+      rel="stylesheet"
+    />
+    <script defer="True" src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="bace-nav"></div>
+      <!-- BLOQUE: hero · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="hero" id="inicio">
+        <div class="hero-photo"></div>
+        <div class="hero-overlay"></div>
+        <div aria-hidden="true" class="hero-lines"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">REFACCIONES · KENWORTH DAF BACE</p>
+          <h1>
+            Refacciones multimarca para Transporte Pesado<em
+              >Camión, Tractocamión, Remolque</em
             >
-
-            <div class="promo-slide-overlay"></div>
-
-            <div class="promo-slide-content">
-              <span class="promo-category">PROMOCIÓN DEL MES</span>
-
-              <h3>
-                Filtros originales
-              </h3>
-
-              <p>
-                Protege el rendimiento de tu unidad con componentes diseñados
-                para trabajar bajo las condiciones más exigentes.
-              </p>
-
-              <a
-                href="#cotizacion-refacciones"
-                data-promotion="Filtros originales"
-              >
-                Solicitar promoción <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Promoción 2 -->
-          <article class="promo-slide" aria-hidden="true">
-            <img
-              src="assets/images/Promos/promo-2.jpg"
-              alt="Promoción en componentes para sistema de frenos"
+          </h1>
+          <p class="lead">
+            Refacciones Kenworth y multimarca de equipo original, productos
+            nacionales e internacionales certificados. Mantén tus unidades y
+            negocio funcionando de manera óptima con refacciones de calidad y
+            confiables que garanticen tu operación.
+          </p>
+          <div class="hero-actions">
+            <a class="button red" href="#cotizar"
+              >Solicitar refacción <span>↗</span></a
             >
-
-            <div class="promo-slide-overlay"></div>
-
-            <div class="promo-slide-content">
-              <span class="promo-category">SEGURIDAD EN RUTA</span>
-
-              <h3>
-                Sistema de frenos
-              </h3>
-
-              <p>
-                Consulta disponibilidad y promociones en componentes para
-                mantener la seguridad y capacidad de respuesta de tu unidad.
-              </p>
-
-              <a
-                href="#cotizacion-refacciones"
-                data-promotion="Sistema de frenos"
-              >
-                Conocer promoción <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Promoción 3 -->
-          <article class="promo-slide" aria-hidden="true">
-            <img
-              src="assets/images/Promos/promo-3.jpg"
-              alt="Paquete de mantenimiento para camiones Kenworth y DAF"
-            >
-
-            <div class="promo-slide-overlay"></div>
-
-            <div class="promo-slide-content">
-              <span class="promo-category">PAQUETE ESPECIAL</span>
-
-              <h3>
-                Mantenimiento completo
-              </h3>
-
-              <p>
-                Encuentra los componentes que necesitas para realizar el
-                mantenimiento preventivo de tu unidad.
-              </p>
-
-              <a
-                href="#cotizacion-refacciones"
-                data-promotion="Paquete de mantenimiento"
-              >
-                Cotizar paquete <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-
-      <!-- Controles inferiores -->
-      <div class="promo-carousel-controls">
-
-        <div class="promo-carousel-progress">
-          <span id="promoCurrentSlide">01</span>
-
-          <div class="promo-progress-line">
-            <span id="promoProgressBar"></span>
           </div>
-
-          <span id="promoTotalSlides">03</span>
         </div>
-
-        <div class="promo-carousel-buttons">
-          <button
-            class="promo-carousel-button"
-            id="promoPrevious"
-            type="button"
-            aria-label="Promoción anterior"
+        <aside class="availability">
+          <span class="pulse"></span>
+          <div>
+            <small>RESPALDO REGIONAL</small
+            ><strong>+de 35mil números de parte disponibles</strong>
+            <p>CEDIS + almacenes + atención especializada</p>
+          </div>
+        </aside>
+        <div class="hero-stats">
+          <div><b>21</b><span>SUCURSALES</span></div>
+          <div><b>5</b><span>ESTADOS</span></div>
+          <div><b>24/7</b><span>REFACCIONES EN LINEA</span></div>
+          <div><b>ORIGINALES</b><span>Y MULTIMARCA</span></div>
+        </div>
+      </section>
+      <!-- BLOQUE: soluciones · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="solutions" id="soluciones">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow dark">REFACCIONES POR CATEGORÍA</p>
+            <h2>
+              Encuentra las partes que mantienen
+              <em>tus unidades en movimiento.</em>
+            </h2>
+          </div>
+        </div>
+        <div class="category-layout">
+          <div class="category-list" id="partsCategoryTabs" role="tablist">
+            <button
+              aria-selected="true"
+              class="active"
+              data-category="motor"
+              role="tab"
+              type="button"
+            >
+              <span>01</span><b>Motor, filtro y lubricación</b><i>↗</i>
+            </button>
+            <button
+              aria-selected="false"
+              data-category="frenos"
+              role="tab"
+              type="button"
+            >
+              <span>02</span><b>Frenos y seguridad</b><i>↗</i>
+            </button>
+            <button
+              aria-selected="false"
+              data-category="tren"
+              role="tab"
+              type="button"
+            >
+              <span>03</span><b>Tren motriz</b><i>↗</i>
+            </button>
+            <button
+              aria-selected="false"
+              data-category="electrico"
+              role="tab"
+              type="button"
+            >
+              <span>04</span><b>Eléctrico e iluminación</b><i>↗</i>
+            </button>
+            <button
+              aria-selected="false"
+              data-category="suspension"
+              role="tab"
+              type="button"
+            >
+              <span>05</span><b>Suspensión y dirección</b><i>↗</i>
+            </button>
+            <button
+              aria-selected="false"
+              data-category="cabina"
+              role="tab"
+              type="button"
+            >
+              <span>06</span><b>Cabina y accesorios</b><i>↗</i>
+            </button>
+          </div>
+          <div class="category-stage">
+            <div
+              aria-live="polite"
+              class="category-content"
+              id="partsCategoryContent"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- BLOQUE: programas · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="programs" id="programas">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow dark">PROGRAMAS DE VALOR</p>
+            <h2>
+              Comprar mejor también
+              <em>mueve tu negocio.</em>
+            </h2>
+            <p class="programs-intro">
+              Beneficios diseñados para hombre-camión, transportistas y flotas.
+            </p>
+          </div>
+        </div>
+        <div class="program-grid">
+          <!-- 01. VALOR KENWORTH -->
+          <article class="program red-card">
+            <small>LEALTAD</small>
+            <div class="program-logos">
+              <img
+                alt="Valor Kenworth"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/valor-kw.png"
+              />
+            </div>
+            <h3>Valor Kenworth</h3>
+            <p>
+              Obtén bonos trimestrales del 3 al 5% del total de tu facturación.
+            </p>
+            <div class="program-benefit">
+              <strong>3%5%</strong>
+              <span>en bonos trimestrales</span>
+            </div>
+            <p class="program-note">
+              Para registrarte al programa, acércate a tu asesor de refacciones.
+            </p>
+          </article>
+          <!-- 02. MOVI -->
+          <article class="program">
+            <small>COMPRA DIGITAL</small>
+            <div class="program-logos">
+              <img
+                alt="MOVI"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/Movi.png"
+              />
+            </div>
+            <h3>MOVI</h3>
+            <p>
+              Busca refacciones, consulta el inventario y los catálogos de
+              partes para tus unidades multimarca, crea una orden de compra y
+              solicita la entrega o la recolección.
+            </p>
+            <p>
+              Disponible todo en tiempo real desde la comodidad de tu
+              dispositivo móvil.
+            </p>
+            <a
+              class="program-action"
+              href="https://movi.kenworth.com/customer/account/login/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>Ingresar a MOVI</span>
+              <b aria-hidden="true">↗</b>
+            </a>
+          </article>
+          <!-- 03. FACTURACIÓN CENTRALIZADA -->
+          <article class="program dark-card">
+            <small>CONTROL PARA FLOTAS</small>
+            <div class="program-logos">
+              <img
+                alt="TreviPay"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/trevipay-bg.png"
+              />
+            </div>
+            <h3>Facturación centralizada</h3>
+            <p>
+              El programa de Facturación Centralizada de refacciones y servicio
+              brinda esquemas de precios estandarizados, a través de un sistema
+              de pago y línea de crédito para flotas.
+            </p>
+            <ul class="program-benefits">
+              <li>Sin costo</li>
+              <li>
+                Línea de crédito en todas las sucursales Kenworth del país
+              </li>
+              <li>Pago centralizado</li>
+              <li>Precios congelados</li>
+              <li>Control en compras</li>
+              <li>Reportes detallados y centralizados</li>
+              <li>Soporte al cliente</li>
+            </ul>
+          </article>
+          <!-- 04. KENWORTH SELECT Y TRP PERFORMANCE -->
+          <article class="program">
+            <small>MEMBRESÍA</small>
+            <div class="program-logos program-logos--double">
+              <img
+                alt="Kenworth Select"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/kw-select.png"
+              />
+              <img
+                alt="TRP Performance"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/trp-per.png"
+              />
+            </div>
+            <h3>Kenworth Select y TRP® Performance</h3>
+            <p>
+              Ahorra todo el año y obtén tu Membresía Kenworth o TRP®
+              Performance. Forma parte del Programa de Lealtad y recibe
+              descuentos exclusivos en refacciones y mano de obra en servicio.
+            </p>
+            <a
+              class="program-action"
+              href="https://partsandservice.kenworth.com/mx-es/register"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span>Obtener membresía</span>
+              <b aria-hidden="true">↗</b>
+            </a>
+          </article>
+        </div>
+      </section>
+      <!-- BLOQUE: refacciones · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="parts-intro" id="refacciones">
+        <!-- Columna izquierda: promociones -->
+        <div class="parts-intro-left">
+          <p class="parts-eyebrow">BRAKE CENTER</p>
+          <div
+            aria-label="Promociones de refacciones"
+            class="promo-carousel"
+            id="partsPromoCarousel"
           >
-            ←
-          </button>
-
-          <button
-            class="promo-carousel-button"
-            id="promoNext"
-            type="button"
-            aria-label="Siguiente promoción"
+            <div class="promo-carousel-viewport">
+              <div class="promo-carousel-track">
+                <!-- Promoción 1 -->
+                <article aria-hidden="false" class="promo-slide active">
+                  <img
+                    alt="Promoción en filtros originales Kenworth"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/Promos/promo-1.jpg"
+                  />
+                </article>
+                <!-- Promoción 2 -->
+                <article aria-hidden="true" class="promo-slide">
+                  <img
+                    alt="Promoción en componentes para sistema de frenos"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/Promos/Promo-2.jpg"
+                  />
+                </article>
+                <!-- Promoción 3 -->
+                <article aria-hidden="true" class="promo-slide">
+                  <img
+                    alt="Paquete de mantenimiento para camiones Kenworth y DAF"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/images/Promos/Promo-3.jpg"
+                  />
+                </article>
+              </div>
+            </div>
+            <!-- Controles inferiores -->
+            <div class="promo-carousel-controls">
+              <div class="promo-carousel-progress">
+                <span id="promoCurrentSlide">01</span>
+                <div class="promo-progress-line">
+                  <span id="promoProgressBar"></span>
+                </div>
+                <span id="promoTotalSlides">03</span>
+              </div>
+              <div class="promo-carousel-buttons">
+                <button
+                  aria-label="Promoción anterior"
+                  class="promo-carousel-button"
+                  id="promoPrevious"
+                  type="button"
+                ></button>
+                <button
+                  aria-label="Siguiente promoción"
+                  class="promo-carousel-button"
+                  id="promoNext"
+                  type="button"
+                >
+                  →
+                </button>
+              </div>
+            </div>
+            <!-- Indicadores -->
+            <div aria-label="Seleccionar promoción" class="promo-carousel-dots">
+              <button
+                aria-current="true"
+                aria-label="Mostrar promoción 1"
+                class="active"
+                data-promo-slide="0"
+                type="button"
+              ></button>
+              <button
+                aria-current="false"
+                aria-label="Mostrar promoción 2"
+                data-promo-slide="1"
+                type="button"
+              ></button>
+              <button
+                aria-current="false"
+                aria-label="Mostrar promoción 3"
+                data-promo-slide="2"
+                type="button"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <!-- Columna derecha: contenido existente -->
+        <div class="parts-intro-content brake-center-content">
+          <div class="parts-intro-content">
+            <h2>
+              Soluciones integrales
+              <em>en seguridad y frenado.</em>
+            </h2>
+            <p>
+              Ahorra costos al realizar mantenimientos preventivos en sistema de
+              frenado. <br />
+              Evita fallas que ocasionan paros de la unidad y garantiza tu
+              seguridad en el camino.<br />
+              Nuestros Centros de Embalatado te ofrecen
+            </p>
+            <div class="brake-benefits">
+              <ul class="brake-benefits__list">
+                <li>Asesoría especializada</li>
+                <li>Personal calificado y certificado</li>
+                <li>
+                  Balatas empastadas y remachadas en la formulación de tu
+                  preferencia
+                </li>
+                <li>Rectificado de tambores</li>
+                <li>Inspección visual</li>
+                <li>Herramental especializado en zapatas y tambores</li>
+                <li>Servicio a domicilio</li>
+              </ul>
+              <p class="brake-benefits__note">
+                El Brake Center brinda a nuestros clientes una solución que
+                garantiza <strong>seguridad</strong> con un valor agregado
+                gracias a la <strong>calidad del producto y servicio</strong>
+                otorgado en materiales de fricción para sistemas de frenado,
+                además de contar con su certificación por
+                <strong>TMD®</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- BLOQUE: cotizar · contenido HTML; presentación en CSS y eventos en el script de esta página. -->
+      <section class="request" id="cotizar">
+        <div class="request-copy reveal">
+          <p class="eyebrow dark">SOLICITA UNA COTIZACIÓN</p>
+          <h2>Cuéntanos qué necesita <em>tu unidad.</em></h2>
+          <p>
+            Entre más información compartas, más fácil será ayudarte a
+            identificar la refacción correcta.
+          </p>
+          <div class="request-tips">
+            <span>✓ Número de serie o últimos 8 dígitos</span
+            ><span>✓ Marca, modelo y año</span
+            ><span>✓ Número de parte o fotografía</span
+            ><span>✓ Sucursal o ciudad de entrega</span>
+          </div>
+        </div>
+        <form class="request-form" id="partsRequestForm">
+          <label
+            >TIPO DE SOLICITUD<select id="partsRequestType" name="tipo">
+              <option>Cotización de refacciones</option>
+              <option>Motor, filtración y Lubricación</option>
+              <option>Frenos y seguridad</option>
+              <option>Tren motriz</option>
+              <option>Eléctrico e iluminación</option>
+              <option>Suspensión y dirección</option>
+              <option>Cabina y accesorios</option>
+            </select></label
           >
-            →
-          </button>
+          <div class="field-row">
+            <label
+              >NOMBRE<input
+                name="nombre"
+                placeholder="Nombre completo"
+                required="" /></label
+            ><label
+              >TELÉFONO<input
+                name="telefono"
+                placeholder="10 dígitos"
+                required=""
+                type="tel"
+            /></label>
+          </div>
+          <div class="field-row">
+            <label
+              >CIUDAD<input
+                name="ciudad"
+                placeholder="Ciudad o sucursal" /></label
+            ><label
+              >UNIDAD<input name="unidad" placeholder="Marca, modelo y año"
+            /></label>
+          </div>
+          <label
+            >¿QUÉ REFACCIÓN NECESITAS?<textarea
+              name="descripcion"
+              placeholder="Número de parte, sistema, síntoma o descripción"
+              rows="4"
+            ></textarea></label
+          ><button class="button red" type="submit">
+            Enviar solicitud <span>↗</span></button
+          ><small class="privacy"
+            >Al enviar aceptas ser contactado por un asesor de Grupo
+            BACE.</small
+          >
+        </form>
+      </section>
+      <!-- ========================================================
+     FOOTER INSTITUCIONAL · KENWORTH DAF BACE
+     No reemplazar el footer .kwfans-cart
+     ======================================================== -->
+      <footer class="bace-footer" id="contacto">
+        <div class="bace-footer__inner">
+          <!-- Identidad superior -->
+          <div class="bace-footer__top">
+            <a
+              aria-label="Volver al inicio de Kenworth DAF BACE"
+              class="bace-footer__brand"
+              href="#inicio"
+            >
+              <img
+                alt="Kenworth DAF BACE"
+                decoding="async"
+                loading="lazy"
+                src="assets/images/logos/KW-DAF.png"
+              />
+            </a>
+          </div>
+          <!-- Matrices -->
+          <div class="bace-footer__locations">
+            <!-- Kenworth DAF del Bajío -->
+            <article class="bace-footer__location">
+              <header class="bace-footer__location-header">
+                <span class="bace-footer__location-number"></span>
+                <div>
+                  <h2>Kenworth DAF del Bajío</h2>
+                  <h3>Matriz Querétaro</h3>
+                </div>
+              </header>
+              <div class="bace-footer__contact-list">
+                <a
+                  class="bace-footer__contact"
+                  href="https://maps.app.goo.gl/FrEAsvTGB62Cdirf7"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span aria-hidden="true" class="bace-footer__contact-icon">
+                    <svg viewbox="0 0 24 24">
+                      <path
+                        d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                      ></path>
+                      <circle cx="12" cy="9" r="2.5"></circle>
+                    </svg>
+                  </span>
+                  <span>
+                    Autopista México–Querétaro km 204,<br />
+                    76209 San Isidro Miranda, Qro.
+                  </span>
+                </a>
+                <a
+                  class="bace-footer__contact bace-footer__phone"
+                  href="tel:4422774086"
+                >
+                  <span aria-hidden="true" class="bace-footer__contact-icon">
+                    <svg viewbox="0 0 24 24">
+                      <path
+                        d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <small>Teléfono</small>
+                    <strong>442 277 4086</strong>
+                  </span>
+                </a>
+              </div>
+              <div class="bace-footer__location-bottom">
+                <a
+                  class="bace-footer__branches"
+                  href="https://kwbace.com.mx/kenworth-grupo-bace/#Localizar"
+                >
+                  <span>Conoce nuestras sucursales</span>
+                  <b aria-hidden="true">→</b>
+                </a>
+                <nav
+                  aria-label="Redes sociales de Kenworth DAF del Bajío"
+                  class="bace-footer__social"
+                >
+                  <a
+                    aria-label="Facebook Kenworth DAF del Bajío"
+                    href="https://www.facebook.com/KWBajio"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    f
+                  </a>
+                  <a
+                    aria-label="Instagram Kenworth DAF del Bajío"
+                    href="https://www.instagram.com/kenworthbajiobace/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ◎
+                  </a>
+                  <a
+                    aria-label="LinkedIn Kenworth DAF del Bajío"
+                    href="https://www.linkedin.com/company/kenworth-del-baj%C3%ADo-bace/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    in
+                  </a>
+                  <a
+                    aria-label="TikTok Kenworth DAF del Bajío"
+                    href="https://www.tiktok.com/@kenworthbajio"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ♪
+                  </a>
+                </nav>
+              </div>
+            </article>
+            <!-- Kenworth DAF del Centro -->
+            <article class="bace-footer__location">
+              <header class="bace-footer__location-header">
+                <span class="bace-footer__location-number"></span>
+                <div>
+                  <h2>Kenworth DAF del Centro</h2>
+                  <h3>Matriz Comanjilla</h3>
+                </div>
+              </header>
+              <div class="bace-footer__contact-list">
+                <a
+                  class="bace-footer__contact"
+                  href="https://maps.app.goo.gl/1gCTYLroUXHg9qKe7"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span aria-hidden="true" class="bace-footer__contact-icon">
+                    <svg viewbox="0 0 24 24">
+                      <path
+                        d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"
+                      ></path>
+                      <circle cx="12" cy="9" r="2.5"></circle>
+                    </svg>
+                  </span>
+                  <span>
+                    Blvd. Aeropuerto #5017, Col. Los Sauces,<br />
+                    37680 León, Gto.
+                  </span>
+                </a>
+                <a
+                  class="bace-footer__contact bace-footer__phone"
+                  href="tel:4777199500"
+                >
+                  <span aria-hidden="true" class="bace-footer__contact-icon">
+                    <svg viewbox="0 0 24 24">
+                      <path
+                        d="M6.6 2.8 9.4 8l-2 1.7a15.1 15.1 0 0 0 6.9 6.9l1.7-2
+                     5.2 2.8-1.2 4a2 2 0 0 1-2.2 1.4C9.4 21.6
+                     2.4 14.6 1.2 6.2A2 2 0 0 1 2.6 4l4-1.2Z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <small>Teléfono</small>
+                    <strong>477 719 9500</strong>
+                  </span>
+                </a>
+              </div>
+              <div class="bace-footer__location-bottom">
+                <a
+                  class="bace-footer__branches"
+                  href="https://kwbace.com.mx/kenworth-grupo-bace/#sucursales"
+                >
+                  <span>Conoce nuestras sucursales</span>
+                  <b aria-hidden="true">→</b>
+                </a>
+                <nav
+                  aria-label="Redes sociales de Kenworth DAF del Centro"
+                  class="bace-footer__social"
+                >
+                  <a
+                    aria-label="Facebook Kenworth DAF del Centro"
+                    href="https://www.facebook.com/KWCBACE/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    f
+                  </a>
+                  <a
+                    aria-label="Instagram Kenworth DAF del Centro"
+                    href="https://www.instagram.com/kenworthdelcentro/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ◎
+                  </a>
+                  <a
+                    aria-label="LinkedIn Kenworth DAF del Centro"
+                    href="https://www.linkedin.com/company/kenworthdelcentrobace/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    in
+                  </a>
+                  <a
+                    aria-label="TikTok Kenworth DAF del Centro"
+                    href="https://www.tiktok.com/@kwcentrobace"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    ♪
+                  </a>
+                </nav>
+              </div>
+            </article>
+          </div>
+          <!-- Franja inferior -->
+          <div class="bace-footer__bottom">
+            <!--
+      <a
+        class="bace-footer__jobs"
+        href="https://kwbace.com.mx/bolsa-de-trabajo-kw/"
+      >
+        <span>Bolsa de trabajo</span>
+        <b aria-hidden="true">↗</b>
+      </a> -->
+            <p class="bace-footer__copyright">
+              © <span id="baceFooterYear">2026</span>
+              KENWORTH DAF BACE
+            </p>
+            <nav aria-label="Información legal" class="bace-footer__legal">
+              <a
+                href="https://kwbace.com.mx/wp-content/uploads/2024/07/NUEVO-AVISO-DE-PRIVACIDAD-KW-CENTRO-JULIO-2024.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Privacidad KW DAF BACE
+              </a>
+              <a
+                href="https://kwbace.com.mx/wp-content/uploads/2023/12/Constancia-Situacion-Fiscal.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Constancia fiscal
+              </a>
+            </nav>
+          </div>
         </div>
-
-      </div>
-
-      <!-- Indicadores -->
-      <div class="promo-carousel-dots" aria-label="Seleccionar promoción">
-        <button
-          class="active"
-          type="button"
-          data-promo-slide="0"
-          aria-label="Mostrar promoción 1"
-          aria-current="true"
-        ></button>
-
-        <button
-          type="button"
-          data-promo-slide="1"
-          aria-label="Mostrar promoción 2"
-          aria-current="false"
-        ></button>
-
-        <button
-          type="button"
-          data-promo-slide="2"
-          aria-label="Mostrar promoción 3"
-          aria-current="false"
-        ></button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Columna derecha: contenido existente -->
-  <div class="parts-intro-content">
-
-    <h2>
-      CADA HORA DETENIDA
-      <em>cuesta.</em>
-    </h2>
-
-    <p>
-      Conectamos disponibilidad, asesoría y opciones de compra para ayudarte
-      a encontrar la refacción adecuada con mayor rapidez y confianza.
-    </p>
-
-    <div class="parts-process">
-
-      <div>
-        <strong>IDENTIFICA</strong>
-        <span aria-hidden="true">→</span>
-      </div>
-
-      <div>
-        <strong>LOCALIZA</strong>
-        <span aria-hidden="true">→</span>
-      </div>
-
-      <div>
-        <strong>COTIZA</strong>
-        <span aria-hidden="true">→</span>
-      </div>
-
-      <div>
-        <strong>RECIBE</strong>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-    <section class="solutions" id="soluciones">
-      <div class="section-head reveal"><div><p class="eyebrow dark">SOLUCIONES POR SISTEMA</p><h2>Encuentra lo que mantiene <em>tu negocio en movimiento.</em></h2></div><p>Selecciona una familia para conocer el tipo de componentes y marcas disponibles.</p></div>
-      <div class="category-layout">
-        <div class="category-list" id="partsCategoryTabs" role="tablist">
-          <button class="active" type="button" role="tab" aria-selected="true" data-category="motor"><span>01</span><b>Motor y filtración</b><i>↗</i></button>
-          <button type="button" role="tab" aria-selected="false" data-category="frenos"><span>02</span><b>Frenos y seguridad</b><i>↗</i></button>
-          <button type="button" role="tab" aria-selected="false" data-category="tren"><span>03</span><b>Tren motriz</b><i>↗</i></button>
-          <button type="button" role="tab" aria-selected="false" data-category="electrico"><span>04</span><b>Eléctrico e iluminación</b><i>↗</i></button>
-          <button type="button" role="tab" aria-selected="false" data-category="suspension"><span>05</span><b>Suspensión y dirección</b><i>↗</i></button>
-          <button type="button" role="tab" aria-selected="false" data-category="cabina"><span>06</span><b>Cabina y accesorios</b><i>↗</i></button>
-        </div>
-        <div class="category-stage"><div class="category-content" id="partsCategoryContent" aria-live="polite"></div></div>
-      </div>
-    </section>
-
-    <section class="quality"><div class="quality-photo"></div><div class="quality-copy reveal"><p class="eyebrow">CALIDAD QUE PROTEGE TU INVERSIÓN</p><h2>La pieza correcta. <em>El respaldo correcto.</em></h2><p>Elige entre equipo original, alternativas multimarca certificadas y líneas nacionales e internacionales, según la aplicación y necesidad de tu flota.</p><div class="quality-grid"><span><b>01</b>Compatibilidad</span><span><b>02</b>Confiabilidad</span><span><b>03</b>Disponibilidad</span><span><b>04</b>Asesoría</span></div></div></section>
-
-    <section class="programs" id="programas">
-      <div class="section-head reveal"><div><p class="eyebrow dark">PROGRAMAS DE VALOR</p><h2>Comprar mejor también <em>mueve tu negocio.</em></h2></div><p>Beneficios diseñados para hombre-camión, transportistas y flotas.</p></div>
-      <div class="program-grid">
-        <article class="program red-card"><small>LEALTAD</small><h3>Valor Kenworth</h3><p>Bonos trimestrales de acuerdo con tus compras para recompensar tu preferencia.</p><strong>3%—5%</strong><span>en bonos, según condiciones del programa</span></article>
-        <article class="program"><small>MEMBRESÍA</small><h3>Kenworth Select</h3><p>Descuentos exclusivos en refacciones y mano de obra durante todo el año.</p><a href="https://partsandservice.kenworth.com" target="_blank" rel="noopener noreferrer">Conocer programa ↗</a></article>
-        <article class="program"><small>MULTIMARCA</small><h3>TRP® Performance</h3><p>Beneficios y descuentos para mantener tu operación con soluciones multimarca.</p><a href="https://partsandservice.kenworth.com" target="_blank" rel="noopener noreferrer">Conocer programa ↗</a></article>
-        <article class="program dark-card"><small>CONTROL PARA FLOTAS</small><h3>Facturación centralizada</h3><p>Precios estandarizados, línea de crédito, protección de precios y reportes detallados.</p><ul><li>Pago centralizado</li><li>Control de compras</li><li>Soporte especializado</li></ul></article>
-      </div>
-    </section>
-
-    <section class="channels" id="canales"><div class="section-head light reveal"><div><p class="eyebrow">TÚ ELIGES CÓMO COMPRAR</p><h2>La misma confianza, <em>por el canal que prefieras.</em></h2></div></div><div class="channel-grid"><article><span class="channel-icon">24/7</span><small>Mostrador Virtual de Partes</small><h3>MOVI</h3><p>Consulta inventario y catálogos, crea órdenes de compra y solicita entrega o recolección.</p><a href="https://kwbace.com.mx/programas-de-valor/" target="_blank" rel="noopener noreferrer">Comprar en línea <span>↗</span></a></article><article><span class="channel-icon">21</span><small>Inventario cerca de tu ruta</small><h3>Red de sucursales</h3><p>Disponibilidad respaldada por almacenes y centros de distribución en cinco estados.</p><a href="index.html#sucursales">Encontrar sucursal <span>↗</span></a></article><article><span class="channel-icon">1:1</span><small>Ayuda para identificar la pieza</small><h3>Asesor especializado</h3><p>Comparte datos de tu unidad, número de serie o fotografía y recibe acompañamiento.</p><a href="#cotizar">Solicitar apoyo <span>↗</span></a></article></div></section>
-
-    <section class="request" id="cotizar"><div class="request-copy reveal"><p class="eyebrow dark">SOLICITA UNA COTIZACIÓN</p><h2>Cuéntanos qué necesita <em>tu unidad.</em></h2><p>Entre más información compartas, más fácil será ayudarte a identificar la refacción correcta.</p><div class="request-tips"><span>✓ Número de serie o últimos 8 dígitos</span><span>✓ Marca, modelo y año</span><span>✓ Número de parte o fotografía</span><span>✓ Sucursal o ciudad de entrega</span></div></div><form class="request-form" id="partsRequestForm"><label>TIPO DE SOLICITUD<select id="partsRequestType" name="tipo"><option>Cotización de refacciones</option><option>Motor y filtración</option><option>Frenos y seguridad</option><option>Tren motriz</option><option>Eléctrico e iluminación</option><option>Suspensión y dirección</option><option>Cabina y accesorios</option></select></label><div class="field-row"><label>NOMBRE<input name="nombre" required placeholder="Nombre completo"></label><label>TELÉFONO<input name="telefono" required type="tel" placeholder="10 dígitos"></label></div><div class="field-row"><label>CIUDAD<input name="ciudad" placeholder="Ciudad o sucursal"></label><label>UNIDAD<input name="unidad" placeholder="Marca, modelo y año"></label></div><label>¿QUÉ REFACCIÓN NECESITAS?<textarea name="descripcion" rows="4" placeholder="Número de parte, sistema, síntoma o descripción"></textarea></label><button class="button red" type="submit">Enviar solicitud <span>↗</span></button><small class="privacy">Al enviar aceptas ser contactado por un asesor de Grupo BACE.</small></form></section>
-
-    <footer><footer>
-  <a
-    class="parts-footer-brand"
-    href="index.html"
-    aria-label="Ir al inicio de Kenworth DAF BACE"
-  >
-    <img
-      src="assets/images/logos/logo-kenworth-daf-bace.PNG"
-      alt="Kenworth DAF BACE"
-    >
-
-    <span class="parts-footer-divider" aria-hidden="true"></span>
-
-    <span class="parts-footer-brand-copy">
-      <b>REFACCIONES</b>
-      <small>GRUPO BACE</small>
-    </span>
-  </a>
-
-  <div>
-    <b>Refacciones</b>
-    <a href="#soluciones">Familias</a>
-    <a href="#programas">Programas</a>
-    <a href="#canales">Cómo comprar</a>
-  </div>
-
-  <div>
-    <b>Grupo BACE</b>
-    <a href="unidades-nuevas.html">Unidades</a>
-    <a href="index.html#servicios">Servicio</a>
-    <a href="index.html#sucursales">Sucursales</a>
-  </div>
-
-  <div class="footer-action">
-    <small>¿NECESITAS UNA REFACCIÓN?</small>
-    <a href="#cotizar">
-      Habla con un asesor
-      <span>↗</span>
-    </a>
-  </div>
-
-  <p class="copyright">
-    © 2026 KENWORTH DAF BACE · Gente con Pasión por Servir
-  </p>
-</footer></footer>
-  </main>
-  <script src="assets/js/pages/refacciones.js"></script>
-</body>
+      </footer>
+    </main>
+    <script src="assets/js/pages/refacciones.js"></script>
+  </body>
 </html>
