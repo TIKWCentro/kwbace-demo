@@ -1,0 +1,195 @@
+<!-- FRAGMENTO ARCHIVADO: CarruselRef.
+     Referencia histórica del proyecto, no cargada por las páginas del demo.
+     No insertar sin revisar IDs y eventos para evitar componentes duplicados. -->
+<section class="parts-intro" id="refacciones">
+  <!-- Columna izquierda: promociones -->
+  <div class="parts-intro-left">
+    <p class="parts-eyebrow">MÁS QUE UNA PIEZA</p>
+
+    <div
+      class="promo-carousel"
+      id="partsPromoCarousel"
+      aria-label="Promociones de refacciones"
+    >
+      <div class="promo-carousel-viewport">
+        <div class="promo-carousel-track">
+          <!-- Promoción 1 -->
+          <article class="promo-slide active" aria-hidden="false">
+            <img
+              src="assets/images/Promos/promo-1.jpg"
+              alt="Promoción en filtros originales Kenworth"
+            />
+
+            <div class="promo-slide-overlay"></div>
+
+            <div class="promo-slide-content">
+              <span class="promo-category">PROMOCIÓN DEL MES</span>
+
+              <h3>Filtros originales</h3>
+
+              <p>
+                Protege el rendimiento de tu unidad con componentes diseñados
+                para trabajar bajo las condiciones más exigentes.
+              </p>
+
+              <a
+                href="#cotizacion-refacciones"
+                data-promotion="Filtros originales"
+              >
+                Solicitar promoción <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Promoción 2 -->
+          <article class="promo-slide" aria-hidden="true">
+            <img
+              src="assets/images/Promos/Promo-2.jpg"
+              alt="Promoción en componentes para sistema de frenos"
+            />
+
+            <div class="promo-slide-overlay"></div>
+
+            <div class="promo-slide-content">
+              <span class="promo-category">SEGURIDAD EN RUTA</span>
+
+              <h3>Sistema de frenos</h3>
+
+              <p>
+                Consulta disponibilidad y promociones en componentes para
+                mantener la seguridad y capacidad de respuesta de tu unidad.
+              </p>
+
+              <a
+                href="#cotizacion-refacciones"
+                data-promotion="Sistema de frenos"
+              >
+                Conocer promoción <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Promoción 3 -->
+          <article class="promo-slide" aria-hidden="true">
+            <img
+              src="assets/images/Promos/Promo-3.jpg"
+              alt="Paquete de mantenimiento para camiones Kenworth y DAF"
+            />
+
+            <div class="promo-slide-overlay"></div>
+
+            <div class="promo-slide-content">
+              <span class="promo-category">PAQUETE ESPECIAL</span>
+
+              <h3>Mantenimiento completo</h3>
+
+              <p>
+                Encuentra los componentes que necesitas para realizar el
+                mantenimiento preventivo de tu unidad.
+              </p>
+
+              <a
+                href="#cotizacion-refacciones"
+                data-promotion="Paquete de mantenimiento"
+              >
+                Cotizar paquete <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Controles inferiores -->
+      <div class="promo-carousel-controls">
+        <div class="promo-carousel-progress">
+          <span id="promoCurrentSlide">01</span>
+
+          <div class="promo-progress-line">
+            <span id="promoProgressBar"></span>
+          </div>
+
+          <span id="promoTotalSlides">03</span>
+        </div>
+
+        <div class="promo-carousel-buttons">
+          <button
+            class="promo-carousel-button"
+            id="promoPrevious"
+            type="button"
+            aria-label="Promoción anterior"
+          >
+            ←
+          </button>
+
+          <button
+            class="promo-carousel-button"
+            id="promoNext"
+            type="button"
+            aria-label="Siguiente promoción"
+          >
+            →
+          </button>
+        </div>
+      </div>
+
+      <!-- Indicadores -->
+      <div class="promo-carousel-dots" aria-label="Seleccionar promoción">
+        <button
+          class="active"
+          type="button"
+          data-promo-slide="0"
+          aria-label="Mostrar promoción 1"
+          aria-current="true"
+        ></button>
+
+        <button
+          type="button"
+          data-promo-slide="1"
+          aria-label="Mostrar promoción 2"
+          aria-current="false"
+        ></button>
+
+        <button
+          type="button"
+          data-promo-slide="2"
+          aria-label="Mostrar promoción 3"
+          aria-current="false"
+        ></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Columna derecha: contenido existente -->
+  <div class="parts-intro-content">
+    <h2>
+      CADA HORA DETENIDA
+      <em>cuesta.</em>
+    </h2>
+
+    <p>
+      Conectamos disponibilidad, asesoría y opciones de compra para ayudarte a
+      encontrar la refacción adecuada con mayor rapidez y confianza.
+    </p>
+
+    <div class="parts-process">
+      <div>
+        <strong>IDENTIFICA</strong>
+        <span aria-hidden="true">→</span>
+      </div>
+
+      <div>
+        <strong>LOCALIZA</strong>
+        <span aria-hidden="true">→</span>
+      </div>
+
+      <div>
+        <strong>COTIZA</strong>
+        <span aria-hidden="true">→</span>
+      </div>
+
+      <div>
+        <strong>RECIBE</strong>
+      </div>
+    </div>
+  </div>
+</section>

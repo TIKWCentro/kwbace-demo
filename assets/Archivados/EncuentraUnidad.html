@@ -1,0 +1,136 @@
+<!-- FRAGMENTO ARCHIVADO: EncuentraUnidad.
+     Referencia histórica del proyecto, no cargada por las páginas del demo.
+     No insertar sin revisar IDs y eventos para evitar componentes duplicados. -->
+<!--=====================================================
+ENCUENTRA TU UNIDAD
+===================================================== -->
+<section class="chooser" id="elige">
+  <header class="operation-heading">
+    <div>
+      <p class="eyebrow dark">ENCUENTRA TU UNIDAD</p>
+
+      <h2>
+        ¿Qué necesita mover
+        <em>tu negocio?</em>
+      </h2>
+    </div>
+
+    <p>
+      Selecciona el tipo de operación y descubre las unidades Kenworth y DAF
+      recomendadas para tu negocio.
+    </p>
+  </header>
+
+  <nav
+    class="operation-tabs"
+    aria-label="Seleccionar tipo de operación"
+    role="tablist"
+  >
+    <button
+      class="operation-tab is-active"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      data-segment="carretera"
+    >
+      <span>01</span>
+      <strong>Carretera</strong>
+    </button>
+
+    <button
+      class="operation-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      data-segment="distribucion"
+    >
+      <span>02</span>
+      <strong>Distribución</strong>
+    </button>
+
+    <button
+      class="operation-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      data-segment="vocacional"
+    >
+      <span>03</span>
+      <strong>Vocacional</strong>
+    </button>
+
+    <button
+      class="operation-tab"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      data-segment="premium"
+    >
+      <span>04</span>
+      <strong>Experiencia premium</strong>
+    </button>
+  </nav>
+
+  <div class="operation-stage">
+    <div class="operation-stage__media">
+      <img
+        id="operationImage"
+        src="assets/images/U Kenworth/kw-680.jpg"
+        alt="Unidad para operación en carretera"
+      />
+    </div>
+
+    <div class="operation-stage__shade"></div>
+
+    <div class="operation-stage__copy">
+      <div class="operation-stage__number" id="operationNumber">01</div>
+
+      <small id="operationKicker">LARGA DISTANCIA</small>
+
+      <h3 id="operationTitle">Carretera</h3>
+
+      <p id="operationDescription">
+        Autonomía, rendimiento y confort para recorrer largas distancias con
+        mayor eficiencia.
+      </p>
+
+      <a href="index.html#cotizar" class="operation-quote">
+        Solicitar asesoría
+        <span>↗</span>
+      </a>
+    </div>
+
+    <aside class="operation-models">
+      <div class="operation-models__heading">
+        <div>
+          <small>MODELOS RECOMENDADOS</small>
+          <strong>Elige una opción</strong>
+        </div>
+
+        <div class="operation-models__controls">
+          <button
+            id="operationPrevious"
+            type="button"
+            aria-label="Modelo anterior"
+          >
+            ←
+          </button>
+
+          <button
+            id="operationNext"
+            type="button"
+            aria-label="Siguiente modelo"
+          >
+            →
+          </button>
+        </div>
+      </div>
+
+      <div class="operation-models__track" id="operationModelTrack"></div>
+
+      <p class="operation-models__note">
+        Selecciona un modelo para consultar sus características.
+      </p>
+    </aside>
+  </div>
+</section>
